@@ -381,19 +381,61 @@ for i in range(100):
     mixer.send("/config/osc/level", str(val))
     on = ~on
 
+# Osc f1 Hertz Level
+mixer.send("/config/osc/f1", 1)
+print(mixer.query("/config/osc/f1", 1))
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/config/osc/f1", str(val))
+    on = ~on
 
-
-
-
+# Osc f2 Hertz Level
+mixer.send("/config/osc/f2", 1)
+print(mixer.query("/config/osc/f2", 1))
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/config/osc/f2", str(val))
+    on = ~on
 
 # OSC fsel Configuration
 mixer.send("/config/osc/fsel", 0)
 print(mixer.query("/config/osc/fsel", 0))
 
-# OSC Type Configuration 
+# OSC SINE Type Configuration 
+mixer.send("/config/talk/osc/type", 0)
+print(mixer.query("/config/talk/osc/type", 0))
+
+# OSC PINK Type Configuration 
 mixer.send("/config/talk/osc/type", 1)
 print(mixer.query("/config/talk/osc/type", 1))
 
+# OSC WHITE Type Configuration 
+mixer.send("/config/talk/osc/type", 2)
+print(mixer.query("/config/talk/osc/type", 2))
+
+# OSC Mix Bus 1 Destination Configuration (MixBus 1-16)
+mixer.send("/config/osc/dest", 0)
+print(mixer.query("/config/osc/dest", 0))
+
+# OSC Left Destination Configuration 
+mixer.send("/config/osc/dest", 17)
+print(mixer.query("/config/osc/dest", 17))
+
+# OSC Right Destination Configuration 
+mixer.send("/config/osc/dest", 18)
+print(mixer.query("/config/osc/dest", 18))
+
+# OSC Left+Right Destination Configuration 
+mixer.send("/config/osc/dest", 19)
+print(mixer.query("/config/osc/dest", 18))
+
+# OSC M/C Destination Configuration 
+mixer.send("/config/osc/dest", 20)
+print(mixer.query("/config/osc/dest", 20))
+
+# OSC Matrix 1 Destination Configuration (Matrix1-6) 
+mixer.send("/config/osc/dest", 21)
+print(mixer.query("/config/osc/dest", 21))
 
 
 # Toggle GATE on channel 1
