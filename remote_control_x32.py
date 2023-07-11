@@ -40,6 +40,32 @@ print(mixer.query("/ch/01/mix/on"))
 mixer.send("/ch/01/mix/on", 0)
 print(mixer.query("/ch/01/mix/on"))
 
+# Channel Link CH1-CH2 On
+mixer.send("/config/chlink/1-2", 1)
+print(mixer.query("/config/chlink/1-2", 1))
+
+# Channel Link CH1-CH2 Off
+mixer.send("/config/chlink/1-2", 0)
+print(mixer.query("/config/chlink/1-2", 0))
+
+# AUX Link AUX1-AUX2 On
+mixer.send("/config/auxlink/1-2", 1)
+print(mixer.query("/config/auxlink/1-2", 1))
+
+# AUX Link AUX1-AUX2 Off
+mixer.send("/config/auxlink/1-2", 0)
+print(mixer.query("/config/auxlink/1-2", 0))
+
+# FX Link FX1-FX2 On
+mixer.send("/config/fxlink/1-2", 1)
+print(mixer.query("/config/fxlink/1-2", 1))
+
+# FX Link FX1-FX2 Off
+mixer.send("/config/fxlink/1-2", 0)
+print(mixer.query("/config/fxlink/1-2", 0))
+
+
+
 # Toggle GATE on channel 1
 mixer.send("/ch/01/gate/on", 1)
 print(mixer.query("/ch/01/gate/on"))
