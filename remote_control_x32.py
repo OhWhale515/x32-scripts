@@ -129,6 +129,169 @@ print(mixer.query("/config/mono/link", 1))
 mixer.send("/config/mono/link", 0)
 print(mixer.query("/config/mono/link", 0))
 
+# Mono Mode Link On
+mixer.send("/config/mono/link", 1)
+print(mixer.query("/config/mono/link", 1))
+
+# Solo dB Level
+mixer.send("/config/solo/level", 10.0)
+print(mixer.query("/config/solo/level", 10.0))
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/config/solo/level", str(val))
+    on = ~on
+
+# Solo dB Level
+mixer.send("/config/solo/level", 10.0)
+print(mixer.query("/config/solo/level", 10.0))
+
+# Solo Source Options Off
+mixer.send("/config/solo/source", 0)
+print(mixer.query("/config/solo/source", 0))
+
+# Solo Source Option LR
+mixer.send("/config/solo/source", 1)
+print(mixer.query("/config/solo/source", 1))
+
+# Solo Source Option LR+C
+mixer.send("/config/solo/source", 2)
+print(mixer.query("/config/solo/source", 2))
+
+# Solo Source Option LRPFL
+mixer.send("/config/solo/source", 3)
+print(mixer.query("/config/solo/source", 3))
+
+# Solo Source Option LRAFL
+mixer.send("/config/solo/source", 4)
+print(mixer.query("/config/solo/source", 4))
+
+# Solo Source Option AUX56
+mixer.send("/config/solo/source", 5)
+print(mixer.query("/config/solo/source", 5))
+
+# Solo Source Option AUX78
+mixer.send("/config/solo/source", 6)
+print(mixer.query("/config/solo/source", 6))
+
+# Solo Source Trim dB Level
+mixer.send("/config/solo/sourcetrim", 10.0)
+print(mixer.query("/config/solo/sourcetrim", 10.0))
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/config/solo/sourcetrim", str(val))
+    on = ~on
+
+# Solo Channel Mode PFL
+mixer.send("/config/solo/chmode", 0)
+print(mixer.query("/config/solo/chmode", 0))
+
+# Solo Channel Mode AFL
+mixer.send("/config/solo/chmode", 1)
+print(mixer.query("/config/solo/chmode", 1))
+
+# Solo Bus Mode PFL
+mixer.send("/config/solo/chmode", 0)
+print(mixer.query("/config/solo/chmode", 0))
+
+# Solo Bus Mode AFL
+mixer.send("/config/solo/busmode", 1)
+print(mixer.query("/config/solo/busmode", 1))
+
+# Solo DCA Mode PFL
+mixer.send("/config/solo/dcamode", 0)
+print(mixer.query("/config/solo/dcamode", 0))
+
+# Solo DCA Mode AFL
+mixer.send("/config/solo/dcamode", 1)
+print(mixer.query("/config/solo/dcamode", 1))
+
+# Solo Exclusive Mode On
+mixer.send("/config/solo/exclusive", 0)
+print(mixer.query("/config/solo/exclusive", 0))
+
+# Solo Exclusive Mode Off
+mixer.send("/config/solo/exclusive", 1)
+print(mixer.query("/config/solo/exclusive", 1))
+
+# Solo Follow Select Mode On
+mixer.send("/config/solo/followsel", 0)
+print(mixer.query("/config/solo/followsel", 0))
+
+# Solo Follow Select  Mode Off
+mixer.send("/config/solo/followsel", 1)
+print(mixer.query("/config/solo/followsel", 1))
+
+# Solo Follow Solo Mode On
+mixer.send("/config/solo/followsolo", 0)
+print(mixer.query("/config/solo/followsolo", 0))
+
+# Solo Follow Solo Mode Off
+mixer.send("/config/solo/followsolo", 1)
+print(mixer.query("/config/solo/followsolo", 1))
+
+# Solo DimAtt dB Level
+mixer.send("/config/solo/dimatt", 10.0)
+print(mixer.query("/config/solo/dimatt", 10.0))
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/config/solo/dimatt", str(val))
+    on = ~on
+
+# Solo Dim Mode On
+mixer.send("/config/solo/dim", 0)
+print(mixer.query("/config/solo/dim", 0))
+
+# Solo Dim Mode Off
+mixer.send("/config/solo/dim", 1)
+print(mixer.query("/config/solo/dim", 1))
+
+# Solo Mono Mode On
+mixer.send("/config/solo/mono", 0)
+print(mixer.query("/config/solo/mono", 0))
+
+# Solo Mono Mode Off
+mixer.send("/config/solo/mono", 1)
+print(mixer.query("/config/solo/mono", 1))
+
+# Solo Delay Mode On
+mixer.send("/config/solo/delay", 0)
+print(mixer.query("/config/solo/delay", 0))
+
+# Solo Delay Mode Off
+mixer.send("/config/solo/delay", 1)
+print(mixer.query("/config/solo/delay", 1))
+
+# Solo Delay Time ms Level
+mixer.send("/config/solo/delaytime", 10.0)
+print(mixer.query("/config/solo/delaytime", 10.0))
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/config/solo/delaytime", str(val))
+    on = ~on
+
+# Solo Master Control Mode On
+mixer.send("/config/solo/masterctrl", 0)
+print(mixer.query("/config/solo/masterctrl", 0))
+
+# Solo Master Control Mode Off
+mixer.send("/config/solo/masterctrl", 1)
+print(mixer.query("/config/solo/masterctrl", 1))
+
+# Solo Mute Mode On
+mixer.send("/config/solo/mute", 0)
+print(mixer.query("/config/solo/mute", 0))
+
+# Solo Mute Mode Off
+mixer.send("/config/solo/mute", 1)
+print(mixer.query("/config/solo/mute", 1))
+
+# Solo dimpfl Mode On
+mixer.send("/config/solo/dimpfl", 0)
+print(mixer.query("/config/solo/dimpfl", 0))
+
+# Solo dimpfl Mode Off
+mixer.send("/config/solo/dimpfl", 1)
+print(mixer.query("/config/solo/dimpfl", 1))
 
 
 # Toggle GATE on channel 1
