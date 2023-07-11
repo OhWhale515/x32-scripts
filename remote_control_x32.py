@@ -293,6 +293,108 @@ print(mixer.query("/config/solo/dimpfl", 0))
 mixer.send("/config/solo/dimpfl", 1)
 print(mixer.query("/config/solo/dimpfl", 1))
 
+# Talk Mode On
+mixer.send("/config/talk/enable", 0)
+print(mixer.query("/config/talk/enable", 0))
+
+# Talk Mode Off
+mixer.send("/config/talk/enable", 1)
+print(mixer.query("/config/talk/enable", 1))
+
+# Talk Source INT
+mixer.send("/config/talk/source", 0)
+print(mixer.query("/config/talk/source", 0))
+
+# Talk Source ENT
+mixer.send("/config/talk/source", 1)
+print(mixer.query("/config/talk/source", 1))
+
+# Talk dB Level A
+mixer.send("/config/A/level", 10.0)
+print(mixer.query("/config/A/level", 10.0))
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/config/A/level", str(val))
+    on = ~on
+
+# Talk dB Level B
+mixer.send("/config/B/level", 10.0)
+print(mixer.query("/config/B/level", 10.0))
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/config/B/level", str(val))
+    on = ~on
+
+# Talk Latch A On
+mixer.send("/config/talk/A/latch", 0)
+print(mixer.query("/config/talk/A/latch", 0))
+
+# Talk Latch A Off
+mixer.send("/config/talk/A/latch", 1)
+print(mixer.query("/config/talk/A/latch", 1))
+
+# Talk Latch B On
+mixer.send("/config/talk/B/latch", 0)
+print(mixer.query("/config/talk/B/latch", 0))
+
+# Talk Latch B Off
+mixer.send("/config/talk/B/latch", 1)
+print(mixer.query("/config/talk/B/latch", 1))
+
+# Talk Dim A On
+mixer.send("/config/talk/A/dim", 0)
+print(mixer.query("/config/talk/A/dim", 0))
+
+# Talk Dim A Off
+mixer.send("/config/talk/A/dim", 1)
+print(mixer.query("/config/talk/A/dim", 1))
+
+# Talk Dim B On
+mixer.send("/config/talk/B/dim", 0)
+print(mixer.query("/config/talk/B/dim", 0))
+
+# Talk Dim B Off
+mixer.send("/config/talk/B/dim", 1)
+print(mixer.query("/config/talk/B/dim", 1))
+
+# Talk Dest Mapping A
+mixer.send("/config/talk/A/destmap", 0)
+print(mixer.query("/config/talk/A/destmap", 0))
+for i in range(100):
+    val = random.uniform(0, 10)
+    mixer.send("/config/talk/A/destmap", str(val))
+    on = ~on
+
+# Talk Dest Mapping B
+mixer.send("/config/talk/A/destmap", 1)
+print(mixer.query("/config/talk/B/destmap", 1))
+for i in range(100):
+    val = random.uniform(0, 10)
+    mixer.send("/config/talk/B/destmap", str(val))
+    on = ~on
+
+# Osc dB Level
+mixer.send("/config/osc/level", 1)
+print(mixer.query("/config/osc/level", 1))
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/config/osc/level", str(val))
+    on = ~on
+
+
+
+
+
+
+# OSC fsel Configuration
+mixer.send("/config/osc/fsel", 0)
+print(mixer.query("/config/osc/fsel", 0))
+
+# OSC Type Configuration 
+mixer.send("/config/talk/osc/type", 1)
+print(mixer.query("/config/talk/osc/type", 1))
+
+
 
 # Toggle GATE on channel 1
 mixer.send("/ch/01/gate/on", 1)
