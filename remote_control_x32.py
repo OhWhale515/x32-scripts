@@ -1945,3 +1945,87 @@ time.sleep(1)
 mixer.send("/config/routing/PLAY/1-8", 23)
 print(mixer.query("/config/routing/PLAY/1-8"))
 time.sleep(1)
+
+
+
+# PLAY AUX Routing Configurations
+# AUX1-4
+mixer.send("/config/routing/PLAY/AUX", 0)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+# AN1-2
+mixer.send("/config/routing/PLAY/AUX", 1)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+# AN1-4
+mixer.send("/config/routing/PLAY/AUX", 2)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+# AN1-6
+mixer.send("/config/routing/PLAY/AUX", 3)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+# A1-2
+mixer.send("/config/routing/PLAY/AUX", 4)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+# A1-4
+mixer.send("/config/routing/PLAY/AUX", 5)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+# A1-6
+mixer.send("/config/routing/PLAY/AUX", 6)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+# B1-2
+mixer.send("/config/routing/PLAY/AUX", 7)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+# B1-4
+mixer.send("/config/routing/PLAY/AUX", 8)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+# B1-6
+mixer.send("/config/routing/PLAY/AUX", 9)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+# CARD1-2
+mixer.send("/config/routing/PLAY/AUX", 10)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+# CARD1-4
+mixer.send("/config/routing/PLAY/AUX", 11)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+# CARD1-6
+mixer.send("/config/routing/PLAY/AUX", 12)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+
+# UIN1-2
+mixer.send("/config/routing/PLAY/AUX", 13)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+# UIN1-4
+mixer.send("/config/routing/PLAY/AUX", 14)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
+
+# UIN1-6
+mixer.send("/config/routing/PLAY/AUX", 15)
+print(mixer.query("/config/routing/PLAY/AUX"))
+time.sleep(1)
