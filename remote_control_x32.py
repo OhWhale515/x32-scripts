@@ -918,3 +918,365 @@ time.sleep(1)
 mixer.send("/config/routing/IN/AUX", 15)
 print(mixer.query("/config/routing/IN/AUX"))
 time.sleep(1)
+
+# AES50-A Routing 1-48
+# AN1-8
+mixer.send("/config/routing/AES50A/1-8", 0)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# AN9-16
+mixer.send("/config/routing/AES50A/1-8", 1)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# AN17-24
+mixer.send("/config/routing/AES50A/1-8", 2)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# AN25-32
+mixer.send("/config/routing/AES50A/1-8", 3)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# A1-8
+mixer.send("/config/routing/AES50A/1-8", 4)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# A9-16
+mixer.send("/config/routing/AES50A/1-8", 5)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# A17-24
+mixer.send("/config/routing/AES50A/1-8", 6)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# A25-32
+mixer.send("/config/routing/AES50A/1-8", 7)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# A33-40
+mixer.send("/config/routing/AES50A/1-8", 8)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# A41-48
+mixer.send("/config/routing/AES50A/1-8", 9)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# B1-8
+mixer.send("/config/routing/AES50A/1-8", 10)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# B9-16
+mixer.send("/config/routing/AES50A/1-8", 11)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# B17-24
+mixer.send("/config/routing/AES50A/1-8", 12)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# B25-32
+mixer.send("/config/routing/AES50A/1-8", 13)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# B33-40
+mixer.send("/config/routing/AES50A/1-8", 14)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# B41-48
+mixer.send("/config/routing/AES50A/1-8", 15)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# CARD 1-8
+mixer.send("/config/routing/AES50A/1-8", 16)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# CARD 9-16
+mixer.send("/config/routing/AES50A/1-8", 17)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# CARD 17-24
+mixer.send("/config/routing/AES50A/1-8", 18)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# CARD 25-32
+mixer.send("/config/routing/AES50A/1-8", 19)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# OUT1-8
+mixer.send("/config/routing/AES50A/1-8", 20)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# OUT9-16
+mixer.send("/config/routing/AES50A/1-8", 21)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# P16 1-8
+mixer.send("/config/routing/AES50A/1-8", 22)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# P16 9-16
+mixer.send("/config/routing/AES50A/1-8", 23)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# AUX1-6/Mon
+mixer.send("/config/routing/AES50A/1-8", 24)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# AuxIN1-6/TB
+mixer.send("/config/routing/AES50A/1-8", 25)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# UOUT1-8
+mixer.send("/config/routing/AES50A/1-8", 26)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# UOUT9-16
+mixer.send("/config/routing/AES50A/1-8", 27)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# UOUT17-24
+mixer.send("/config/routing/AES50A/1-8", 28)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# UOUT25-32
+mixer.send("/config/routing/AES50A/1-8", 29)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# UOUT33-40
+mixer.send("/config/routing/AES50A/1-8", 30)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# UOUT41-48
+mixer.send("/config/routing/AES50A/1-8", 31)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# UIN 1-8
+mixer.send("/config/routing/AES50A/1-8", 32)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# UIN 9-16
+mixer.send("/config/routing/AES50A/1-8", 33)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# UIN 17-24
+mixer.send("/config/routing/AES50A/1-8", 34)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# UIN 25-32
+mixer.send("/config/routing/AES50A/1-8", 35)
+print(mixer.query("/config/routing/AES50A/1-8"))
+time.sleep(1)
+
+# AES50-B Routing 1-48
+# AN1-8
+mixer.send("/config/routing/AES50B/1-8", 0)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# AN9-16
+mixer.send("/config/routing/AES50B/1-8", 1)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# AN17-24
+mixer.send("/config/routing/AES50B/1-8", 2)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# AN25-32
+mixer.send("/config/routing/AES50B/1-8", 3)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# A1-8
+mixer.send("/config/routing/AES50B/1-8", 4)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# A9-16
+mixer.send("/config/routing/AES50B/1-8", 5)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# A17-24
+mixer.send("/config/routing/AES50B/1-8", 6)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# A25-32
+mixer.send("/config/routing/AES50B/1-8", 7)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# A33-40
+mixer.send("/config/routing/AES50B/1-8", 8)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# A41-48
+mixer.send("/config/routing/AES50B/1-8", 9)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# B1-8
+mixer.send("/config/routing/AES50B/1-8", 10)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# B9-16
+mixer.send("/config/routing/AES50B/1-8", 11)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# B17-24
+mixer.send("/config/routing/AES50B/1-8", 12)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# B25-32
+mixer.send("/config/routing/AES50B/1-8", 13)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# B33-40
+mixer.send("/config/routing/AES50B/1-8", 14)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# B41-48
+mixer.send("/config/routing/AES50B/1-8", 15)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# CARD 1-8
+mixer.send("/config/routing/AES50B/1-8", 16)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# CARD 9-16
+mixer.send("/config/routing/AES50B/1-8", 17)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# CARD 17-24
+mixer.send("/config/routing/AES50B/1-8", 18)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# CARD 25-32
+mixer.send("/config/routing/AES50B/1-8", 19)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# OUT1-8
+mixer.send("/config/routing/AES50B/1-8", 20)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# OUT9-16
+mixer.send("/config/routing/AES50B/1-8", 21)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# P16 1-8
+mixer.send("/config/routing/AES50B/1-8", 22)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# P16 9-16
+mixer.send("/config/routing/AES50B/1-8", 23)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# AUX1-6/Mon
+mixer.send("/config/routing/AES50B/1-8", 24)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# AuxIN1-6/TB
+mixer.send("/config/routing/AES50B/1-8", 25)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# UOUT1-8
+mixer.send("/config/routing/AES50B/1-8", 26)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# UOUT9-16
+mixer.send("/config/routing/AES50B/1-8", 27)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# UOUT17-24
+mixer.send("/config/routing/AES50B/1-8", 28)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# UOUT25-32
+mixer.send("/config/routing/AES50B/1-8", 29)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# UOUT33-40
+mixer.send("/config/routing/AES50B/1-8", 30)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# UOUT41-48
+mixer.send("/config/routing/AES50B/1-8", 31)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# UIN 1-8
+mixer.send("/config/routing/AES50B/1-8", 32)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# UIN 9-16
+mixer.send("/config/routing/AES50B/1-8", 33)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# UIN 17-24
+mixer.send("/config/routing/AES50B/1-8", 34)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
+
+# UIN 25-32
+mixer.send("/config/routing/AES50B/1-8", 35)
+print(mixer.query("/config/routing/AES50B/1-8"))
+time.sleep(1)
