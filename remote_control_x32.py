@@ -543,140 +543,170 @@ time.sleep(1)
 
 # OSC fsel Configuration
 mixer.send("/config/osc/fsel", 0)
-print(mixer.query("/config/osc/fsel", 0))
+print(mixer.query("/config/osc/fsel"))
+time.sleep(1)
 
 # OSC SINE Type Configuration 
 mixer.send("/config/talk/osc/type", 0)
-print(mixer.query("/config/talk/osc/type", 0))
+print(mixer.query("/config/talk/osc/type"))
+time.sleep(1)
 
 # OSC PINK Type Configuration 
 mixer.send("/config/talk/osc/type", 1)
-print(mixer.query("/config/talk/osc/type", 1))
+print(mixer.query("/config/talk/osc/type"))
+time.sleep(1)
 
 # OSC WHITE Type Configuration 
 mixer.send("/config/talk/osc/type", 2)
-print(mixer.query("/config/talk/osc/type", 2))
+print(mixer.query("/config/talk/osc/type"))
+time.sleep(1)
 
 # OSC Mix Bus 1 Destination Configuration (MixBus 1-16)
 mixer.send("/config/osc/dest", 0)
-print(mixer.query("/config/osc/dest", 0))
+print(mixer.query("/config/osc/dest"))
+time.sleep(1)
 
 # OSC Left Destination Configuration 
 mixer.send("/config/osc/dest", 17)
-print(mixer.query("/config/osc/dest", 17))
+print(mixer.query("/config/osc/dest"))
+time.sleep(1)
 
 # OSC Right Destination Configuration 
 mixer.send("/config/osc/dest", 18)
-print(mixer.query("/config/osc/dest", 18))
+print(mixer.query("/config/osc/dest"))
+time.sleep(1)
 
 # OSC Left+Right Destination Configuration 
 mixer.send("/config/osc/dest", 19)
-print(mixer.query("/config/osc/dest", 18))
+print(mixer.query("/config/osc/dest"))
+time.sleep(1)
 
 # OSC M/C Destination Configuration 
 mixer.send("/config/osc/dest", 20)
-print(mixer.query("/config/osc/dest", 20))
+print(mixer.query("/config/osc/dest"))
+time.sleep(1)
 
 # OSC Matrix 1 Destination Configuration (Matrix1-6) 
 mixer.send("/config/osc/dest", 21)
-print(mixer.query("/config/osc/dest", 21))
-
+print(mixer.query("/config/osc/dest"))
+time.sleep(1)
 
 #User Route Outs OUTPUTS 01-48 CONFIGURATIONS
 # User Route OFF Outs
 mixer.send("/config/userrout/out/01", 0)
-print(mixer.query("/config/userrout/out/01", 0))
+print(mixer.query("/config/userrout/out/01"))
+time.sleep(1)
 
 # Local In 1-32 int 1-32
 mixer.send("/config/userrout/out/01", 1)
-print(mixer.query("/config/userrout/out/01", 1))
+print(mixer.query("/config/userrout/out/01"))
+time.sleep(1)
 
 # AES50-A 1-48 int 33-80
 mixer.send("/config/userrout/out/01", 33)
-print(mixer.query("/config/userrout/out/01", 33))
+print(mixer.query("/config/userrout/out/01"))
+time.sleep(1)
 
 # AES50-B 1-48 int 81-128
 mixer.send("/config/userrout/out/01", 81)
-print(mixer.query("/config/userrout/out/01", 81))
+print(mixer.query("/config/userrout/out/01"))
+time.sleep(1)
 
 # Card In 1-32 int 129-160
 mixer.send("/config/userrout/out/01", 129)
-print(mixer.query("/config/userrout/out/01", 129))
+print(mixer.query("/config/userrout/out/01"))
+time.sleep(1)
 
 # Aux In 1-6 int 161-166
 mixer.send("/config/userrout/out/01", 161)
-print(mixer.query("/config/userrout/out/01", 161))
+print(mixer.query("/config/userrout/out/01"))
+time.sleep(1)
 
 # TB Internal 
 mixer.send("/config/userrout/out/01", 167)
-print(mixer.query("/config/userrout/out/01", 167))
+print(mixer.query("/config/userrout/out/01"))
+time.sleep(1)
 
 # TB External 
 mixer.send("/config/userrout/out/01", 168)
-print(mixer.query("/config/userrout/out/01", 168))
+print(mixer.query("/config/userrout/out/01"))
+time.sleep(1)
 
 # Outputs 1-16 int 169-184 
 mixer.send("/config/userrout/out/01", 169)
-print(mixer.query("/config/userrout/out/01", 169))
+print(mixer.query("/config/userrout/out/01"))
+time.sleep(1)
 
 # P16 1-16 int 185-200 
 mixer.send("/config/userrout/out/01", 185)
-print(mixer.query("/config/userrout/out/01", 185))
+print(mixer.query("/config/userrout/out/01"))
+time.sleep(1)
 
 # AUX 1-6 int 201-206 
 mixer.send("/config/userrout/out/01", 201)
-print(mixer.query("/config/userrout/out/01", 201))
+print(mixer.query("/config/userrout/out/01"))
+time.sleep(1)
 
 # Monitor Left
 mixer.send("/config/userrout/out/01", 207)
-print(mixer.query("/config/userrout/out/01", 207))
+print(mixer.query("/config/userrout/out/01"))
+time.sleep(1)
 
 # Monitor Right
 mixer.send("/config/userrout/out/01", 208)
-print(mixer.query("/config/userrout/out/01", 208))
-
+print(mixer.query("/config/userrout/out/01"))
+time.sleep(1)
 
 #User Route Outs INPUTS 01-32 CONFIGURATIONS
 # User Route OFF Outs
 mixer.send("/config/userrout/in/01", 0)
-print(mixer.query("/config/userrout/in/01", 0))
+print(mixer.query("/config/userrout/in/01"))
+time.sleep(1)
 
 # Local In 1-32 int 1-32
 mixer.send("/config/userrout/in/01", 1)
-print(mixer.query("/config/userrout/in/01", 1))
+print(mixer.query("/config/userrout/in/01"))
+time.sleep(1)
 
 # AES50-A 1-48 int 33-80
 mixer.send("/config/userrout/in/01", 33)
-print(mixer.query("/config/userrout/in/01", 33))
+print(mixer.query("/config/userrout/in/01"))
+time.sleep(1)
 
 # AES50-B 1-48 int 81-128
 mixer.send("/config/userrout/in/01", 81)
-print(mixer.query("/config/userrout/in/01", 81))
+print(mixer.query("/config/userrout/in/01"))
+time.sleep(1)
 
 # Card In 1-32 int 129-160
 mixer.send("/config/userrout/in/01", 129)
-print(mixer.query("/config/userrout/in/01", 129))
+print(mixer.query("/config/userrout/in/01"))
+time.sleep(1)
 
 # Aux In 1-6 int 161-166
 mixer.send("/config/userrout/in/01", 161)
-print(mixer.query("/config/userrout/in/01", 161))
+print(mixer.query("/config/userrout/in/01"))
+time.sleep(1)
 
 # TB Internal 
 mixer.send("/config/userrout/in/01", 167)
-print(mixer.query("/config/userrout/in/01", 167))
+print(mixer.query("/config/userrout/in/01"))
+time.sleep(1)
 
 # TB External 
 mixer.send("/config/userrout/in/01", 168)
-print(mixer.query("/config/userrout/in/01", 168))
+print(mixer.query("/config/userrout/in/01"))
+time.sleep(1)
 
 # Route Switch Record
 mixer.send("/config/routing/routswitch", 0)
-print(mixer.query("/config/routing/routswitch", 0))
+print(mixer.query("/config/routing/routswitch"))
+time.sleep(1)
 
 # Route Switch Playback
 mixer.send("/config/routing/routswitch", 1)
-print(mixer.query("/config/routing/routswitch", 1))
-
+print(mixer.query("/config/routing/routswitch"))
+time.sleep(1)
 
 
 
