@@ -438,6 +438,100 @@ mixer.send("/config/osc/dest", 21)
 print(mixer.query("/config/osc/dest", 21))
 
 
+#User Route Outs OUTPUTS 01-48 CONFIGURATIONS
+# User Route OFF Outs
+mixer.send("/config/userrout/out/01", 0)
+print(mixer.query("/config/userrout/out/01", 0))
+
+# Local In 1-32 int 1-32
+mixer.send("/config/userrout/out/01", 1)
+print(mixer.query("/config/userrout/out/01", 1))
+
+# AES50-A 1-48 int 33-80
+mixer.send("/config/userrout/out/01", 33)
+print(mixer.query("/config/userrout/out/01", 33))
+
+# AES50-B 1-48 int 81-128
+mixer.send("/config/userrout/out/01", 81)
+print(mixer.query("/config/userrout/out/01", 81))
+
+# Card In 1-32 int 129-160
+mixer.send("/config/userrout/out/01", 129)
+print(mixer.query("/config/userrout/out/01", 129))
+
+# Aux In 1-6 int 161-166
+mixer.send("/config/userrout/out/01", 161)
+print(mixer.query("/config/userrout/out/01", 161))
+
+# TB Internal 
+mixer.send("/config/userrout/out/01", 167)
+print(mixer.query("/config/userrout/out/01", 167))
+
+# TB External 
+mixer.send("/config/userrout/out/01", 168)
+print(mixer.query("/config/userrout/out/01", 168))
+
+# Outputs 1-16 int 169-184 
+mixer.send("/config/userrout/out/01", 169)
+print(mixer.query("/config/userrout/out/01", 169))
+
+# P16 1-16 int 185-200 
+mixer.send("/config/userrout/out/01", 185)
+print(mixer.query("/config/userrout/out/01", 185))
+
+# AUX 1-6 int 201-206 
+mixer.send("/config/userrout/out/01", 201)
+print(mixer.query("/config/userrout/out/01", 201))
+
+# Monitor Left
+mixer.send("/config/userrout/out/01", 207)
+print(mixer.query("/config/userrout/out/01", 207))
+
+# Monitor Right
+mixer.send("/config/userrout/out/01", 208)
+print(mixer.query("/config/userrout/out/01", 208))
+
+
+#User Route Outs INPUTS 01-32 CONFIGURATIONS
+# User Route OFF Outs
+mixer.send("/config/userrout/in/01", 0)
+print(mixer.query("/config/userrout/in/01", 0))
+
+# Local In 1-32 int 1-32
+mixer.send("/config/userrout/in/01", 1)
+print(mixer.query("/config/userrout/in/01", 1))
+
+# AES50-A 1-48 int 33-80
+mixer.send("/config/userrout/in/01", 33)
+print(mixer.query("/config/userrout/in/01", 33))
+
+# AES50-B 1-48 int 81-128
+mixer.send("/config/userrout/in/01", 81)
+print(mixer.query("/config/userrout/in/01", 81))
+
+# Card In 1-32 int 129-160
+mixer.send("/config/userrout/in/01", 129)
+print(mixer.query("/config/userrout/in/01", 129))
+
+# Aux In 1-6 int 161-166
+mixer.send("/config/userrout/in/01", 161)
+print(mixer.query("/config/userrout/in/01", 161))
+
+# TB Internal 
+mixer.send("/config/userrout/in/01", 167)
+print(mixer.query("/config/userrout/in/01", 167))
+
+# TB External 
+mixer.send("/config/userrout/in/01", 168)
+print(mixer.query("/config/userrout/in/01", 168))
+
+
+
+
+
+
+
+
 # Toggle GATE on channel 1
 mixer.send("/ch/01/gate/on", 1)
 print(mixer.query("/ch/01/gate/on"))
