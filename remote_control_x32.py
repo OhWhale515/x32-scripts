@@ -525,8 +525,13 @@ print(mixer.query("/config/userrout/in/01", 167))
 mixer.send("/config/userrout/in/01", 168)
 print(mixer.query("/config/userrout/in/01", 168))
 
+# Route Switch Record
+mixer.send("/config/routing/routswitch", 0)
+print(mixer.query("/config/routing/routswitch", 0))
 
-
+# Route Switch Playback
+mixer.send("/config/routing/routswitch", 1)
+print(mixer.query("/config/routing/routswitch", 1))
 
 
 
