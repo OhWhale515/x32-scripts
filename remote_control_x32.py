@@ -1282,8 +1282,7 @@ print(mixer.query("/config/routing/AES50B/1-8"))
 time.sleep(1)
 
 
-
-# CARD Routing 1-48
+# CARD Routing 1-32
 # AN1-8
 mixer.send("/config/routing/CARD/1-8", 0)
 print(mixer.query("/config/routing/CARD/1-8"))
@@ -1462,4 +1461,187 @@ time.sleep(1)
 # UIN 25-32
 mixer.send("/config/routing/CARD/1-8", 35)
 print(mixer.query("/config/routing/CARD/1-8"))
+time.sleep(1)
+
+
+
+# OUTPUT Routing 1-4 & 9-12
+# AN1-4
+mixer.send("/config/routing/OUT/1-4", 0)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# AN9-12
+mixer.send("/config/routing/OUT/1-4", 1)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# AN17-20
+mixer.send("/config/routing/OUT/1-4", 2)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# AN25-28
+mixer.send("/config/routing/OUT/1-4", 3)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# A1-4
+mixer.send("/config/routing/OUT/1-4", 4)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# A9-12
+mixer.send("/config/routing/OUT/1-4", 5)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# A17-20
+mixer.send("/config/routing/OUT/1-4", 6)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# A25-28
+mixer.send("/config/routing/OUT/1-4", 7)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# A33-36
+mixer.send("/config/routing/OUT/1-4", 8)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# A41-44
+mixer.send("/config/routing/OUT/1-4", 9)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# B1-4
+mixer.send("/config/routing/OUT/1-4", 10)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# B9-12
+mixer.send("/config/routing/OUT/1-4", 11)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# B17-20
+mixer.send("/config/routing/OUT/1-4", 12)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# B25-28
+mixer.send("/config/routing/OUT/1-4", 13)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# B33-46
+mixer.send("/config/routing/OUT/1-4", 14)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# B41-44
+mixer.send("/config/routing/OUT/1-4", 15)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# CARD 1-4
+mixer.send("/config/routing/OUT/1-4", 16)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# CARD 9-12
+mixer.send("/config/routing/OUT/1-4", 17)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# CARD 17-20
+mixer.send("/config/routing/OUT/1-4", 18)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# CARD 25-28
+mixer.send("/config/routing/OUT/1-4", 19)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# OUT1-4
+mixer.send("/config/routing/OUT/1-4", 20)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# OUT9-12
+mixer.send("/config/routing/OUT/1-4", 21)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# P16 1-4
+mixer.send("/config/routing/OUT/1-4", 22)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# P16 9-12
+mixer.send("/config/routing/OUT/1-4", 23)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# AUX/CR
+mixer.send("/config/routing/OUT/1-4", 24)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# AUX/TB
+mixer.send("/config/routing/OUT/1-4", 25)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# UOUT1-4
+mixer.send("/config/routing/OUT/1-4", 26)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# UOUT9-12
+mixer.send("/config/routing/OUT/1-4", 27)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# UOUT17-20
+mixer.send("/config/routing/OUT/1-4", 28)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# UOUT25-28
+mixer.send("/config/routing/OUT/1-48", 29)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# UOUT33-36
+mixer.send("/config/routing/OUT/1-4", 30)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# UOUT41-44
+mixer.send("/config/routing/OUT/1-4", 31)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# UIN 1-4
+mixer.send("/config/routing/OUT/1-4", 32)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# UIN 9-12
+mixer.send("/config/routing/OUT/1-4", 33)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# UIN 17-20
+mixer.send("/config/routing/OUT/1-4", 34)
+print(mixer.query("/config/routing/OUT/1-4"))
+time.sleep(1)
+
+# UIN 25-28
+mixer.send("/config/routing/OUT/1-4", 35)
+print(mixer.query("/config/routing/OUT/1-4"))
 time.sleep(1)
