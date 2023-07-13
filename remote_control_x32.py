@@ -2718,3 +2718,226 @@ time.sleep(1)
 mixer.send("/config/userctrl/B/enc/1", U2)
 print(mixer.query("/config/userctrl/B/enc/1"))
 time.sleep(1)
+
+
+
+# User C Encoder Controls 1-4
+# User C Fader Encoder Controls Not Assigned
+mixer.send("/config/userctrl/C/enc/1", _)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Fader Encoder Controls 00-31 Chl 01-32
+mixer.send("/config/userctrl/C/enc/1", F00)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Fader Encoder Controls 32-39 AUX 01-08
+mixer.send("/config/userctrl/C/enc/1", F32)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Fader Encoder Controls 40-47 FX rtn 1L to FX rtn 4R
+mixer.send("/config/userctrl/C/enc/1", F40)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Fader Encoder Controls 48-63 Matrix 1-6
+mixer.send("/config/userctrl/C/enc/1", F48)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Fader Encoder Controls Main LR
+mixer.send("/config/userctrl/C/enc/1", F70)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Fader Encoder Controls Main M/C
+mixer.send("/config/userctrl/C/enc/1", F71)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Fader Encoder Controls DCA 1-8
+mixer.send("/config/userctrl/C/enc/1", F72)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Pan Encoder Controls 00-31 Chl 01-32
+mixer.send("/config/userctrl/C/enc/1", P00)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Pan Encoder Controls 32-39 AUX 01-08
+mixer.send("/config/userctrl/C/enc/1", P32)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Pan Encoder Controls 40-47 FX rtn 1L to FX rtn 4R
+mixer.send("/config/userctrl/C/enc/1", P40)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Pan Encoder Controls 48-63 Matrix 1-6
+mixer.send("/config/userctrl/C/enc/1", P48)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Pan Encoder Controls Main LR
+mixer.send("/config/userctrl/C/enc/1", P70)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Pan Encoder Controls Main M/C
+mixer.send("/config/userctrl/C/enc/1", P71)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Pan Encoder Controls DCA 1-8
+mixer.send("/config/userctrl/C/enc/1", B72)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Send Encoder Controls 00-31 Chl 01-32 MixBus 01-16
+mixer.send("/config/userctrl/C/enc/1", S0000)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Send Encoder Controls 32-39 AUX 01-08 MixBus 01-16
+mixer.send("/config/userctrl/C/enc/1", S320000)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Send Encoder Controls 40-47 FX rtn 1L to FX rtn 4R MixBus 01-16
+mixer.send("/config/userctrl/C/enc/1", S4000)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Send Encoder Controls 48-63 Matrix 1-6 MixBus 01-16
+mixer.send("/config/userctrl/C/enc/1", S4800)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Send Encoder Controls Main LR MixBus 01-16
+mixer.send("/config/userctrl/C/enc/1", S7000)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Send Encoder Controls Main M/C MixBus 01-16 
+mixer.send("/config/userctrl/C/enc/1", S7100)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Send Encoder Controls DCA 1-8 MixBus 01-16
+mixer.send("/config/userctrl/C/enc/1", S7200)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Send Encoder Controls DCA 1-8 MixBus 01-16
+mixer.send("/config/userctrl/C/enc/1", S7200)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Midi Control Change Encoder Controls Midi Chl 1-16 MidiValue 000-127
+mixer.send("/config/userctrl/C/enc/1", MC00000)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Midi Note Encoder Controls Midi Chl 1-16 MidiValue 000-127
+mixer.send("/config/userctrl/C/enc/1", MN00000)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Midi Program Change Encoder Controls Midi Chl 1-16 MidiValue 000-127
+mixer.send("/config/userctrl/C/enc/1", MP00000)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Remote 1-8  Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", 000)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Remote Jog  Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", 008)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl Fader  Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", "D@")
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl Gate Threshold  Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", DA)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl Gate Range Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", DB)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl Gate Attack Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", DC)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl Gate Hold Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", DD)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl Gate Release Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", DE)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl Dynamic Threshold Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", DF)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl Dynamic Ratio Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", DG)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl Dynamic Knee Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", DH)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl Dynamic MGain  Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", DI)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl Dynamic Attack Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", DJ)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl Dynamic Hold Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", DK)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl Dynamic Release Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", DL)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl X-Live! Locator (Marker Position)  Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", U0)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl X-Live! Marker List (Nav)  Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", U1)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
+
+# User C Selected Chl X-Live! Session List (Nav)  Encoder Controls 
+mixer.send("/config/userctrl/C/enc/1", U2)
+print(mixer.query("/config/userctrl/C/enc/1"))
+time.sleep(1)
