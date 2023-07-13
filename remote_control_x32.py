@@ -2941,3 +2941,768 @@ time.sleep(1)
 mixer.send("/config/userctrl/C/enc/1", U2)
 print(mixer.query("/config/userctrl/C/enc/1"))
 time.sleep(1)
+
+
+
+# User Button Controls 5-12
+# User A Jump to "Channel" Page Button Controls chl 01-32 Home
+mixer.send("/config/userctrl/A/btn/5", P0000)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls chl 01-32 Config
+mixer.send("/config/userctrl/A/btn/5", P0001)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls chl 01-32 Gate
+mixer.send("/config/userctrl/A/btn/5", P0002)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls chl 01-32 Dynamics
+mixer.send("/config/userctrl/A/btn/5", P0003)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls chl 01-32 EQ
+mixer.send("/config/userctrl/A/btn/5", P0004)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls chl 01-32 Mix
+mixer.send("/config/userctrl/A/btn/5", P0005)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls chl 01-32 Main
+mixer.send("/config/userctrl/A/btn/5", P0006)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls chl 01-32 Send to Faders
+mixer.send("/config/userctrl/A/btn/5", P000S)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Aux 01-08 Home
+mixer.send("/config/userctrl/A/btn/5", P0000)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Aux 01-08 Config
+mixer.send("/config/userctrl/A/btn/5", P0001)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Aux 01-08 Gate
+mixer.send("/config/userctrl/A/btn/5", P3202)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Aux 01-08 Dynamics
+mixer.send("/config/userctrl/A/btn/5", P3203)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Aux 01-08 EQ
+mixer.send("/config/userctrl/A/btn/5", P3204)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Aux 01-08 Mix
+mixer.send("/config/userctrl/A/btn/5", P3205)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Aux 01-08 Main
+mixer.send("/config/userctrl/A/btn/5", P3206)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Aux 01-08 Send to Faders
+mixer.send("/config/userctrl/A/btn/5", P320S)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls FX rtn 1L-4R Home
+mixer.send("/config/userctrl/A/btn/5", P4000)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls FX rtn 1L-4R Config
+mixer.send("/config/userctrl/A/btn/5", P4001)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls FX rtn 1L-4R Gate
+mixer.send("/config/userctrl/A/btn/5", P4002)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls FX rtn 1L-4R Dynamics
+mixer.send("/config/userctrl/A/btn/5", P4003)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls FX rtn 1L-4R EQ
+mixer.send("/config/userctrl/A/btn/5", P4004)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls FX rtn 1L-4R Mix
+mixer.send("/config/userctrl/A/btn/5", P4005)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls FX rtn 1L-4R Main
+mixer.send("/config/userctrl/A/btn/5", P4006)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls FX rtn 1L-4R Send to Faders
+mixer.send("/config/userctrl/A/btn/5", P400S)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls MixBus 01-16 Home
+mixer.send("/config/userctrl/A/btn/5", P4800)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls MixBus 01-16 Config
+mixer.send("/config/userctrl/A/btn/5", P4801)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls MixBus 01-16 Gate
+mixer.send("/config/userctrl/A/btn/5", P4802)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls MixBus 01-16 Dynamics
+mixer.send("/config/userctrl/A/btn/5", P4803)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls MixBus 01-16 EQ
+mixer.send("/config/userctrl/A/btn/5", P4804)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls MixBus 01-16 Mix
+mixer.send("/config/userctrl/A/btn/5", P4805)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls MixBus 01-16 Main
+mixer.send("/config/userctrl/A/btn/5", P4806)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls MixBus 01-16 Send to Faders
+mixer.send("/config/userctrl/A/btn/5", P480S)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Matrix 1-6 Home
+mixer.send("/config/userctrl/A/btn/5", P6400)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Matrix 1-6 Config
+mixer.send("/config/userctrl/A/btn/5", P6401)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Matrix 1-6 Gate
+mixer.send("/config/userctrl/A/btn/5", P6402)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Matrix 1-6 Dynamics
+mixer.send("/config/userctrl/A/btn/5", P6403)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Matrix 1-6 EQ
+mixer.send("/config/userctrl/A/btn/5", P6404)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Matrix 1-6 Mix
+mixer.send("/config/userctrl/A/btn/5", P6405)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Matrix 1-6 Main
+mixer.send("/config/userctrl/A/btn/5", P6406)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Matrix 1-6 Send to Faders
+mixer.send("/config/userctrl/A/btn/5", P640S)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main LR Home
+mixer.send("/config/userctrl/A/btn/5", P7000)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main LR Config
+mixer.send("/config/userctrl/A/btn/5", P7001)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main LR Gate
+mixer.send("/config/userctrl/A/btn/5", P7002)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main LR Dynamics
+mixer.send("/config/userctrl/A/btn/5", P7003)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main LR EQ
+mixer.send("/config/userctrl/A/btn/5", P7004)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main LR Mix
+mixer.send("/config/userctrl/A/btn/5", P7005)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main LR Main
+mixer.send("/config/userctrl/A/btn/5", P7006)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main LR Send to Faders
+mixer.send("/config/userctrl/A/btn/5", P700S)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main M/C Home
+mixer.send("/config/userctrl/A/btn/5", P7100)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main M/C Config
+mixer.send("/config/userctrl/A/btn/5", P7101)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main M/C Gate
+mixer.send("/config/userctrl/A/btn/5", P7102)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main M/C Dynamics
+mixer.send("/config/userctrl/A/btn/5", P7103)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main M/C EQ
+mixer.send("/config/userctrl/A/btn/5", P7104)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main M/C Mix
+mixer.send("/config/userctrl/A/btn/5", P7105)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main M/C Main
+mixer.send("/config/userctrl/A/btn/5", P7106)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Channel" Page Button Controls Main M/C Send to Faders
+mixer.send("/config/userctrl/A/btn/5", P710S)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+
+# User A Jump to "Meter" Page Button Controls chl 01-32 Channel
+mixer.send("/config/userctrl/A/btn/5", P0010)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls chl 01-32 MixBus
+mixer.send("/config/userctrl/A/btn/5", P0011)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls chl 01-32 Aux/FX
+mixer.send("/config/userctrl/A/btn/5", P0012)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls chl 01-32 IN/OUT
+mixer.send("/config/userctrl/A/btn/5", P0013)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls chl 01-32 RTA
+mixer.send("/config/userctrl/A/btn/5", P0014)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+
+# User A Jump to "Meter" Page Button Controls Aux 01-08 Channel
+mixer.send("/config/userctrl/A/btn/5", P3210)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Aux 01-08 MixBus
+mixer.send("/config/userctrl/A/btn/5", P3211)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Aux 01-08 Aux/FX
+mixer.send("/config/userctrl/A/btn/5", P3212)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Aux 01-08 IN/OUT
+mixer.send("/config/userctrl/A/btn/5", P3213)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Aux 01-08 RTA
+mixer.send("/config/userctrl/A/btn/5", P3214)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+
+# User A Jump to "Meter" Page Button Controls FX rtn 1L-4R Channel
+mixer.send("/config/userctrl/A/btn/5", P4010)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls FX rtn 1L-4R MixBus
+mixer.send("/config/userctrl/A/btn/5", P4011)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls FX rtn 1L-4R Aux/FX
+mixer.send("/config/userctrl/A/btn/5", P4012)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls FX rtn 1L-4R IN/OUT
+mixer.send("/config/userctrl/A/btn/5", P4013)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls FX rtn 1L-4R RTA
+mixer.send("/config/userctrl/A/btn/5", P4014)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+
+# User A Jump to "Meter" Page Button Controls MixBus01-16 Channel
+mixer.send("/config/userctrl/A/btn/5", P4810)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls MixBus01-16 MixBus
+mixer.send("/config/userctrl/A/btn/5", P4811)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls MixBus01-16 Aux/FX
+mixer.send("/config/userctrl/A/btn/5", P4812)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls MixBus01-16 IN/OUT
+mixer.send("/config/userctrl/A/btn/5", P4813)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls MixBus01-16 RTA
+mixer.send("/config/userctrl/A/btn/5", P4814)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+
+# User A Jump to "Meter" Page Button Controls Matrix 1-6 Channel
+mixer.send("/config/userctrl/A/btn/5", P6410)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Matrix 1-6 MixBus
+mixer.send("/config/userctrl/A/btn/5", P6411)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Matrix 1-6 Aux/FX
+mixer.send("/config/userctrl/A/btn/5", P6412)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Matrix 1-6 IN/OUT
+mixer.send("/config/userctrl/A/btn/5", P6413)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Matrix 1-6 RTA
+mixer.send("/config/userctrl/A/btn/5", P6414)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+
+# User A Jump to "Meter" Page Button Controls Main LR Channel
+mixer.send("/config/userctrl/A/btn/5", P7010)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Main LR MixBus
+mixer.send("/config/userctrl/A/btn/5", P7011)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Main LR Aux/FX
+mixer.send("/config/userctrl/A/btn/5", P7012)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Main LR IN/OUT
+mixer.send("/config/userctrl/A/btn/5", P7013)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Main LR RTA
+mixer.send("/config/userctrl/A/btn/5", P7014)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+
+# User A Jump to "Meter" Page Button Controls Main M/C Channel
+mixer.send("/config/userctrl/A/btn/5", P7110)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Main M/C MixBus
+mixer.send("/config/userctrl/A/btn/5", P7111)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Main M/C Aux/FX
+mixer.send("/config/userctrl/A/btn/5", P7112)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Main M/C IN/OUT
+mixer.send("/config/userctrl/A/btn/5", P7113)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Meter" Page Button Controls Main M/C RTA
+mixer.send("/config/userctrl/A/btn/5", P7114)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+
+# User A Jump to "Route" Page Button Controls Channel 01-32 Home
+mixer.send("/config/userctrl/A/btn/5", P0020)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Channel 01-32 Analog Out
+mixer.send("/config/userctrl/A/btn/5", P0021)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Channel 01-32 AUXOUT
+mixer.send("/config/userctrl/A/btn/5", P0022)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Channel 01-32 P16OUT
+mixer.send("/config/userctrl/A/btn/5", P0023)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Channel 01-32 CARDOUT
+mixer.send("/config/userctrl/A/btn/5", P0024)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Channel 01-32 AES A OOUT
+mixer.send("/config/userctrl/A/btn/5", P0025)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Channel 01-32 AES B OUT
+mixer.send("/config/userctrl/A/btn/5", P0026)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Channel 01-32 XLROUT
+mixer.send("/config/userctrl/A/btn/5", P0027)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+
+# User A Jump to "Route" Page Button Controls AUX 01-08 Home
+mixer.send("/config/userctrl/A/btn/5", P3220)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls AUX 01-08 Analog Out
+mixer.send("/config/userctrl/A/btn/5", P3221)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls AUX 01-08 AUXOUT
+mixer.send("/config/userctrl/A/btn/5", P3222)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls AUX 01-08 P16OUT
+mixer.send("/config/userctrl/A/btn/5", P3223)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls AUX 01-08 CARDOUT
+mixer.send("/config/userctrl/A/btn/5", P3224)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls AUX 01-08 AES A OOUT
+mixer.send("/config/userctrl/A/btn/5", P3225)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls AUX 01-08 AES B OUT
+mixer.send("/config/userctrl/A/btn/5", P3226)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls AUX 01-08 XLROUT
+mixer.send("/config/userctrl/A/btn/5", P3227)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+
+# User A Jump to "Route" Page Button Controls FX rtn 1L-4R Home
+mixer.send("/config/userctrl/A/btn/5", P4020)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls FX rtn 1L-4R Analog Out
+mixer.send("/config/userctrl/A/btn/5", P4021)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls FX rtn 1L-4R AUXOUT
+mixer.send("/config/userctrl/A/btn/5", P4022)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls FX rtn 1L-4R P16OUT
+mixer.send("/config/userctrl/A/btn/5", P4023)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls FX rtn 1L-4R CARDOUT
+mixer.send("/config/userctrl/A/btn/5", P4024)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls FX rtn 1L-4R AES A OOUT
+mixer.send("/config/userctrl/A/btn/5", P4025)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls FX rtn 1L-4R AES B OUT
+mixer.send("/config/userctrl/A/btn/5", P4026)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls FX rtn 1L-4R XLROUT
+mixer.send("/config/userctrl/A/btn/5", P4027)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+# User A Jump to "Route" Page Button Controls MixBus 01-16 Home
+mixer.send("/config/userctrl/A/btn/5", P4820)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls MixBus 01-16 Analog Out
+mixer.send("/config/userctrl/A/btn/5", P4821)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls MixBus 01-16 AUXOUT
+mixer.send("/config/userctrl/A/btn/5", P4822)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls MixBus 01-16 P16OUT
+mixer.send("/config/userctrl/A/btn/5", P4823)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls MixBus 01-16 CARDOUT
+mixer.send("/config/userctrl/A/btn/5", P4824)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls MixBus 01-16 AES A OOUT
+mixer.send("/config/userctrl/A/btn/5", P4825)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls MixBus 01-16 AES B OUT
+mixer.send("/config/userctrl/A/btn/5", P4826)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls MixBus 01-16 XLROUT
+mixer.send("/config/userctrl/A/btn/5", P4827)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+
+# User A Jump to "Route" Page Button Controls Matrix 1-6 Home
+mixer.send("/config/userctrl/A/btn/5", P6420)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Matrix 1-6 Analog Out
+mixer.send("/config/userctrl/A/btn/5", P6421)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Matrix 1-6 AUXOUT
+mixer.send("/config/userctrl/A/btn/5", P6422)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Matrix 1-6 P16OUT
+mixer.send("/config/userctrl/A/btn/5", P6423)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Matrix 1-6 CARDOUT
+mixer.send("/config/userctrl/A/btn/5", P6424)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Matrix 1-6 AES A OOUT
+mixer.send("/config/userctrl/A/btn/5", P6425)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Matrix 1-6 AES B OUT
+mixer.send("/config/userctrl/A/btn/5", P6426)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Matrix 1-6 XLROUT
+mixer.send("/config/userctrl/A/btn/5", P6427)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+
+# User A Jump to "Route" Page Button Controls Main LR Home
+mixer.send("/config/userctrl/A/btn/5", P7020)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Main LR Analog Out
+mixer.send("/config/userctrl/A/btn/5", P7021)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Main LR AUXOUT
+mixer.send("/config/userctrl/A/btn/5", P7022)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Main LR P16OUT
+mixer.send("/config/userctrl/A/btn/5", P7023)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Main LR CARDOUT
+mixer.send("/config/userctrl/A/btn/5", P7024)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Main LR AES A OOUT
+mixer.send("/config/userctrl/A/btn/5", P7025)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Main LR AES B OUT
+mixer.send("/config/userctrl/A/btn/5", P7026)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Main LR XLROUT
+mixer.send("/config/userctrl/A/btn/5", P7027)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+
+# User A Jump to "Route" Page Button Controls Main M/C Home
+mixer.send("/config/userctrl/A/btn/5", P7120)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Main M/C Analog Out
+mixer.send("/config/userctrl/A/btn/5", P7121)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Main M/C AUXOUT
+mixer.send("/config/userctrl/A/btn/5", P7122)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Main M/C P16OUT
+mixer.send("/config/userctrl/A/btn/5", P7123)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Main M/C CARDOUT
+mixer.send("/config/userctrl/A/btn/5", P7124)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Main M/C AES A OOUT
+mixer.send("/config/userctrl/A/btn/5", P7125)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Main M/C AES B OUT
+mixer.send("/config/userctrl/A/btn/5", P7126)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Route" Page Button Controls Main M/C XLROUT
+mixer.send("/config/userctrl/A/btn/5", P7127)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
