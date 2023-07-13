@@ -2029,3 +2029,248 @@ time.sleep(1)
 mixer.send("/config/routing/PLAY/AUX", 15)
 print(mixer.query("/config/routing/PLAY/AUX"))
 time.sleep(1)
+
+# User Color Controls 
+# User Color Control A OFF
+mixer.send("/config/userctrl/A/color", 0)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A RED
+mixer.send("/config/userctrl/A/color", 1)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A GREEN
+mixer.send("/config/userctrl/A/color", 2)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A YELLOW
+mixer.send("/config/userctrl/A/color", 3)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A BLUE
+mixer.send("/config/userctrl/A/color", 4)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A MAGENTA 
+mixer.send("/config/userctrl/A/color", 5)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A CYAN
+mixer.send("/config/userctrl/A/color", 6)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A WHITE
+mixer.send("/config/userctrl/A/color", 7)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A OFFi
+mixer.send("/config/userctrl/A/color", 8)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A REDi
+mixer.send("/config/userctrl/A/color", 9)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A GREENi
+mixer.send("/config/userctrl/A/color", 10)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A YELLOWi
+mixer.send("/config/userctrl/A/color", 11)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A BLUEi
+mixer.send("/config/userctrl/A/color", 12)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A MAGENTAi 
+mixer.send("/config/userctrl/A/color", 13)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A CYANi
+mixer.send("/config/userctrl/A/color", 14)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Control A WHITEi
+mixer.send("/config/userctrl/A/color", 15)
+print(mixer.query("/config/userctrl/A/color"))
+time.sleep(1)
+
+# User Color Controls B 
+# User Color Control B OFF
+mixer.send("/config/userctrl/B/color", 0)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B RED
+mixer.send("/config/userctrl/B/color", 1)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B GREEN
+mixer.send("/config/userctrl/B/color", 2)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B YELLOW
+mixer.send("/config/userctrl/B/color", 3)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B BLUE
+mixer.send("/config/userctrl/B/color", 4)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B MAGENTA 
+mixer.send("/config/userctrl/B/color", 5)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B CYAN
+mixer.send("/config/userctrl/B/color", 6)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B WHITE
+mixer.send("/config/userctrl/B/color", 7)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B OFFi
+mixer.send("/config/userctrl/B/color", 8)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B REDi
+mixer.send("/config/userctrl/B/color", 9)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B GREENi
+mixer.send("/config/userctrl/B/color", 10)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B YELLOWi
+mixer.send("/config/userctrl/B/color", 11)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B BLUEi
+mixer.send("/config/userctrl/B/color", 12)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B MAGENTAi 
+mixer.send("/config/userctrl/B/color", 13)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B CYANi
+mixer.send("/config/userctrl/B/color", 14)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+# User Color Control B WHITEi
+mixer.send("/config/userctrl/B/color", 15)
+print(mixer.query("/config/userctrl/B/color"))
+time.sleep(1)
+
+
+
+# User Color Controls C 
+# User Color Control C OFF
+mixer.send("/config/userctrl/C/color", 0)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C RED
+mixer.send("/config/userctrl/C/color", 1)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C GREEN
+mixer.send("/config/userctrl/C/color", 2)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C YELLOW
+mixer.send("/config/userctrl/C/color", 3)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C BLUE
+mixer.send("/config/userctrl/C/color", 4)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C MAGENTA 
+mixer.send("/config/userctrl/C/color", 5)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C CYAN
+mixer.send("/config/userctrl/C/color", 6)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C WHITE
+mixer.send("/config/userctrl/C/color", 7)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C OFFi
+mixer.send("/config/userctrl/C/color", 8)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C REDi
+mixer.send("/config/userctrl/C/color", 9)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C GREENi
+mixer.send("/config/userctrl/C/color", 10)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C YELLOWi
+mixer.send("/config/userctrl/C/color", 11)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C BLUEi
+mixer.send("/config/userctrl/C/color", 12)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C MAGENTAi 
+mixer.send("/config/userctrl/C/color", 13)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C CYANi
+mixer.send("/config/userctrl/C/color", 14)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
+
+# User Color Control C WHITEi
+mixer.send("/config/userctrl/C/color", 15)
+print(mixer.query("/config/userctrl/C/color"))
+time.sleep(1)
