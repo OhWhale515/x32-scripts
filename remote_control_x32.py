@@ -4061,3 +4061,233 @@ time.sleep(1)
 mixer.send("/config/userctrl/A/btn/5", P7142)
 print(mixer.query("/config/userctrl/A/btn/5"))
 time.sleep(1)
+
+
+# User A Jump to "FX" Page Button Controls Layer OFF Home
+mixer.send("/config/userctrl/A/btn/5", P0050)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer OFF FX1
+mixer.send("/config/userctrl/A/btn/5", P0051)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer OFF FX2
+mixer.send("/config/userctrl/A/btn/5", P0052)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer OFF FX3
+mixer.send("/config/userctrl/A/btn/5", P0053)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer OFF FX4
+mixer.send("/config/userctrl/A/btn/5", P0054)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer OFF FX5
+mixer.send("/config/userctrl/A/btn/5", P0055)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer OFF FX6
+mixer.send("/config/userctrl/A/btn/5", P0056)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer OFF FX7
+mixer.send("/config/userctrl/A/btn/5", P0057)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer OFF FX8
+mixer.send("/config/userctrl/A/btn/5", P0058)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+# User A Jump to "FX" Page Button Controls Layer 01 Home
+mixer.send("/config/userctrl/A/btn/5", P0150)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 01 FX1
+mixer.send("/config/userctrl/A/btn/5", P0151)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 01 FX2
+mixer.send("/config/userctrl/A/btn/5", P0152)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 01 FX3
+mixer.send("/config/userctrl/A/btn/5", P0153)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 01 FX4
+mixer.send("/config/userctrl/A/btn/5", P0154)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 01 FX5
+mixer.send("/config/userctrl/A/btn/5", P0155)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 01 FX6
+mixer.send("/config/userctrl/A/btn/5", P0156)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 01 FX7
+mixer.send("/config/userctrl/A/btn/5", P0157)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 01 FX8
+mixer.send("/config/userctrl/A/btn/5", P0158)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+# User A Jump to "FX" Page Button Controls Layer 02 Home
+mixer.send("/config/userctrl/A/btn/5", P0250)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 02 FX1
+mixer.send("/config/userctrl/A/btn/5", P0251)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 02 FX2
+mixer.send("/config/userctrl/A/btn/5", P0252)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 02 FX3
+mixer.send("/config/userctrl/A/btn/5", P0253)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 02 FX4
+mixer.send("/config/userctrl/A/btn/5", P0254)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 02 FX5
+mixer.send("/config/userctrl/A/btn/5", P0255)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 02 FX6
+mixer.send("/config/userctrl/A/btn/5", P0256)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 02 FX7
+mixer.send("/config/userctrl/A/btn/5", P0257)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 02 FX8
+mixer.send("/config/userctrl/A/btn/5", P02258)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+# User A Jump to "FX" Page Button Controls Layer 03 Home
+mixer.send("/config/userctrl/A/btn/5", P0350)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 03 FX1
+mixer.send("/config/userctrl/A/btn/5", P0351)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 03 FX2
+mixer.send("/config/userctrl/A/btn/5", P0352)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 03 FX3
+mixer.send("/config/userctrl/A/btn/5", P0353)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 03 FX4
+mixer.send("/config/userctrl/A/btn/5", P0354)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 03 FX5
+mixer.send("/config/userctrl/A/btn/5", P0355)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 03 FX6
+mixer.send("/config/userctrl/A/btn/5", P0356)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 03 FX7
+mixer.send("/config/userctrl/A/btn/5", P0357)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 03 FX8
+mixer.send("/config/userctrl/A/btn/5", P0358)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+# User A Jump to "FX" Page Button Controls Layer 04 Home
+mixer.send("/config/userctrl/A/btn/5", P0450)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 04 FX1
+mixer.send("/config/userctrl/A/btn/5", P0451)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 04 FX2
+mixer.send("/config/userctrl/A/btn/5", P0452)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 04 FX3
+mixer.send("/config/userctrl/A/btn/5", P0453)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 04 FX4
+mixer.send("/config/userctrl/A/btn/5", P0454)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 04 FX5
+mixer.send("/config/userctrl/A/btn/5", P0455)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 04 FX6
+mixer.send("/config/userctrl/A/btn/5", P0456)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 04 FX7
+mixer.send("/config/userctrl/A/btn/5", P0457)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "FX" Page Button Controls Layer 04 FX8
+mixer.send("/config/userctrl/A/btn/5", P0458)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
