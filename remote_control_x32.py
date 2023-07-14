@@ -3292,6 +3292,44 @@ mixer.send("/config/userctrl/A/btn/5", P27)
 print(mixer.query("/config/userctrl/A/btn/5"))
 time.sleep(1)
 
+# User A Jump to "Setup" Page Button Controls Global
+mixer.send("/config/userctrl/A/btn/5", P30)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Setup" Page Button Controls Conf
+mixer.send("/config/userctrl/A/btn/5", P31)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Setup" Page Button Controls Remote
+mixer.send("/config/userctrl/A/btn/5", P32)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Setup" Page Button Controls Network
+mixer.send("/config/userctrl/A/btn/5", P33)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Setup" Page Button Controls Names
+mixer.send("/config/userctrl/A/btn/5", P34)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Setup" Page Button Controls Preamps
+mixer.send("/config/userctrl/A/btn/5", P35)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+# User A Jump to "Setup" Page Button Controls Card
+mixer.send("/config/userctrl/A/btn/5", P36)
+print(mixer.query("/config/userctrl/A/btn/5"))
+time.sleep(1)
+
+
+
+
 
 # User A Jump to "FX" Page Button Controls Layer OFF Home
 mixer.send("/config/userctrl/A/btn/5", P0050)
