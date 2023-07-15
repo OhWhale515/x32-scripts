@@ -4066,3 +4066,541 @@ time.sleep(1)
 mixer.send("/config/userctrl/A/btn/5", A1)
 print(mixer.query("/config/userctrl/A/btn/5"))
 time.sleep(1)
+
+
+# Gain Left 
+mixer.send("/config/tape/gainL", 10.0)
+print(mixer.query("/config/tape/gainL"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/config/solo/sourcetrim", str(val))
+    on = ~on
+time.sleep(1) 
+
+# Gain Right 
+mixer.send("/config/tape/gainR", 10.0)
+print(mixer.query("/config/tape/gainL"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/config/solo/sourcetrim", str(val))
+    on = ~on
+time.sleep(1) 
+
+# AutoPlay OFF 
+mixer.send("/config/tape/autoplay", OFF)
+print(mixer.query("/config/tape/autoplay"))
+time.sleep(1)
+
+# Mix Enable OFF 
+mixer.send("/config/amixenable/X", 0)
+print(mixer.query("/config/amixenable/X"))
+time.sleep(1)
+
+# Mix Enable ON 
+mixer.send("/config/amixenable/X", 1)
+print(mixer.query("/config/amixenable/X"))
+time.sleep(1)
+
+
+# DP48 Configurations
+# DP48 Scope Group Name 
+mixer.send("/config/dp48/scope", 0)
+print(mixer.query("/config/dp48/scope"))
+time.sleep(1)
+
+# DP48 Scope Group Assign 
+mixer.send("/config/dp48/scope", 1)
+print(mixer.query("/config/dp48/scope"))
+time.sleep(1)
+
+# DP48 Scope Chan Level 
+mixer.send("/config/dp48/scope", 2)
+print(mixer.query("/config/dp48/scope"))
+time.sleep(1)
+
+# DP48 Scope Chan Pan 
+mixer.send("/config/dp48/scope", 3)
+print(mixer.query("/config/dp48/scope"))
+time.sleep(1)
+
+
+# DP48 Broadcast No-OP 
+mixer.send("/config/dp48/broadcast", 0)
+print(mixer.query("/config/dp48/broadcast"))
+time.sleep(1)
+
+# DP48 Broadcast Broadcast scope TBV 
+mixer.send("/config/dp48/broadcast", 1)
+print(mixer.query("/config/dp48/broadcast"))
+time.sleep(1)
+
+
+# DP48 Assign 01-48 Group OFF
+mixer.send("/config/dp48/assign/01", 0)
+print(mixer.query("/config/dp48/assign/01"))
+time.sleep(1)
+
+# DP48 Assign 01-48 Group 1-12
+mixer.send("/config/dp48/assign/01", 1)
+print(mixer.query("/config/dp48/assign/01"))
+time.sleep(1)
+
+
+# DP48 Group Name 01-12
+mixer.send("/config/dp48/grpname/01", TEST123)
+print(mixer.query("/config/dp48/grpname/01"))
+time.sleep(1)
+
+
+# Channel Name Configurations 
+# Channel Name id 01-31
+mixer.send("/ch/01/config/name", TEST123)
+print(mixer.query("/ch/01/config/name"))
+time.sleep(1)
+
+# Channel Icon Blank id 01-31
+mixer.send("/ch/01/config/icon", 0)
+print(mixer.query("/ch/01/config/name"))
+time.sleep(1)
+
+# Channel Icon 02-74 id 01-31
+mixer.send("/ch/01/config/icon", 1)
+print(mixer.query("/ch/01/config/name"))
+time.sleep(1)
+
+
+
+# Channel Color Configurations 
+# Channel Color OFF
+mixer.send("/ch/01/config/color", 0)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Channel Color RED
+mixer.send("/ch/01/config/color", 1)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Channel Color GREEN
+mixer.send("/ch/01/config/color", 2)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Channel Color YELLOW
+mixer.send("/ch/01/config/color", 3)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Channel Color BLUE
+mixer.send("/ch/01/config/color", 4)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Channel Color MAGENTA 
+mixer.send("/ch/01/config/color", 5)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Channel Color CYAN
+mixer.send("/ch/01/config/color", 6)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Channel Color WHITE
+mixer.send("/ch/01/config/color", 7)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Chhannel Color OFFi
+mixer.send("/ch/01/config/color", 8)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Channel Color REDi
+mixer.send("/ch/01/config/color", 9)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Channel Color GREENi
+mixer.send("/ch/01/config/color", 10)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Channel Color YELLOWi
+mixer.send("/ch/01/config/color", 11)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Channel Color BLUEi
+mixer.send("/ch/01/config/color", 12)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Channel Color MAGENTAi 
+mixer.send("/ch/01/config/color", 13)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Channel Color CYANi
+mixer.send("/ch/01/config/color", 14)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+# Channel Color WHITEi
+mixer.send("/ch/01/config/color", 15)
+print(mixer.query("/ch/01/config/color"))
+time.sleep(1)
+
+
+# Channel Source Configurations 0-64
+# Channel Source OFF
+mixer.send("/ch/01/config/source", 0)
+print(mixer.query("/ch/01/config/source"))
+time.sleep(1)
+
+# Channel Source In01-32
+mixer.send("/ch/01/config/source", 1)
+print(mixer.query("/ch/01/config/source"))
+time.sleep(1)
+
+# Channel Source AUX 1-6
+mixer.send("/ch/01/config/source", 33)
+print(mixer.query("/ch/01/config/source"))
+time.sleep(1)
+
+# Channel Source USB L
+mixer.send("/ch/01/config/source", 39)
+print(mixer.query("/ch/01/config/source"))
+time.sleep(1)
+
+# Channel Source USB R
+mixer.send("/ch/01/config/source", 40)
+print(mixer.query("/ch/01/config/source"))
+time.sleep(1)
+
+# Channel Source FX 1L-4L
+mixer.send("/ch/01/config/source", 41)
+print(mixer.query("/ch/01/config/source"))
+time.sleep(1)
+
+# Channel Source FX 1R-4R
+mixer.send("/ch/01/config/source", 45)
+print(mixer.query("/ch/01/config/source"))
+time.sleep(1)
+
+# Channel Source Bus 01-16
+mixer.send("/ch/01/config/source", 49)
+print(mixer.query("/ch/01/config/source"))
+time.sleep(1)
+
+
+# Delay Controls
+# Delay OFF
+mixer.send("/ch/01/delay/on", 0)
+print(mixer.query("/ch/01/delay/on"))
+time.sleep(1)
+
+# Delay ON
+mixer.send("/ch/01/delay/on", 1)
+print(mixer.query("/ch/01/delay/on"))
+time.sleep(1)
+
+# Delay Time
+mixer.send("/ch/01/delay/on", 10.0)
+print(mixer.query("/ch/01/delay/on"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/delay/on", str(val))
+    on = ~on
+time.sleep(1)
+
+# Pre Amp Trim
+mixer.send("/ch/01/preamp/trim", 10.0)
+print(mixer.query("/ch/01/preamp/trim"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/preamp/trim", str(val))
+    on = ~on
+time.sleep(1)
+
+# Pre Amp Invert OFF
+mixer.send("/ch/01/preamp/invert", 0)
+print(mixer.query("/ch/01/preamp/invert"))
+time.sleep(1)
+
+# Pre Amp Invert ON
+mixer.send("/ch/01/preamp/invert", 1)
+print(mixer.query("/ch/01/preamp/invert"))
+time.sleep(1)
+
+# Pre Amp Phantom Power OFF
+mixer.send("/ch/01/preamp/hpon", 0)
+print(mixer.query("/ch/01/preamp/hpon"))
+time.sleep(1)
+
+# Pre Amp Phantom Power ON
+mixer.send("/ch/01/preamp/hpon", 1)
+print(mixer.query("/ch/01/preamp/hpon"))
+time.sleep(1)
+
+# Pre Amp HP Slope 12, 18, 24
+mixer.send("/ch/01/preamp/hpon", 12)
+print(mixer.query("/ch/01/preamp/hpon"))
+time.sleep(1)
+
+
+# Pre Amp HPF
+mixer.send("/ch/01/preamp/hpf", 10.0)
+print(mixer.query("/ch/01/preamp/hpf"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/preamp/hpf", str(val))
+    on = ~on
+time.sleep(1)
+
+
+# Gate Controls
+# Gate OFF
+mixer.send("/ch/01/gate/on", 0)
+print(mixer.query("/ch/01/gate/on"))
+time.sleep(1)
+
+# Gate ON
+mixer.send("/ch/01/gate/on", 1)
+print(mixer.query("/ch/01/gate/on"))
+time.sleep(1)
+
+# Gate Modes
+# Gate Modes EXP2-EXP4
+mixer.send("/ch/01/gate/mode", 0)
+print(mixer.query("/ch/01/gate/mode"))
+time.sleep(1)
+
+# Gate Modes GATE
+mixer.send("/ch/01/gate/mode", 3)
+print(mixer.query("/ch/01/gate/mode"))
+time.sleep(1)
+
+# Gate Modes DUCK
+mixer.send("/ch/01/gate/mode", 4)
+print(mixer.query("/ch/01/gate/mode"))
+time.sleep(1)
+
+
+# Gate Threshold dB
+mixer.send("/ch/01/gate/thr", 10.0)
+print(mixer.query("/ch/01/gate/thr"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/gate/thr", str(val))
+    on = ~on
+time.sleep(1)
+
+# Gate Range dB
+mixer.send("/ch/01/gate/range", 10.0)
+print(mixer.query("/ch/01/gate/range"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/gate/range", str(val))
+    on = ~on
+time.sleep(1)
+
+# Gate Attack dB
+mixer.send("/ch/01/gate/attack", 10.0)
+print(mixer.query("/ch/01/gate/attack"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/gate/attack", str(val))
+    on = ~on
+time.sleep(1)
+
+# Gate Hold ms
+mixer.send("/ch/01/gate/hold", 10.0)
+print(mixer.query("/ch/01/gate/hold"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/gate/hold", str(val))
+    on = ~on
+time.sleep(1)
+
+# Gate Release ms
+mixer.send("/ch/01/gate/release", 10.0)
+print(mixer.query("/ch/01/gate/release"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/gate/release", str(val))
+    on = ~on
+time.sleep(1)
+
+
+
+# Channel Gate Source OFF
+mixer.send("/ch/01/gate/keysrc", 0)
+print(mixer.query("/ch/01/gate/keysrc"))
+time.sleep(1)
+
+# Channel Gate Source In01-32
+mixer.send("/ch/01/gate/keysrc", 1)
+print(mixer.query("/ch/01/gate/keysrc"))
+time.sleep(1)
+
+# Channel Gate Source AUX 1-6
+mixer.send("/ch/01/gate/keysrc", 33)
+print(mixer.query("/ch/01/gate/keysrc"))
+time.sleep(1)
+
+# Channel Gate Source USB L
+mixer.send("/ch/01/gate/keysrc", 39)
+print(mixer.query("/ch/01/gate/keysrc"))
+time.sleep(1)
+
+# Channel Gate Source USB R
+mixer.send("/ch/01/gate/keysrc", 40)
+print(mixer.query("/ch/01/gate/keysrc"))
+time.sleep(1)
+
+# Channel Gate Source FX 1L-4L
+mixer.send("/ch/01/gate/keysrc", 41)
+print(mixer.query("/ch/01/gate/keysrc"))
+time.sleep(1)
+
+# Channel Gate Source FX 1R-4R
+mixer.send("/ch/01/gate/keysrc", 45)
+print(mixer.query("/ch/01/gate/keysrc"))
+time.sleep(1)
+
+# Channel Gate Source Bus 01-16
+mixer.send("/ch/01/gate/keysrc", 49)
+print(mixer.query("/ch/01/gate/keysrc"))
+time.sleep(1)
+
+
+# Channel Gate Filter OFF
+mixer.send("/ch/01/gate/filter/on", 0)
+print(mixer.query("/ch/01/gate/filter/on"))
+time.sleep(1)
+
+# Channel Gate Filter ON
+mixer.send("/ch/01/gate/filter/on", 1)
+print(mixer.query("/ch/01/gate/filter/on"))
+time.sleep(1)
+
+# Channel Gate Types
+# Channel Gate LC6
+mixer.send("/ch/01/gate/filter/type", 0)
+print(mixer.query("/ch/01/gate/filter/type"))
+time.sleep(1)
+
+# Channel Gate LC12
+mixer.send("/ch/01/gate/filter/type", 1)
+print(mixer.query("/ch/01/gate/filter/type"))
+time.sleep(1)
+
+# Channel Gate HC6
+mixer.send("/ch/01/gate/filter/type", 2)
+print(mixer.query("/ch/01/gate/filter/type"))
+time.sleep(1)
+
+# Channel Gate HC12
+mixer.send("/ch/01/gate/filter/type", 3)
+print(mixer.query("/ch/01/gate/filter/type"))
+time.sleep(1)
+
+# Channel Gate 1.0
+mixer.send("/ch/01/gate/filter/type", 4)
+print(mixer.query("/ch/01/gate/filter/type"))
+time.sleep(1)
+
+# Channel Gate 2.0
+mixer.send("/ch/01/gate/filter/type", 5)
+print(mixer.query("/ch/01/gate/filter/type"))
+time.sleep(1)
+
+# Channel Gate 3.0
+mixer.send("/ch/01/gate/filter/type", 6)
+print(mixer.query("/ch/01/gate/filter/type"))
+time.sleep(1)
+
+# Channel Gate 5.0
+mixer.send("/ch/01/gate/filter/type", 7)
+print(mixer.query("/ch/01/gate/filter/type"))
+time.sleep(1)
+
+# Channel Gate 10.0
+mixer.send("/ch/01/gate/filter/type", 8)
+print(mixer.query("/ch/01/gate/filter/type"))
+time.sleep(1)
+
+
+# Gate Filter Hertz
+mixer.send("/ch/01/gate/filter/f", 10.0)
+print(mixer.query("/ch/01/gate/filter/f"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/gate/filter/f", str(val))
+    on = ~on
+time.sleep(1)
+
+
+# Dynamic Mode Config
+# Dynamic Mode OFF
+mixer.send("/ch/01/dyn/on", 0)
+print(mixer.query("/ch/01/dyn/on"))
+time.sleep(1)
+
+# Dynamic Mode ON
+mixer.send("/ch/01/dyn/on", 1)
+print(mixer.query("/ch/01/dyn/on"))
+time.sleep(1)
+
+# Dynamic Mode COMP
+mixer.send("/ch/01/dyn/mode", 0)
+print(mixer.query("/ch/01/dyn/mode"))
+time.sleep(1)
+
+# Dynamic Mode EXP
+mixer.send("/ch/01/dyn/mode", 1)
+print(mixer.query("/ch/01/dyn/mode"))
+time.sleep(1)
+
+# Dynamic Mode Det PEAK
+mixer.send("/ch/01/dyn/det", 0)
+print(mixer.query("/ch/01/dyn/det"))
+time.sleep(1)
+
+# Dynamic Mode Det RMS
+mixer.send("/ch/01/dyn/det", 1)
+print(mixer.query("/ch/01/dyn/det"))
+time.sleep(1)
+
+# Dynamic Mode Evelope LIN
+mixer.send("/ch/01/dyn/env", 0)
+print(mixer.query("/ch/01/dyn/env"))
+time.sleep(1)
+
+# Dynamic Mode Evelope LOG
+mixer.send("/ch/01/dyn/env", 1)
+print(mixer.query("/ch/01/dyn/env"))
+time.sleep(1)
+
+
+# Dynamic Threshold
+mixer.send("/ch/01/dyn/thr", 10.0)
+print(mixer.query("/ch/01/dyn/thr"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/dyn/thr", str(val))
+    on = ~on
+time.sleep(1)
