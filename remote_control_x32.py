@@ -4604,3 +4604,255 @@ for i in range(100):
     mixer.send("/ch/01/dyn/thr", str(val))
     on = ~on
 time.sleep(1)
+
+# Dynamic Ratio 1.1
+mixer.send("/ch/01/dyn/ratio", 0)
+print(mixer.query("/ch/01/dyn/ratio"))
+time.sleep(1)
+
+# Dynamic Ratio 1.3
+mixer.send("/ch/01/dyn/ratio", 1)
+print(mixer.query("/ch/01/dyn/ratio"))
+time.sleep(1)
+
+# Dynamic Ratio 1.5
+mixer.send("/ch/01/dyn/ratio", 2)
+print(mixer.query("/ch/01/dyn/ratio"))
+time.sleep(1)
+
+# Dynamic Ratio 2.0
+mixer.send("/ch/01/dyn/ratio", 3)
+print(mixer.query("/ch/01/dyn/ratio"))
+time.sleep(1)
+
+# Dynamic Ratio 2.5
+mixer.send("/ch/01/dyn/ratio", 4)
+print(mixer.query("/ch/01/dyn/ratio"))
+time.sleep(1)
+
+# Dynamic Ratio 3.0
+mixer.send("/ch/01/dyn/ratio", 5)
+print(mixer.query("/ch/01/dyn/ratio"))
+time.sleep(1)
+
+# Dynamic Ratio 4.0
+mixer.send("/ch/01/dyn/ratio", 6)
+print(mixer.query("/ch/01/dyn/ratio"))
+time.sleep(1)
+
+# Dynamic Ratio 5.0
+mixer.send("/ch/01/dyn/ratio", 7)
+print(mixer.query("/ch/01/dyn/ratio"))
+time.sleep(1)
+
+# Dynamic Ratio 7.0
+mixer.send("/ch/01/dyn/ratio", 8)
+print(mixer.query("/ch/01/dyn/ratio"))
+time.sleep(1)
+
+# Dynamic Ratio 10
+mixer.send("/ch/01/dyn/ratio", 9)
+print(mixer.query("/ch/01/dyn/ratio"))
+time.sleep(1)
+
+# Dynamic Ratio 20
+mixer.send("/ch/01/dyn/ratio", 10)
+print(mixer.query("/ch/01/dyn/ratio"))
+time.sleep(1)
+
+# Dynamic Ratio 100
+mixer.send("/ch/01/dyn/ratio", 11)
+print(mixer.query("/ch/01/dyn/ratio"))
+time.sleep(1)
+
+
+# Dynamic Knee
+mixer.send("/ch/01/dyn/knee", 10.0)
+print(mixer.query("/ch/01/dyn/knee"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/dyn/knee", str(val))
+    on = ~on
+time.sleep(1)
+
+# Dynamic Mgain dB
+mixer.send("/ch/01/dyn/mgain", 10.0)
+print(mixer.query("/ch/01/dyn/mgain"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/dyn/mgain", str(val))
+    on = ~on
+time.sleep(1)
+
+# Dynamic Attack ms
+mixer.send("/ch/01/dyn/attack", 10.0)
+print(mixer.query("/ch/01/dyn/attack"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/dyn/attack", str(val))
+    on = ~on
+time.sleep(1)
+
+# Dynamic Hold ms
+mixer.send("/ch/01/dyn/hold", 10.0)
+print(mixer.query("/ch/01/dyn/hold"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/dyn/hold", str(val))
+    on = ~on
+time.sleep(1)
+
+# Dynamic Release ms
+mixer.send("/ch/01/dyn/release", 10.0)
+print(mixer.query("/ch/01/dyn/release"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/dyn/release", str(val))
+    on = ~on
+time.sleep(1)
+
+# Dyanmic POS PRE
+mixer.send("/ch/01/dyn/pos", 0)
+print(mixer.query("/ch/01/dyn/pos"))
+time.sleep(1)
+
+# Dyanmic POS POST
+mixer.send("/ch/01/dyn/pos", 1)
+print(mixer.query("/ch/01/dyn/pos"))
+time.sleep(1)
+
+
+# Channel DYN Source OFF
+mixer.send("/ch/01/dyn/keysrc", 0)
+print(mixer.query("/ch/01/dyn/keysrc"))
+time.sleep(1)
+
+# Channel DYN Source In01-32
+mixer.send("/ch/01/dyn/keysrc", 1)
+print(mixer.query("/ch/01/dyn/keysrc"))
+time.sleep(1)
+
+# Channel DYN Source AUX 1-6
+mixer.send("/ch/01/dyn/keysrc", 33)
+print(mixer.query("/ch/01/dyn/keysrc"))
+time.sleep(1)
+
+# Channel DYN Source USB L
+mixer.send("/ch/01/dyn/keysrc", 39)
+print(mixer.query("/ch/01/dyn/keysrc"))
+time.sleep(1)
+
+# Channel DYN Source USB R
+mixer.send("/ch/01/dyn/keysrc", 40)
+print(mixer.query("/ch/01/dyn/keysrc"))
+time.sleep(1)
+
+# Channel DYN Source FX 1L-4L
+mixer.send("/ch/01/dyn/keysrc", 41)
+print(mixer.query("/ch/01/dyn/keysrc"))
+time.sleep(1)
+
+# Channel DYN Source FX 1R-4R
+mixer.send("/ch/01/dyn/keysrc", 45)
+print(mixer.query("/ch/01/dyn/keysrc"))
+time.sleep(1)
+
+# Channel DYN Source Bus 01-16
+mixer.send("/ch/01/dyn/keysrc", 49)
+print(mixer.query("/ch/01/dyn/keysrc"))
+time.sleep(1)
+
+
+# Dynamic Mix Percent %
+mixer.send("/ch/01/dyn/mix", 10.0)
+print(mixer.query("/ch/01/dyn/mix"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/dyn/mix", str(val))
+    on = ~on
+time.sleep(1)
+
+
+# Dynamic Auto OFF
+mixer.send("/ch/01/dyn/auto", 0)
+print(mixer.query("/ch/01/dyn/auto"))
+time.sleep(1)
+
+# Dynamic Auto ON
+mixer.send("/ch/01/dyn/auto", 1)
+print(mixer.query("/ch/01/dyn/auto"))
+time.sleep(1)
+
+# Dynamic Filter OFF
+mixer.send("/ch/01/dyn/filter/on", 0)
+print(mixer.query("/ch/01/dyn/filter/on"))
+time.sleep(1)
+
+# Dynamic Filter ON
+mixer.send("/ch/01/dyn/filter/on", 1)
+print(mixer.query("/ch/01/dyn/filter/on"))
+time.sleep(1)
+
+
+
+# Channel Dynamic LC6
+mixer.send("/ch/01/dyn/filter/type", 0)
+print(mixer.query("/ch/01/dyn/filter/type"))
+time.sleep(1)
+
+# Channel Dynamic LC12
+mixer.send("/ch/01/dyn/filter/type", 1)
+print(mixer.query("/ch/01/dyn/filter/type"))
+time.sleep(1)
+
+# Channel Dynamic HC6
+mixer.send("/ch/01/dyn/filter/type", 2)
+print(mixer.query("/ch/01/dyn/filter/type"))
+time.sleep(1)
+
+# Channel Dynamic HC12
+mixer.send("/ch/01/dyn/filter/type", 3)
+print(mixer.query("/ch/01/dyn/filter/type"))
+time.sleep(1)
+
+# Channel Dynamic 1.0
+mixer.send("/ch/01/dyn/filter/type", 4)
+print(mixer.query("/ch/01/dyn/filter/type"))
+time.sleep(1)
+
+# Channel Dynamic 2.0
+mixer.send("/ch/01/dyn/filter/type", 5)
+print(mixer.query("/ch/01/dyn/filter/type"))
+time.sleep(1)
+
+# Channel Dynamic 3.0
+mixer.send("/ch/01/dyn/filter/type", 6)
+print(mixer.query("/ch/01/dyn/filter/type"))
+time.sleep(1)
+
+# Channel Dynamic 5.0
+mixer.send("/ch/01/dyn/filter/type", 7)
+print(mixer.query("/ch/01/dyn/filter/type"))
+time.sleep(1)
+
+# Channel Dynamic 10.0
+mixer.send("/ch/01/gate/dyn/type", 8)
+print(mixer.query("/ch/01/dyn/filter/type"))
+time.sleep(1)
+
+
+# Dynamic Filter Hertz
+mixer.send("/ch/01/dyn/filter/f", 10.0)
+print(mixer.query("/ch/01/dyn/filter/f"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/dyn/filter/f", str(val))
+    on = ~on
+time.sleep(1)
