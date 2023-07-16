@@ -5149,3 +5149,438 @@ for i in range(100):
     mixer.send("/ch/01/mix/01/level", str(val))
     on = ~on
 time.sleep(1)
+
+
+# Channel Mix Pan 01
+mixer.send("/ch/01/mix/01/pan", 10.0)
+print(mixer.query("/ch/01/mix/01/pan"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/mix/01/pan", str(val))
+    on = ~on
+time.sleep(1)
+
+# Channel Mix Pan 03
+mixer.send("/ch/01/mix/03/pan", 10.0)
+print(mixer.query("/ch/01/mix/03/pan"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/mix/03/pan", str(val))
+    on = ~on
+time.sleep(1)
+
+# Channel Mix Pan 05
+mixer.send("/ch/01/mix/05/pan", 10.0)
+print(mixer.query("/ch/01/mix/05/pan"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/mix/05/pan", str(val))
+    on = ~on
+time.sleep(1)
+
+# Channel Mix Pan 07
+mixer.send("/ch/01/mix/07/pan", 10.0)
+print(mixer.query("/ch/01/mix/07/pan"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/mix/07/pan", str(val))
+    on = ~on
+time.sleep(1)
+
+# Channel Mix Pan 09
+mixer.send("/ch/01/mix/09/pan", 10.0)
+print(mixer.query("/ch/01/mix/09/pan"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/mix/09/pan", str(val))
+    on = ~on
+time.sleep(1)
+
+# Channel Mix Pan 11
+mixer.send("/ch/01/mix/11/pan", 10.0)
+print(mixer.query("/ch/01/mix/11/pan"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/mix/11/pan", str(val))
+    on = ~on
+time.sleep(1)
+
+# Channel Mix Pan 13
+mixer.send("/ch/01/mix/13/pan", 10.0)
+print(mixer.query("/ch/01/mix/13/pan"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/mix/13/pan", str(val))
+    on = ~on
+time.sleep(1)
+
+# Channel Mix Pan 15
+mixer.send("/ch/01/mix/15/pan", 10.0)
+print(mixer.query("/ch/01/mix/15/pan"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/mix/15/pan", str(val))
+    on = ~on
+time.sleep(1)
+
+
+# Channel Mix 01 IN/LC Type
+mixer.send("/ch/01/mix/01/type", 0)
+print(mixer.query("/ch/01/mix/01/type"))
+time.sleep(1)
+
+# Channel Mix 01 <-EQ Type
+mixer.send("/ch/01/mix/01/type", 1)
+print(mixer.query("/ch/01/mix/01/type"))
+time.sleep(1)
+
+# Channel Mix 01 EQ-> Type
+mixer.send("/ch/01/mix/01/type", 2)
+print(mixer.query("/ch/01/mix/01/type"))
+time.sleep(1)
+
+# Channel Mix 01 PRE Type
+mixer.send("/ch/01/mix/01/type", 3)
+print(mixer.query("/ch/01/mix/01/type"))
+time.sleep(1)
+
+# Channel Mix 01 POST Type
+mixer.send("/ch/01/mix/01/type", 4)
+print(mixer.query("/ch/01/mix/01/type"))
+time.sleep(1)
+
+# Channel Mix 01 GRP Type
+mixer.send("/ch/01/mix/01/type", 5)
+print(mixer.query("/ch/01/mix/01/type"))
+time.sleep(1)
+
+
+# Channel Mix 03 IN/LC Type
+mixer.send("/ch/01/mix/03/type", 0)
+print(mixer.query("/ch/01/mix/03/type"))
+time.sleep(1)
+
+# Channel Mix 03 <-EQ Type
+mixer.send("/ch/01/mix/03/type", 1)
+print(mixer.query("/ch/01/mix/03/type"))
+time.sleep(1)
+
+# Channel Mix 03 EQ-> Type
+mixer.send("/ch/01/mix/03/type", 2)
+print(mixer.query("/ch/01/mix/03/type"))
+time.sleep(1)
+
+# Channel Mix 03 PRE Type
+mixer.send("/ch/01/mix/03/type", 3)
+print(mixer.query("/ch/01/mix/03/type"))
+time.sleep(1)
+
+# Channel Mix 03 POST Type
+mixer.send("/ch/01/mix/03/type", 4)
+print(mixer.query("/ch/01/mix/03/type"))
+time.sleep(1)
+
+# Channel Mix 03 GRP Type
+mixer.send("/ch/01/mix/03/type", 5)
+print(mixer.query("/ch/01/mix/03/type"))
+time.sleep(1)
+
+
+# Channel Mix 05 IN/LC Type
+mixer.send("/ch/01/mix/05/type", 0)
+print(mixer.query("/ch/01/mix/05/type"))
+time.sleep(1)
+
+# Channel Mix 05 <-EQ Type
+mixer.send("/ch/01/mix/05/type", 1)
+print(mixer.query("/ch/01/mix/05/type"))
+time.sleep(1)
+
+# Channel Mix 05 EQ-> Type
+mixer.send("/ch/01/mix/05/type", 2)
+print(mixer.query("/ch/01/mix/05/type"))
+time.sleep(1)
+
+# Channel Mix 05 PRE Type
+mixer.send("/ch/01/mix/05/type", 3)
+print(mixer.query("/ch/01/mix/05/type"))
+time.sleep(1)
+
+# Channel Mix 05 POST Type
+mixer.send("/ch/01/mix/05/type", 4)
+print(mixer.query("/ch/01/mix/05/type"))
+time.sleep(1)
+
+# Channel Mix 05 GRP Type
+mixer.send("/ch/01/mix/05/type", 5)
+print(mixer.query("/ch/01/mix/05/type"))
+time.sleep(1)
+
+
+# Channel Mix 07 IN/LC Type
+mixer.send("/ch/01/mix/07/type", 0)
+print(mixer.query("/ch/01/mix/07/type"))
+time.sleep(1)
+
+# Channel Mix 07 <-EQ Type
+mixer.send("/ch/01/mix/07/type", 1)
+print(mixer.query("/ch/01/mix/07/type"))
+time.sleep(1)
+
+# Channel Mix 07 EQ-> Type
+mixer.send("/ch/01/mix/07/type", 2)
+print(mixer.query("/ch/01/mix/07/type"))
+time.sleep(1)
+
+# Channel Mix 07 PRE Type
+mixer.send("/ch/01/mix/07/type", 3)
+print(mixer.query("/ch/01/mix/07/type"))
+time.sleep(1)
+
+# Channel Mix 07 POST Type
+mixer.send("/ch/01/mix/07/type", 4)
+print(mixer.query("/ch/01/mix/07/type"))
+time.sleep(1)
+
+# Channel Mix 07 GRP Type
+mixer.send("/ch/01/mix/07/type", 5)
+print(mixer.query("/ch/01/mix/07/type"))
+time.sleep(1)
+
+
+# Channel Mix 09 IN/LC Type
+mixer.send("/ch/01/mix/09/type", 0)
+print(mixer.query("/ch/01/mix/09/type"))
+time.sleep(1)
+
+# Channel Mix 09 <-EQ Type
+mixer.send("/ch/01/mix/09/type", 1)
+print(mixer.query("/ch/01/mix/09/type"))
+time.sleep(1)
+
+# Channel Mix 09 EQ-> Type
+mixer.send("/ch/01/mix/09/type", 2)
+print(mixer.query("/ch/01/mix/09/type"))
+time.sleep(1)
+
+# Channel Mix 09 PRE Type
+mixer.send("/ch/01/mix/09/type", 3)
+print(mixer.query("/ch/01/mix/09/type"))
+time.sleep(1)
+
+# Channel Mix 09 POST Type
+mixer.send("/ch/01/mix/09/type", 4)
+print(mixer.query("/ch/01/mix/09/type"))
+time.sleep(1)
+
+# Channel Mix 09 GRP Type
+mixer.send("/ch/01/mix/09/type", 5)
+print(mixer.query("/ch/01/mix/09/type"))
+time.sleep(1)
+
+
+# Channel Mix 11 IN/LC Type
+mixer.send("/ch/01/mix/11/type", 0)
+print(mixer.query("/ch/01/mix/11/type"))
+time.sleep(1)
+
+# Channel Mix 11 <-EQ Type
+mixer.send("/ch/01/mix/11/type", 1)
+print(mixer.query("/ch/01/mix/11/type"))
+time.sleep(1)
+
+# Channel Mix 11 EQ-> Type
+mixer.send("/ch/01/mix/11/type", 2)
+print(mixer.query("/ch/01/mix/11/type"))
+time.sleep(1)
+
+# Channel Mix 11 PRE Type
+mixer.send("/ch/01/mix/11/type", 3)
+print(mixer.query("/ch/01/mix/11/type"))
+time.sleep(1)
+
+# Channel Mix 11 POST Type
+mixer.send("/ch/01/mix/11/type", 4)
+print(mixer.query("/ch/01/mix/11/type"))
+time.sleep(1)
+
+# Channel Mix 11 GRP Type
+mixer.send("/ch/01/mix/11/type", 5)
+print(mixer.query("/ch/01/mix/11/type"))
+time.sleep(1)
+
+
+# Channel Mix IN/LC Type
+mixer.send("/ch/01/mix/01/type", 0)
+print(mixer.query("/ch/01/mix/01/type"))
+time.sleep(1)
+
+# Channel Mix <-EQ Type
+mixer.send("/ch/01/mix/01/type", 1)
+print(mixer.query("/ch/01/mix/01/type"))
+time.sleep(1)
+
+# Channel Mix EQ-> Type
+mixer.send("/ch/01/mix/01/type", 2)
+print(mixer.query("/ch/01/mix/01/type"))
+time.sleep(1)
+
+# Channel Mix 13 PRE Type
+mixer.send("/ch/01/mix/13/type", 3)
+print(mixer.query("/ch/01/mix/13/type"))
+time.sleep(1)
+
+# Channel Mix 13 POST Type
+mixer.send("/ch/01/mix/13/type", 4)
+print(mixer.query("/ch/01/mix/13/type"))
+time.sleep(1)
+
+# Channel Mix 13 GRP Type
+mixer.send("/ch/01/mix/13/type", 5)
+print(mixer.query("/ch/01/mix/13/type"))
+time.sleep(1)
+
+
+# Channel Mix 01 panFollow OFF
+mixer.send("/ch/01/mix/01/type", 0)
+print(mixer.query("/ch/01/mix/01/type"))
+time.sleep(1)
+
+# Channel Mix 01 panFollow ON
+mixer.send("/ch/01/mix/01/type", 1)
+print(mixer.query("/ch/01/mix/01/type"))
+time.sleep(1)
+
+
+# Channel Mix 03 panFollow OFF
+mixer.send("/ch/01/mix/03/type", 0)
+print(mixer.query("/ch/01/mix/03/type"))
+time.sleep(1)
+
+# Channel Mix 03 panFollow ON
+mixer.send("/ch/01/mix/03/type", 1)
+print(mixer.query("/ch/01/mix/03/type"))
+time.sleep(1)
+
+
+# Channel Mix 01 panFollow OFF
+mixer.send("/ch/01/mix/01/type", 0)
+print(mixer.query("/ch/01/mix/01/type"))
+time.sleep(1)
+
+# Channel Mix 05 panFollow ON
+mixer.send("/ch/01/mix/05/type", 1)
+print(mixer.query("/ch/01/mix/05/type"))
+time.sleep(1)
+
+
+# Channel Mix 07 panFollow OFF
+mixer.send("/ch/01/mix/07/type", 0)
+print(mixer.query("/ch/01/mix/07/type"))
+time.sleep(1)
+
+# Channel Mix 07 panFollow ON
+mixer.send("/ch/01/mix/07/type", 1)
+print(mixer.query("/ch/01/mix/07/type"))
+time.sleep(1)
+
+
+# Channel Mix 09 panFollow OFF
+mixer.send("/ch/01/mix/09/type", 0)
+print(mixer.query("/ch/01/mix/09/type"))
+time.sleep(1)
+
+# Channel Mix 09 panFollow ON
+mixer.send("/ch/01/mix/09/type", 1)
+print(mixer.query("/ch/01/mix/09/type"))
+time.sleep(1)
+
+
+# Channel Mix 11 panFollow OFF
+mixer.send("/ch/01/mix/11/type", 0)
+print(mixer.query("/ch/01/mix/11/type"))
+time.sleep(1)
+
+# Channel Mix 11 panFollow ON
+mixer.send("/ch/01/mix/11/type", 1)
+print(mixer.query("/ch/01/mix/11/type"))
+time.sleep(1)
+
+
+# Channel Mix 13 panFollow OFF
+mixer.send("/ch/01/mix/13/type", 0)
+print(mixer.query("/ch/01/mix/13/type"))
+time.sleep(1)
+
+# Channel Mix 01 panFollow ON
+mixer.send("/ch/01/mix/13/type", 1)
+print(mixer.query("/ch/01/mix/13/type"))
+time.sleep(1)
+
+
+# Channel Mix 15 panFollow OFF
+mixer.send("/ch/01/mix/15/type", 0)
+print(mixer.query("/ch/01/mix/15/type"))
+time.sleep(1)
+
+# Channel Mix 15 panFollow ON
+mixer.send("/ch/01/mix/15/type", 1)
+print(mixer.query("/ch/01/mix/15/type"))
+time.sleep(1)
+
+
+# Channel GRP DCA 01-32
+mixer.send("/ch/01/grp/dca", 1)
+print(mixer.query("/ch/01/grp/dca"))
+time.sleep(1)
+
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/grp/dca", str(val))
+    on = ~on
+    
+    
+# Channel GRP Mute 01-32
+mixer.send("/ch/01/grp/mute", 1)
+print(mixer.query("/ch/01/grp/mute"))
+time.sleep(1)
+
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/grp/mute", str(val))
+    on = ~on
+
+
+# Channel AutoMix Group OFF 01-32
+mixer.send("/ch/01/automix/group", 0)
+print(mixer.query("/ch/01/automix/group"))
+time.sleep(1)
+
+# Channel AutoMix Group X Axis 01-32
+mixer.send("/ch/01/automix/group", 1)
+print(mixer.query("/ch/01/automix/group"))
+time.sleep(1)
+
+# Channel AutoMix Group Y Axis 01-32
+mixer.send("/ch/01/automix/group", 2)
+print(mixer.query("/ch/01/automix/group"))
+time.sleep(1)
+
+
+# Channel AutoMix Weight dB 01-32
+mixer.send("/ch/01/automix/weight", 1)
+print(mixer.query("/ch/01/automix/weight"))
+time.sleep(1)
+
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/automix/weight", str(val))
+    on = ~on
