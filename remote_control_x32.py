@@ -4856,3 +4856,296 @@ for i in range(100):
     mixer.send("/ch/01/dyn/filter/f", str(val))
     on = ~on
 time.sleep(1)
+
+
+# Channel Insert OFF
+mixer.send("/ch/01/insert/on", 0)
+print(mixer.query("/ch/01/insert/on"))
+time.sleep(1)
+
+# Channel Insert ON
+mixer.send("/ch/01/insert/on", 1)
+print(mixer.query("/ch/01/insert/on"))
+time.sleep(1)
+
+# Channel Insert POS PRE
+mixer.send("/ch/01/insert/pos", 0)
+print(mixer.query("/ch/01/insert/pos"))
+time.sleep(1)
+
+# Channel Insert POS POST
+mixer.send("/ch/01/insert/pos", 1)
+print(mixer.query("/ch/01/insert/pos"))
+time.sleep(1)
+
+
+# Channel Insert Sel OFF
+mixer.send("/ch/01/insert/sel", 0)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX1L
+mixer.send("/ch/01/insert/sel", 1)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX1R
+mixer.send("/ch/01/insert/sel", 2)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX2L
+mixer.send("/ch/01/insert/sel", 3)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX2R
+mixer.send("/ch/01/insert/sel", 4)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX3L
+mixer.send("/ch/01/insert/sel", 5)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX3R
+mixer.send("/ch/01/insert/sel", 6)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX4L
+mixer.send("/ch/01/insert/sel", 7)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX4R
+mixer.send("/ch/01/insert/sel", 8)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX5L
+mixer.send("/ch/01/insert/sel", 9)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX5R
+mixer.send("/ch/01/insert/sel", 10)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX6L
+mixer.send("/ch/01/insert/sel", 11)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX6R
+mixer.send("/ch/01/insert/sel", 12)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX7L
+mixer.send("/ch/01/insert/sel", 13)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX7R
+mixer.send("/ch/01/insert/sel", 14)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX8L
+mixer.send("/ch/01/insert/sel", 15)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel FX8R
+mixer.send("/ch/01/insert/sel", 16)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel AUX1
+mixer.send("/ch/01/insert/sel", 17)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel AUX2
+mixer.send("/ch/01/insert/sel", 18)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel AUX3
+mixer.send("/ch/01/insert/sel", 19)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel AUX4
+mixer.send("/ch/01/insert/sel", 20)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel AUX5
+mixer.send("/ch/01/insert/sel", 21)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+# Channel Insert Sel AUX6
+mixer.send("/ch/01/insert/sel", 22)
+print(mixer.query("/ch/01/insert/sel"))
+time.sleep(1)
+
+
+# Channel EQ OFF
+mixer.send("/ch/01/eq/on", 0)
+print(mixer.query("/ch/01/eq/on"))
+time.sleep(1)
+
+# Channel EQ ON
+mixer.send("/ch/01/eq/on", 1)
+print(mixer.query("/ch/01/eq/on"))
+time.sleep(1)
+
+
+# Channel EQ 1-4 LCUT 
+mixer.send("/ch/01/eq/1/type", 0)
+print(mixer.query("/ch/01/eq/1/type"))
+time.sleep(1)
+
+# Channel EQ 1-4 LShv
+mixer.send("/ch/01/eq/1/type", 1)
+print(mixer.query("/ch/01/eq/1/type"))
+time.sleep(1)
+
+# Channel EQ 1-4 PEQ 
+mixer.send("/ch/01/eq/1/type", 2)
+print(mixer.query("/ch/01/eq/1/type"))
+time.sleep(1)
+
+# Channel EQ 1-4 VEQ 
+mixer.send("/ch/01/eq/1/type", 3)
+print(mixer.query("/ch/01/eq/1/type"))
+time.sleep(1)
+
+# Channel EQ 1-4 HShv
+mixer.send("/ch/01/eq/1/type", 4)
+print(mixer.query("/ch/01/eq/1/type"))
+time.sleep(1)
+
+# Channel EQ 1-4 HCut 
+mixer.send("/ch/01/eq/1/type", 5)
+print(mixer.query("/ch/01/eq/1/type"))
+time.sleep(1)
+
+
+# Channel EQ 1-4 Hertz
+mixer.send("/ch/01/eq/1/f", 10.0)
+print(mixer.query("/ch/01/eq/1/f"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/eq/1/f", str(val))
+    on = ~on
+time.sleep(1)
+
+# Channel EQ 1-4 dB
+mixer.send("/ch/01/eq/1/g", 10.0)
+print(mixer.query("/ch/01/eq/1/g"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/eq/1/g", str(val))
+    on = ~on
+time.sleep(1)
+
+# Channel EQ 1-4 Q
+mixer.send("/ch/01/eq/1/q", 10.0)
+print(mixer.query("/ch/01/eq/1/q"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/eq/1/q", str(val))
+    on = ~on
+time.sleep(1)
+
+
+# Channel Mix OFF
+mixer.send("/ch/01/mix/on", 0)
+print(mixer.query("/ch/01/mix/on"))
+time.sleep(1)
+
+# Channel Mix ON
+mixer.send("/ch/01/mix/on", 1)
+print(mixer.query("/ch/01/mix/on"))
+time.sleep(1)
+
+
+# Channel Mix Fader dB Level
+mixer.send("/ch/01/mix/fader", 10.0)
+print(mixer.query("/ch/01/mix/fader"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/mix/fader", str(val))
+    on = ~on
+time.sleep(1)
+
+# Channel Mix st OFF
+mixer.send("/ch/01/mix/st", 0)
+print(mixer.query("/ch/01/mix/st"))
+time.sleep(1)
+
+# Channel Mix st ON
+mixer.send("/ch/01/mix/st", 1)
+print(mixer.query("/ch/01/mix/st"))
+time.sleep(1)
+
+# Channel Mix Pan 
+mixer.send("/ch/01/mix/pan", 10.0)
+print(mixer.query("/ch/01/mix/pan"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/mix/pan", str(val))
+    on = ~on
+time.sleep(1)
+
+# Channel Mix Mono OFF
+mixer.send("/ch/01/mix/mono", 0)
+print(mixer.query("/ch/01/mix/mono"))
+time.sleep(1)
+
+# Channel Mix Mono ON
+mixer.send("/ch/01/mix/mono", 1)
+print(mixer.query("/ch/01/mix/mono"))
+time.sleep(1)
+
+# Channel Mix dB mlevel
+mixer.send("/ch/01/mix/mlevel", 10.0)
+print(mixer.query("/ch/01/mix/mlevel"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/mix/mlevel", str(val))
+    on = ~on
+time.sleep(1)
+
+
+# Channel Mix OFF
+mixer.send("/ch/01/mix/01/on", 0)
+print(mixer.query("/ch/01/mix/01/on"))
+time.sleep(1)
+
+# Channel Mix ON
+mixer.send("/ch/01/mix/01/on", 1)
+print(mixer.query("/ch/01/mix/01/on"))
+time.sleep(1)
+
+# Channel Mix dB Level 01-16
+mixer.send("/ch/01/mix/01/level", 10.0)
+print(mixer.query("/ch/01/mix/01/level"))
+time.sleep(1)
+for i in range(100):
+    val = random.uniform(-60, 10)
+    mixer.send("/ch/01/mix/01/level", str(val))
+    on = ~on
+time.sleep(1)
