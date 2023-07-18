@@ -41,7 +41,6 @@ mixer.send("/ch/01/mix/on", 0)
 print(mixer.query("/ch/01/mix/on"))
 
 
-
 # Toggle GATE on channel 1
 mixer.send("/ch/01/gate/on", 1)
 print(mixer.query("/ch/01/gate/on"))
@@ -102,11 +101,6 @@ mixer.send("/ch/01/eq/on", 0)
 print(mixer.query("/ch/01/eq/on"))
 time.sleep(1)
 pass
-
-
-
-
-
 
 
 # Channel Link CH1-CH2 On
