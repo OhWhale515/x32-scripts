@@ -639,3 +639,1046 @@ def config_routing_aes50a_1_48(mixer, input_num):
     """
     mixer.send(f"/config/routing/AES50A/1-8", input_num)
     print(mixer.query(f"/config/routing/AES50A/1-8"))
+
+
+
+def config_routing_card_1_32(mixer, input_num):
+    """
+    Configures the CARD Routing for 1-32 inputs.
+
+    Args:
+        mixer: The mixer object.
+        input_num (int): The input number to configure.
+
+    Input Numbers:
+        0: AN1-8
+        1: AN9-16
+        2: AN17-24
+        3: AN25-32
+        4: A1-8
+        5: A9-16
+        6: A17-24
+        7: A25-32
+        8: A33-40
+        9: A41-48
+        10: B1-8
+        11: B9-16
+        12: B17-24
+        13: B25-32
+        14: B33-40
+        15: B41-48
+        16: CARD 1-8
+        17: CARD 9-16
+        18: CARD 17-24
+        19: CARD 25-32
+        20: OUT1-8
+        21: OUT9-16
+        22: P16 1-8
+        23: P16 9-16
+        24: AUX1-6/Mon
+        25: AuxIN1-6/TB
+        26: UOUT1-8
+        27: UOUT9-16
+        28: UOUT17-24
+        29: UOUT25-32
+        30: UOUT33-40
+        31: UOUT41-48
+        32: UIN 1-8
+        33: UIN 9-16
+        34: UIN 17-24
+        35: UIN 25-32
+    """
+    mixer.send(f"/config/routing/CARD/1-8", input_num)
+    print(mixer.query(f"/config/routing/CARD/1-8"))
+
+
+def config_routing_out_1_4(mixer, input_num):
+    """
+    Configures the OUTPUT Routing for 1-4 inputs.
+
+    Args:
+        mixer: The mixer object.
+        input_num (int): The input number to configure.
+
+    Input Numbers:
+        0: AN1-4
+        1: AN9-12
+        2: AN17-20
+        3: AN25-28
+        4: A1-4
+        5: A9-12
+        6: A17-20
+        7: A25-28
+        8: A33-36
+        9: A41-44
+        10: B1-4
+        11: B9-12
+        12: B17-20
+        13: B25-28
+        14: B33-46
+        15: B41-44
+        16: CARD 1-4
+        17: CARD 9-12
+        18: CARD 17-20
+        19: CARD 25-28
+        20: OUT1-4
+        21: OUT9-12
+        22: P16 1-4
+        23: P16 9-12
+        24: AUX/CR
+        25: AUX/TB
+        26: UOUT1-4
+        27: UOUT9-12
+        28: UOUT17-20
+        29: UOUT25-28
+        30: UOUT33-36
+        31: UOUT41-44
+        32: UIN 1-4
+        33: UIN 9-12
+        34: UIN 17-20
+        35: UIN 25-28
+    """
+    mixer.send(f"/config/routing/OUT/1-4", input_num)
+    print(mixer.query(f"/config/routing/OUT/1-4"))
+
+
+def config_routing_out_9_12(mixer, input_num):
+    """
+    Configures the OUTPUT Routing for 9-12 inputs.
+
+    Args:
+        mixer: The mixer object.
+        input_num (int): The input number to configure.
+
+    Input Numbers:
+        0: AN1-4
+        1: AN9-12
+        2: AN17-20
+        3: AN25-28
+        4: A1-4
+        5: A9-12
+        6: A17-20
+        7: A25-28
+        8: A33-36
+        9: A41-44
+        10: B1-4
+        11: B9-12
+        12: B17-20
+        13: B25-28
+        14: B33-46
+        15: B41-44
+        16: CARD 1-4
+        17: CARD 9-12
+        18: CARD 17-20
+        19: CARD 25-28
+        20: OUT1-4
+        21: OUT9-12
+        22: P16 1-4
+        23: P16 9-12
+        24: AUX/CR
+        25: AUX/TB
+        26: UOUT1-4
+        27: UOUT9-12
+        28: UOUT17-20
+        29: UOUT25-28
+        30: UOUT33-36
+        31: UOUT41-44
+        32: UIN 1-4
+        33: UIN 9-12
+        34: UIN 17-20
+        35: UIN 25-28
+    """
+    mixer.send(f"/config/routing/OUT/9-12", input_num)
+    print(mixer.query(f"/config/routing/OUT/9-12"))
+
+
+
+def config_routing_out_5_8(mixer, input_num):
+    """
+    Configures the OUTPUT Routing for 5-8 inputs.
+
+    Args:
+        mixer: The mixer object.
+        input_num (int): The input number to configure.
+
+    Input Numbers:
+        0: AN5-8
+        1: AN13-16
+        2: AN21-24
+        3: AN29-32
+        4: A5-8
+        5: A13-16
+        6: A21-24
+        7: A29-32
+        8: A37-40
+        9: A45-48
+        10: B5-8
+        11: B13-16
+        12: B21-24
+        13: B29-32
+        14: B37-40
+        15: B45-48
+        16: CARD 5-8
+        17: CARD 13-16
+        18: CARD 21-24
+        19: CARD 29-32
+        20: OUT5-8
+        21: OUT13-16
+        22: P16 5-8
+        23: P16 13-16
+        24: AUX/CR
+        25: AUX/TB
+        26: UOUT5-8
+        27: UOUT13-16
+        28: UOUT21-24
+        29: UOUT29-32
+        30: UOUT37-40
+        31: UOUT45-48
+        32: UIN 5-8
+        33: UIN 13-16
+        34: UIN 21-24
+        35: UIN 29-32
+    """
+    mixer.send(f"/config/routing/OUT/5-8", input_num)
+    print(mixer.query(f"/config/routing/OUT/5-8"))
+
+
+def config_routing_out_13_16(mixer, input_num):
+    """
+    Configures the OUTPUT Routing for 13-16 inputs.
+
+    Args:
+        mixer: The mixer object.
+        input_num (int): The input number to configure.
+
+    Input Numbers:
+        0: AN5-8
+        1: AN13-16
+        2: AN21-24
+        3: AN29-32
+        4: A5-8
+        5: A13-16
+        6: A21-24
+        7: A29-32
+        8: A37-40
+        9: A45-48
+        10: B5-8
+        11: B13-16
+        12: B21-24
+        13: B29-32
+        14: B37-40
+        15: B45-48
+        16: CARD 5-8
+        17: CARD 13-16
+        18: CARD 21-24
+        19: CARD 29-32
+        20: OUT5-8
+        21: OUT13-16
+        22: P16 5-8
+        23: P16 13-16
+        24: AUX/CR
+        25: AUX/TB
+        26: UOUT5-8
+        27: UOUT13-16
+        28: UOUT21-24
+        29: UOUT29-32
+        30: UOUT37-40
+        31: UOUT45-48
+        32: UIN 5-8
+        33: UIN 13-16
+        34: UIN 21-24
+        35: UIN 29-32
+    """
+    mixer.send(f"/config/routing/OUT/13-16", input_num)
+    print(mixer.query(f"/config/routing/OUT/13-16"))
+
+
+
+def play_routing_1_8(mixer, input_num):
+    """
+    Configures the PLAY Routing for 1-8 inputs.
+
+    Args:
+        mixer: The mixer object.
+        input_num (int): The input number to configure.
+
+    Input Numbers:
+        0: AN1-8
+        1: AN9-16
+        2: AN17-24
+        3: AN25-32
+        4: A1-8
+        5: A9-16
+        6: A17-24
+        7: A25-32
+        8: A33-40
+        9: A41-48
+        10: B1-8
+        11: B9-16
+        12: B17-24
+        13: B25-32
+        14: B33-40
+        15: B41-48
+        16: CARD 1-8
+        17: CARD 9-16
+        18: CARD 17-24
+        19: CARD 25-32
+        20: UIN 1-8
+        21: UIN 9-16
+        22: UIN 17-24
+        23: UIN 25-32
+    """
+    mixer.send("/config/routing/PLAY/1-8", input_num)
+    print(mixer.query("/config/routing/PLAY/1-8"))
+
+
+def play_aux_routing(mixer, input_num):
+    """
+    Configures the PLAY AUX Routing.
+
+    Args:
+        mixer: The mixer object.
+        input_num (int): The input number to configure.
+
+    Input Numbers:
+        0: AUX1-4
+        1: AN1-2
+        2: AN1-4
+        3: AN1-6
+        4: A1-2
+        5: A1-4
+        6: A1-6
+        7: B1-2
+        8: B1-4
+        9: B1-6
+        10: CARD1-2
+        11: CARD1-4
+        12: CARD1-6
+        13: UIN1-2
+        14: UIN1-4
+        15: UIN1-6
+    """
+    mixer.send("/config/routing/PLAY/AUX", input_num)
+    print(mixer.query("/config/routing/PLAY/AUX"))
+
+
+
+def user_color_control(mixer, control_type, color_code):
+    """
+    Configures the User Color Control for A, B, or C.
+
+    Args:
+        mixer: The mixer object.
+        control_type (str): 'A', 'B', or 'C' for the respective control.
+        color_code (int): The color code to set the color.
+
+    Color Codes:
+        0: OFF
+        1: RED
+        2: GREEN
+        3: YELLOW
+        4: BLUE
+        5: MAGENTA
+        6: CYAN
+        7: WHITE
+        8: OFFi
+        9: REDi
+        10: GREENi
+        11: YELLOWi
+        12: BLUEi
+        13: MAGENTAi
+        14: CYANi
+        15: WHITEi
+    """
+    control_path = f"/config/userctrl/{control_type}/color"
+    mixer.send(control_path, color_code)
+    print(mixer.query(control_path))
+
+
+def user_a_encoder_control(mixer, control_type, control_code):
+    """
+    Configures the User A Encoder Controls 1-4.
+
+    Args:
+        mixer: The mixer object.
+        control_type (str): The type of control (F: Fader, P: Pan, S: Send).
+        control_code (str): The control code to configure.
+
+    Control Codes:
+        F00: Fader Encoder Controls Not Assigned
+        F32: Fader Encoder Controls 32-39 AUX 01-08
+        F40: Fader Encoder Controls 40-47 FX rtn 1L to FX rtn 4R
+        F48: Fader Encoder Controls 48-63 Matrix 1-6
+        F70: Fader Encoder Controls Main LR
+        F71: Fader Encoder Controls Main M/C
+        F72: Fader Encoder Controls DCA 1-8
+        P00: Pan Encoder Controls 00-31 Chl 01-32
+        P32: Pan Encoder Controls 32-39 AUX 01-08
+        P40: Pan Encoder Controls 40-47 FX rtn 1L to FX rtn 4R
+        P48: Pan Encoder Controls 48-63 Matrix 1-6
+        P70: Pan Encoder Controls Main LR
+        P71: Pan Encoder Controls Main M/C
+        P72: Pan Encoder Controls DCA 1-8
+        S0000: Send Encoder Controls 00-31 Chl 01-32 MixBus 01-16
+        S320000: Send Encoder Controls 32-39 AUX 01-08 MixBus 01-16
+        S4000: Send Encoder Controls 40-47 FX rtn 1L to FX rtn 4R MixBus 01-16
+        S4800: Send Encoder Controls 48-63 Matrix 1-6 MixBus 01-16
+        S7000: Send Encoder Controls Main LR MixBus 01-16
+        S7100: Send Encoder Controls Main M/C MixBus 01-16
+        S7200: Send Encoder Controls DCA 1-8 MixBus 01-16
+    """
+    control_path = f"/config/userctrl/A/enc/1"
+    mixer.send(control_path, control_type + control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_midi_control_change_encoder(mixer, midi_channel, midi_value):
+    """
+    Configures the User A Midi Control Change Encoder Controls.
+
+    Args:
+        mixer: The mixer object.
+        midi_channel (int): Midi channel (1-16).
+        midi_value (int): Midi value (000-127).
+    """
+    control_code = f"MC{midi_channel:02d}{midi_value:03d}"
+    control_path = "/config/userctrl/A/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_midi_note_encoder(mixer, midi_channel, midi_value):
+    """
+    Configures the User A Midi Note Encoder Controls.
+
+    Args:
+        mixer: The mixer object.
+        midi_channel (int): Midi channel (1-16).
+        midi_value (int): Midi value (000-127).
+    """
+    control_code = f"MN{midi_channel:02d}{midi_value:03d}"
+    control_path = "/config/userctrl/A/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_midi_program_change_encoder(mixer, midi_channel, midi_value):
+    """
+    Configures the User A Midi Program Change Encoder Controls.
+
+    Args:
+        mixer: The mixer object.
+        midi_channel (int): Midi channel (1-16).
+        midi_value (int): Midi value (000-127).
+    """
+    control_code = f"MP{midi_channel:02d}{midi_value:03d}"
+    control_path = "/config/userctrl/A/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_selected_chl_encoder(mixer, encoder_code):
+    """
+    Configures the User A Selected Chl Encoder Controls.
+
+    Args:
+        mixer: The mixer object.
+        encoder_code (str): The encoder control code to configure.
+    """
+    control_path = "/config/userctrl/A/enc/1"
+    mixer.send(control_path, encoder_code)
+    print(mixer.query(control_path))
+
+
+def user_b_fader_encoder_not_assigned(mixer):
+    control_code = "_"
+    control_path = "/config/userctrl/B/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_b_fader_encoder_channels(mixer, channel_number):
+    control_code = f"F{channel_number:02d}"
+    control_path = "/config/userctrl/B/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_b_fader_encoder_aux(mixer, aux_number):
+    control_code = f"F{aux_number:02d}"
+    control_path = "/config/userctrl/B/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_b_send_encoder_channels(mixer, channel_number, mix_bus_number):
+    control_code = f"S{channel_number:02d}{mix_bus_number:04d}"
+    control_path = "/config/userctrl/B/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_b_midi_control_change_encoder(mixer, midi_channel, midi_value):
+    control_code = f"MC{midi_channel:02d}{midi_value:03d}"
+    control_path = "/config/userctrl/B/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_b_midi_note_encoder(mixer, midi_channel, midi_value):
+    control_code = f"MN{midi_channel:02d}{midi_value:03d}"
+    control_path = "/config/userctrl/B/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_b_midi_program_change_encoder(mixer, midi_channel, midi_value):
+    control_code = f"MP{midi_channel:02d}{midi_value:03d}"
+    control_path = "/config/userctrl/B/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_b_selected_chl_encoder(mixer, encoder_code):
+    control_path = "/config/userctrl/B/enc/1"
+    mixer.send(control_path, encoder_code)
+    print(mixer.query(control_path))
+
+
+def user_c_fader_encoder_not_assigned(mixer):
+    control_code = "_"
+    control_path = "/config/userctrl/C/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_c_fader_encoder_channels(mixer, channel_number):
+    control_code = f"F{channel_number:02d}"
+    control_path = "/config/userctrl/C/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_c_fader_encoder_aux(mixer, aux_number):
+    control_code = f"F{aux_number:02d}"
+    control_path = "/config/userctrl/C/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_c_send_encoder_channels(mixer, channel_number, mix_bus_number):
+    control_code = f"S{channel_number:02d}{mix_bus_number:04d}"
+    control_path = "/config/userctrl/C/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+
+def user_c_midi_control_change_encoder(mixer, midi_channel, midi_value):
+    control_code = f"MC{midi_channel:02d}{midi_value:03d}"
+    control_path = "/config/userctrl/C/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_c_midi_note_encoder(mixer, midi_channel, midi_value):
+    control_code = f"MN{midi_channel:02d}{midi_value:03d}"
+    control_path = "/config/userctrl/C/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_c_midi_program_change_encoder(mixer, midi_channel, midi_value):
+    control_code = f"MP{midi_channel:02d}{midi_value:03d}"
+    control_path = "/config/userctrl/C/enc/1"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_c_remote_encoder(mixer, remote_code):
+    control_path = "/config/userctrl/C/enc/1"
+    mixer.send(control_path, remote_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_channel_page_home(mixer, channel_number):
+    control_code = f"P{channel_number:04d}"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_channel_page_config(mixer, channel_number):
+    control_code = f"P{channel_number:04d}"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_channel_page_gate(mixer, channel_number):
+    control_code = f"P{channel_number:04d}"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_channel_page_dynamics(mixer, channel_number):
+    control_code = f"P{channel_number:04d}"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_channel_page_eq(mixer, channel_number):
+    control_code = f"P{channel_number:04d}"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_channel_page_mix(mixer, channel_number):
+    control_code = f"P{channel_number:04d}"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_channel_page_main(mixer, channel_number):
+    control_code = f"P{channel_number:04d}"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_channel_page_send_to_faders(mixer, channel_number):
+    control_code = f"P{channel_number:04d}S"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_aux_page_home(mixer, aux_number):
+    control_code = f"P{aux_number + 3200:04d}"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_aux_page_config(mixer, aux_number):
+    control_code = f"P{aux_number + 3200:04d}"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_aux_page_gate(mixer, aux_number):
+    control_code = f"P{aux_number + 3200:04d}"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_aux_page_dynamics(mixer, aux_number):
+    control_code = f"P{aux_number + 3200:04d}"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_aux_page_eq(mixer, aux_number):
+    control_code = f"P{aux_number + 3200:04d}"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_aux_page_mix(mixer, aux_number):
+    control_code = f"P{aux_number + 3200:04d}"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_aux_page_main(mixer, aux_number):
+    control_code = f"P{aux_number + 3200:04d}"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_aux_page_send_to_faders(mixer, aux_number):
+    control_code = f"P{aux_number + 3200:04d}S"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_return_home(mixer):
+    control_code = "P4000"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_return_config(mixer):
+    control_code = "P4001"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_return_gate(mixer):
+    control_code = "P4002"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_return_dynamics(mixer):
+    control_code = "P4003"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_return_eq(mixer):
+    control_code = "P4004"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_return_mix(mixer):
+    control_code = "P4005"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_return_main(mixer):
+    control_code = "P4006"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_return_send_to_faders(mixer):
+    control_code = "P400S"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mixbus_home(mixer):
+    control_code = "P4800"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mixbus_config(mixer):
+    control_code = "P4801"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mixbus_gate(mixer):
+    control_code = "P4802"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mixbus_dynamics(mixer):
+    control_code = "P4803"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mixbus_eq(mixer):
+    control_code = "P4804"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mixbus_mix(mixer):
+    control_code = "P4805"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mixbus_main(mixer):
+    control_code = "P4806"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mixbus_send_to_faders(mixer):
+    control_code = "P480S"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_matrix_home(mixer):
+    control_code = "P6400"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_matrix_config(mixer):
+    control_code = "P6401"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_matrix_gate(mixer):
+    control_code = "P6402"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_matrix_dynamics(mixer):
+    control_code = "P6403"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_matrix_eq(mixer):
+    control_code = "P6404"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_matrix_mix(mixer):
+    control_code = "P6405"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_matrix_main(mixer):
+    control_code = "P6406"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_matrix_send_to_faders(mixer):
+    control_code = "P640S"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_lr_home(mixer):
+    control_code = "P7000"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_lr_config(mixer):
+    control_code = "P7001"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_lr_gate(mixer):
+    control_code = "P7002"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_lr_dynamics(mixer):
+    control_code = "P7003"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_lr_eq(mixer):
+    control_code = "P7004"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_lr_mix(mixer):
+    control_code = "P7005"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_lr_main(mixer):
+    control_code = "P7006"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_lr_send_to_faders(mixer):
+    control_code = "P700S"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_mc_home(mixer):
+    control_code = "P7100"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_mc_config(mixer):
+    control_code = "P7101"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_mc_gate(mixer):
+    control_code = "P7102"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_mc_dynamics(mixer):
+    control_code = "P7103"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_mc_eq(mixer):
+    control_code = "P7104"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_mc_mix(mixer):
+    control_code = "P7105"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_mc_main(mixer):
+    control_code = "P7106"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_main_mc_send_to_faders(mixer):
+    control_code = "P710S"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_meter_channel(mixer):
+    control_code = "P10"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_meter_mixbus(mixer):
+    control_code = "P11"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_meter_aux_fx(mixer):
+    control_code = "P12"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_meter_in_out(mixer):
+    control_code = "P13"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_meter_rta(mixer):
+    control_code = "P14"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_route_home(mixer):
+    control_code = "P20"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_route_analog_out(mixer):
+    control_code = "P21"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_route_aux_out(mixer):
+    control_code = "P22"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_route_p16_out(mixer):
+    control_code = "P23"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_route_card_out(mixer):
+    control_code = "P24"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_route_aes_ao_out(mixer):
+    control_code = "P25"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_route_aes_bo_out(mixer):
+    control_code = "P26"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_route_xlr_out(mixer):
+    control_code = "P27"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
