@@ -11,77 +11,77 @@ mixer.__enter__()
 # Validate Connection
 print(mixer.validate_connection())
 
-# Set Channel Names
-for channel in range(1, 33):
-    mixer.strip[channel].config.name = f"Channel {channel}"
 
-# Enable Channel Mix
-for channel in range(1, 33):
-    mixer.strip[channel].mix.on = True
+#Simulate Channel EQ TEST
+def simulate_channel_eq(mixer, channel_id):
+    mixer.send(f"/ch/{channel_id}/eq/on", 1)  # Turn on Channel EQ
+    time.sleep(1)
 
-# Query Channel Mix On/Off Status
-print(mixer.query("/ch/01/mix/on"))
+    eq_types = [0, 1, 2, 3, 4, 5]  # EQ Types: LCUT, LShv, PEQ, VEQ, HShv, HCut
+    for eq_type in eq_types:
+        mixer.send(f"/ch/{channel_id}/eq/1/type", eq_type)  # Set EQ type
+        time.sleep(1)
 
-# Set Channel Mix On/Off Status
-mixer.send("/ch/01/mix/on", 0)  # Turn off
-time.sleep(1)
-mixer.send("/ch/01/mix/on", 1)  # Turn on
-time.sleep(1)
+    # Simulate EQ frequency adjustments
+    for i in range(100):
+        val = random.uniform(-60, 10)
+        mixer.send(f"/ch/{channel_id}/eq/1/f", str(val))
+        time.sleep(0.1)
 
-# Query Channel Mix On/Off Status
-print(mixer.query("/ch/01/mix/on"))
+    # Simulate EQ gain adjustments
+    for i in range(100):
+        val = random.uniform(-60, 10)
+        mixer.send(f"/ch/{channel_id}/eq/1/g", str(val))
+        time.sleep(0.1)
 
-# Query Channel Mix Filter
-print(mixer.query("/ch/01/mix/filter"))
+    # Simulate EQ Q adjustments
+    for i in range(100):
+        val = random.uniform(-60, 10)
+        mixer.send(f"/ch/{channel_id}/eq/1/q", str(val))
+        time.sleep(0.1)
 
-# Set Channel Mix Fader Levels
-for channel in range(1, 33):
-    mixer.send(f"/ch/{channel:02d}/mix/fader", "-20.0")  # Set fader level to -20.0 dB
+    mixer.send(f"/ch/{channel_id}/eq/on", 0)  # Turn off Channel EQ
+    time.sleep(1)
+# Usage: Replace 'YOUR_MIXER_OBJECT' with the actual mixer object and 'YOUR_CHANNEL_ID' with the desired channel ID.
 
-# Mute/Unmute Channel Mix
-for channel in range(1, 33):
-    mixer.send(f"/ch/{channel:02d}/mix/on", 0)  # Mute channels
-time.sleep(1)
-for channel in range(1, 33):
-    mixer.send(f"/ch/{channel:02d}/mix/on", 1)  # Unmute channels
-time.sleep(1)
+#Simulate Channel Mix and Pan TEST
+def simulate_channel_mix_and_pan(mixer, channel_id):
+    mixer.send(f"/ch/{channel_id}/mix/on", 1)  # Turn on Channel Mix
+    time.sleep(1)
 
-# Query Channel Mix Fader Levels
-for channel in range(1, 33):
-    print(mixer.query(f"/ch/{channel:02d}/mix/fader"))
+    mixer.send(f"/ch/{channel_id}/mix/pan", 0.0)  # Set initial pan to center
+    time.sleep(1)
 
-# Multi-Track Recording Control
-mixer.send("/record", 1)  # Start recording
-time.sleep(5)  # Recording for 5 seconds
-mixer.send("/record", 0)  # Stop recording
+    # Simulate pan adjustments
+    for i in range(100):
+        val = random.uniform(-60, 10)
+        mixer.send(f"/ch/{channel_id}/mix/pan", str(val))
+        time.sleep(0.1)
 
-# DAW Integration - Set Track Volume
-mixer.send("/dca/1/fader", "-10.0")  # Set DCA track 1 volume to -10.0 dB
+    mixer.send(f"/ch/{channel_id}/mix/on", 0)  # Turn off Channel Mix
+    time.sleep(1)
 
-# DAW Integration - Set Track Mute/Unmute
-mixer.send("/mute/1", 1)  # Mute track 1
-time.sleep(1)
-mixer.send("/mute/1", 0)  # Unmute track 1
-time.sleep(1)
 
-# Generate wave formation for fader values
-channels = range(1, 33)  # Channels to control in the wave formation
-duration = 20  # Duration of the wave movement in seconds
-frequency = 8.5  # Frequency of the wave in Hz
-start_val = -40.0  # Starting fader value
-end_val = -40.0  # Ending fader value
+# Usage: Replace 'YOUR_MIXER_OBJECT' with the actual mixer object and 'YOUR_CHANNEL_ID' with the desired channel ID.
+# For example, if you want to test channel 1, use simulate_channel_mix_and_pan(YOUR_MIXER_OBJECT, 1).
+simulate_channel_mix_and_pan(YOUR_MIXER_OBJECT, YOUR_CHANNEL_ID)
 
-start_time = time.time()
-while time.time() - start_time < duration:
-    elapsed_time = time.time() - start_time
-    t = elapsed_time * frequency * 2 * math.pi
-    for channel in channels:
-        val = (math.sin(t) + 1) * (end_val - start_val) / 2 + start_val
-        mixer.send(f"/ch/{channel:02d}/mix/fader", str(val))
-    time.sleep(0.05)  # Sleep for a short interval between fader updates
 
-# Clean up: Reset values
-mixer.send("/ch/01/mix/on", 1)  # Turn on channel 1
-for channel in range(1, 33):
-    mixer.strip[channel].config.name = ""  # Reset channel names
-    mixer.strip[channel].mix.on = False  # Turn off channel mix
+#Simulate DCA and Mute TEST 
+def simulate_dca_and_mute(mixer, channel_id):
+    mixer.send(f"/ch/{channel_id}/grp/dca", 1)  # Set DCA to 1 for Channel
+    time.sleep(1)
+
+    mixer.send(f"/ch/{channel_id}/grp/mute", 1)  # Mute the Group for Channel
+    time.sleep(1)
+
+    mixer.send(f"/ch/{channel_id}/grp/dca", 0)  # Unassign DCA for Channel
+    time.sleep(1)
+
+    mixer.send(f"/ch/{channel_id}/grp/mute", 0)  # Unmute the Group for Channel
+    time.sleep(1)
+
+
+# Usage: Replace 'YOUR_MIXER_OBJECT' with the actual mixer object and 'YOUR_CHANNEL_ID' with the desired channel ID.
+# For example, if you want to test channel 1, use simulate_dca_and_mute(YOUR_MIXER_OBJECT, 1).
+simulate_dca_and_mute(YOUR_MIXER_OBJECT, YOUR_CHANNEL_ID)
