@@ -3064,65 +3064,65 @@ def set_fx_return_channel_mix_on(mixer, fxrtn_id, mix_on):
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/on"
     mixer.send(control_path, mix_on_map[mix_on])
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_fader(mixer, fxrtn_id, fader_level):
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/fader"
     mixer.send(control_path, fader_level)
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_st(mixer, fxrtn_id, st_on):
     st_on_map = {"OFF": 0, "ON": 1}
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/st"
     mixer.send(control_path, st_on_map[st_on])
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_pan(mixer, fxrtn_id, pan_level):
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/pan"
     mixer.send(control_path, pan_level)
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_mono(mixer, fxrtn_id, mono_on):
     mono_on_map = {"OFF": 0, "ON": 1}
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/mono"
     mixer.send(control_path, mono_on_map[mono_on])
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_mlevel(mixer, fxrtn_id, mlevel_level):
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/mlevel"
     mixer.send(control_path, mlevel_level)
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_channel_on(mixer, fxrtn_id, channel_num, channel_on):
     channel_on_map = {"OFF": 0, "ON": 1}
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/{channel_num:02}/on"
     mixer.send(control_path, channel_on_map[channel_on])
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_channel_level(mixer, fxrtn_id, channel_num, channel_level):
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/{channel_num:02}/level"
     mixer.send(control_path, channel_level)
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_channel_pan(mixer, fxrtn_id, channel_num, channel_pan):
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/{channel_num:02}/pan"
     mixer.send(control_path, channel_pan)
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_channel_type(mixer, fxrtn_id, channel_num, channel_type):
     channel_type_map = {"IN/LC": 0, "<-EQ": 1, "EQ->": 2, "PRE": 3, "POST": 4, "GRP": 5}
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/{channel_num:02}/type"
     mixer.send(control_path, channel_type_map[channel_type])
     print(mixer.query(control_path))
-    time.sleep(1)
+    
     
     
 def set_fx_return_channel_mix_pan_follow(mixer, fxrtn_id, pan_follow):
@@ -3130,16 +3130,329 @@ def set_fx_return_channel_mix_pan_follow(mixer, fxrtn_id, pan_follow):
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/panFollow"
     mixer.send(control_path, pan_follow_map[pan_follow])
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_grp_dca(mixer, fxrtn_id, dca_value):
     control_path = f"/fxrtn/{fxrtn_id:02}/grp/dca"
     mixer.send(control_path, dca_value)
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_grp_mute(mixer, fxrtn_id, mute_value):
     control_path = f"/fxrtn/{fxrtn_id:02}/grp/mute"
     mixer.send(control_path, mute_value)
     print(mixer.query(control_path))
-    time.sleep(1)
+    
+    
+def set_bus_channel_name(mixer, bus_id, name):
+    control_path = f"/bus/{bus_id:02}/config/name"
+    mixer.send(control_path, name)
+    print(mixer.query(control_path))
+
+def set_bus_channel_icon(mixer, bus_id, icon):
+    control_path = f"/bus/{bus_id:02}/config/icon"
+    mixer.send(control_path, icon)
+    print(mixer.query(control_path))
+
+def set_bus_channel_color(mixer, bus_id, color):
+    color_map = {"OFF": 0, "RD": 1, "GN": 2, "YE": 3, "BL": 4, "MG": 5, "CY": 6, "WH": 7,
+                 "OFFi": 8, "RDi": 9, "GNi": 10, "YEi": 11, "BLi": 12, "MGi": 13, "CYi": 14, "WHi": 15}
+    control_path = f"/bus/{bus_id:02}/config/color"
+    mixer.send(control_path, color_map[color])
+    print(mixer.query(control_path))
+    
+    
+def set_bus_dyn_mix(mixer, bus_id, mix):
+    control_path = f"/bus/{bus_id:02}/dyn/mix"
+    mixer.send(control_path, mix)
+    print(mixer.query(control_path))
+
+def set_bus_dyn_auto(mixer, bus_id, auto):
+    control_path = f"/bus/{bus_id:02}/dyn/auto"
+    mixer.send(control_path, auto)
+    print(mixer.query(control_path))
+
+def set_bus_dyn_filter_on(mixer, bus_id, on):
+    control_path = f"/bus/{bus_id:02}/dyn/filter/on"
+    mixer.send(control_path, on)
+    print(mixer.query(control_path))
+
+def set_bus_dyn_filter_type(mixer, bus_id, filter_type):
+    filter_map = {
+        "LC6": 0, "LC12": 1, "HC6": 2, "HC12": 3, "1.0": 4, "2.0": 5, "3.0": 6, "5.0": 7, "10.0": 8
+    }
+    control_path = f"/bus/{bus_id:02}/dyn/filter/type"
+    mixer.send(control_path, filter_map[filter_type])
+    print(mixer.query(control_path))
+
+def set_bus_dyn_filter_f(mixer, bus_id, freq):
+    control_path = f"/bus/{bus_id:02}/dyn/filter/f"
+    mixer.send(control_path, freq)
+    print(mixer.query(control_path))
+
+def set_bus_insert_on(mixer, bus_id, on):
+    control_path = f"/bus/{bus_id:02}/insert/on"
+    mixer.send(control_path, on)
+    print(mixer.query(control_path))
+
+def set_bus_insert_pos(mixer, bus_id, pos):
+    control_path = f"/bus/{bus_id:02}/insert/pos"
+    mixer.send(control_path, pos)
+    print(mixer.query(control_path))
+
+def set_bus_insert_sel(mixer, bus_id, sel):
+    control_path = f"/bus/{bus_id:02}/insert/sel"
+    mixer.send(control_path, sel)
+    print(mixer.query(control_path))
+
+def set_bus_eq_on(mixer, bus_id, on):
+    control_path = f"/bus/{bus_id:02}/eq/on"
+    mixer.send(control_path, on)
+    print(mixer.query(control_path))
+
+def set_bus_eq_type(mixer, bus_id, eq_band, eq_type):
+    eq_map = {"LCut": 0, "LShv": 1, "PEQ": 2, "VEQ": 3, "HShv": 4, "HCut": 5}
+    control_path = f"/bus/{bus_id:02}/eq/{eq_band}/type"
+    mixer.send(control_path, eq_map[eq_type])
+    print(mixer.query(control_path))
+
+def set_bus_eq_f(mixer, bus_id, eq_band, freq):
+    control_path = f"/bus/{bus_id:02}/eq/{eq_band}/f"
+    mixer.send(control_path, freq)
+    print(mixer.query(control_path))
+
+def set_bus_eq_g(mixer, bus_id, eq_band, gain):
+    control_path = f"/bus/{bus_id:02}/eq/{eq_band}/g"
+    mixer.send(control_path, gain)
+    print(mixer.query(control_path))
+
+def set_bus_eq_q(mixer, bus_id, eq_band, q):
+    control_path = f"/bus/{bus_id:02}/eq/{eq_band}/q"
+    mixer.send(control_path, q)
+    print(mixer.query(control_path))
+
+
+def set_bus_mix_on(mixer, bus_id, on):
+    control_path = f"/bus/{bus_id:02}/mix/on"
+    mixer.send(control_path, on)
+    print(mixer.query(control_path))
+
+def set_bus_mix_fader(mixer, bus_id, fader_level):
+    control_path = f"/bus/{bus_id:02}/mix/fader"
+    mixer.send(control_path, fader_level)
+    print(mixer.query(control_path))
+
+def set_bus_mix_st(mixer, bus_id, st):
+    control_path = f"/bus/{bus_id:02}/mix/st"
+    mixer.send(control_path, st)
+    print(mixer.query(control_path))
+
+def set_bus_mix_pan(mixer, bus_id, pan_level):
+    control_path = f"/bus/{bus_id:02}/mix/pan"
+    mixer.send(control_path, pan_level)
+    print(mixer.query(control_path))
+
+def set_bus_mix_mono(mixer, bus_id, mono):
+    control_path = f"/bus/{bus_id:02}/mix/mono"
+    mixer.send(control_path, mono)
+    print(mixer.query(control_path))
+
+def set_bus_mix_mlevel(mixer, bus_id, mlevel):
+    control_path = f"/bus/{bus_id:02}/mix/mlevel"
+    mixer.send(control_path, mlevel)
+    print(mixer.query(control_path))
+
+def set_bus_mix_on_by_index(mixer, bus_id, mix_index, on):
+    control_path = f"/bus/{bus_id:02}/mix/{mix_index:02}/on"
+    mixer.send(control_path, on)
+    print(mixer.query(control_path))
+
+def set_bus_mix_level_by_index(mixer, bus_id, mix_index, level):
+    control_path = f"/bus/{bus_id:02}/mix/{mix_index:02}/level"
+    mixer.send(control_path, level)
+    print(mixer.query(control_path))
+
+def set_bus_mix_pan_by_index(mixer, bus_id, mix_index, pan):
+    control_path = f"/bus/{bus_id:02}/mix/{mix_index:02}/pan"
+    mixer.send(control_path, pan)
+    print(mixer.query(control_path))
+
+def set_bus_mix_type_by_index(mixer, bus_id, mix_index, mix_type):
+    mix_type_map = {"IN/LC": 0, "<-EQ": 1, "EQ->": 2, "PRE": 3, "POST": 4}
+    control_path = f"/bus/{bus_id:02}/mix/{mix_index:02}/type"
+    mixer.send(control_path, mix_type_map[mix_type])
+    print(mixer.query(control_path))
+
+def set_bus_mix_pan_follow_by_index(mixer, bus_id, mix_index, pan_follow):
+    control_path = f"/bus/{bus_id:02}/mix/{mix_index:02}/panFollow"
+    mixer.send(control_path, pan_follow)
+    print(mixer.query(control_path))
+
+def set_bus_grp_dca(mixer, bus_id, dca_level):
+    control_path = f"/bus/{bus_id:02}/grp/dca"
+    mixer.send(control_path, dca_level)
+    print(mixer.query(control_path))
+
+def set_bus_grp_mute(mixer, bus_id, mute_level):
+    control_path = f"/bus/{bus_id:02}/grp/mute"
+    mixer.send(control_path, mute_level)
+    print(mixer.query(control_path))
+
+
+def set_mtx_config_name(mixer, mtx_id, name):
+    control_path = f"/mtx/{mtx_id:02}/config/name"
+    mixer.send(control_path, name)
+    print(mixer.query(control_path))
+
+def set_mtx_config_icon(mixer, mtx_id, icon):
+    control_path = f"/mtx/{mtx_id:02}/config/icon"
+    mixer.send(control_path, icon)
+    print(mixer.query(control_path))
+
+def set_mtx_config_color(mixer, mtx_id, color):
+    control_path = f"/mtx/{mtx_id:02}/config/color"
+    mixer.send(control_path, color)
+    print(mixer.query(control_path))
+
+def set_mtx_config_preamp_invert(mixer, mtx_id, invert):
+    control_path = f"/mtx/{mtx_id:02}/config/preamp/invert"
+    mixer.send(control_path, invert)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_on(mixer, mtx_id, on):
+    control_path = f"/mtx/{mtx_id:02}/dyn/on"
+    mixer.send(control_path, on)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_mode(mixer, mtx_id, mode):
+    control_path = f"/mtx/{mtx_id:02}/dyn/mode"
+    mixer.send(control_path, mode)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_det(mixer, mtx_id, det):
+    control_path = f"/mtx/{mtx_id:02}/dyn/det"
+    mixer.send(control_path, det)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_env(mixer, mtx_id, env):
+    control_path = f"/mtx/{mtx_id:02}/dyn/env"
+    mixer.send(control_path, env)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_thr(mixer, mtx_id, thr):
+    control_path = f"/mtx/{mtx_id:02}/dyn/thr"
+    mixer.send(control_path, thr)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_ratio(mixer, mtx_id, ratio):
+    ratio_map = {1.1: 0, 1.3: 1, 1.5: 2, 2.0: 3, 2.5: 4, 3.0: 5, 4.0: 6, 5.0: 7, 7.0: 8, 10: 9, 20: 10, 100: 11}
+    control_path = f"/mtx/{mtx_id:02}/dyn/ratio"
+    mixer.send(control_path, ratio_map[ratio])
+    print(mixer.query(control_path))
+
+
+def set_mtx_dyn_knee(mixer, mtx_id, knee):
+    control_path = f"/mtx/{mtx_id:02}/dyn/knee"
+    mixer.send(control_path, knee)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_mgain(mixer, mtx_id, mgain):
+    control_path = f"/mtx/{mtx_id:02}/dyn/mgain"
+    mixer.send(control_path, mgain)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_attack(mixer, mtx_id, attack):
+    control_path = f"/mtx/{mtx_id:02}/dyn/attack"
+    mixer.send(control_path, attack)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_hold(mixer, mtx_id, hold):
+    control_path = f"/mtx/{mtx_id:02}/dyn/hold"
+    mixer.send(control_path, hold)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_release(mixer, mtx_id, release):
+    control_path = f"/mtx/{mtx_id:02}/dyn/release"
+    mixer.send(control_path, release)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_pos(mixer, mtx_id, pos):
+    control_path = f"/mtx/{mtx_id:02}/dyn/pos"
+    mixer.send(control_path, pos)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_mix(mixer, mtx_id, mix):
+    control_path = f"/mtx/{mtx_id:02}/dyn/mix"
+    mixer.send(control_path, mix)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_auto(mixer, mtx_id, auto):
+    control_path = f"/mtx/{mtx_id:02}/dyn/auto"
+    mixer.send(control_path, auto)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_filter_on(mixer, mtx_id, on):
+    control_path = f"/mtx/{mtx_id:02}/dyn/filter/on"
+    mixer.send(control_path, on)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_filter_type(mixer, mtx_id, f_type):
+    control_path = f"/mtx/{mtx_id:02}/dyn/filter/type"
+    mixer.send(control_path, f_type)
+    print(mixer.query(control_path))
+
+def set_mtx_dyn_filter_f(mixer, mtx_id, f_value):
+    control_path = f"/mtx/{mtx_id:02}/dyn/filter/f"
+    mixer.send(control_path, f_value)
+    print(mixer.query(control_path))
+
+def set_mtx_insert_on(mixer, mtx_id, on):
+    control_path = f"/mtx/{mtx_id:02}/insert/on"
+    mixer.send(control_path, on)
+    print(mixer.query(control_path))
+
+def set_mtx_insert_pos(mixer, mtx_id, pos):
+    control_path = f"/mtx/{mtx_id:02}/insert/pos"
+    mixer.send(control_path, pos)
+    print(mixer.query(control_path))
+
+def set_mtx_insert_sel(mixer, mtx_id, sel):
+    control_path = f"/mtx/{mtx_id:02}/insert/sel"
+    mixer.send(control_path, sel)
+    print(mixer.query(control_path))
+
+
+def set_mtx_eq_on(mixer, mtx_id, eq_id, on):
+    control_path = f"/mtx/{mtx_id:02}/eq/{eq_id}/on"
+    mixer.send(control_path, on)
+    print(mixer.query(control_path))
+
+def set_mtx_eq_type(mixer, mtx_id, eq_id, eq_type):
+    control_path = f"/mtx/{mtx_id:02}/eq/{eq_id}/type"
+    mixer.send(control_path, eq_type)
+    print(mixer.query(control_path))
+
+def set_mtx_eq_f(mixer, mtx_id, eq_id, f_value):
+    control_path = f"/mtx/{mtx_id:02}/eq/{eq_id}/f"
+    mixer.send(control_path, f_value)
+    print(mixer.query(control_path))
+
+def set_mtx_eq_g(mixer, mtx_id, eq_id, g_value):
+    control_path = f"/mtx/{mtx_id:02}/eq/{eq_id}/g"
+    mixer.send(control_path, g_value)
+    print(mixer.query(control_path))
+
+def set_mtx_eq_q(mixer, mtx_id, eq_id, q_value):
+    control_path = f"/mtx/{mtx_id:02}/eq/{eq_id}/q"
+    mixer.send(control_path, q_value)
+    print(mixer.query(control_path))
+
+def set_mtx_mix_on(mixer, mtx_id, on):
+    control_path = f"/mtx/{mtx_id:02}/mix/on"
+    mixer.send(control_path, on)
+    print(mixer.query(control_path))
+
+def set_mtx_mix_fader(mixer, mtx_id, fader_value):
+    control_path = f"/mtx/{mtx_id:02}/mix/fader"
+    mixer.send(control_path, fader_value)
+    print(mixer.query(control_path))
