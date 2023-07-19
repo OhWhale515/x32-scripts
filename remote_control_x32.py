@@ -3896,11 +3896,6 @@ mixer.send("/config/userctrl/A/btn/5", S900)
 print(mixer.query("/config/userctrl/A/btn/5"))
 time.sleep(1)
 
-# User A Jump to "Cue Recall" Page Button Controls PREV
-mixer.send("/config/userctrl/A/btn/5", S900)
-print(mixer.query("/config/userctrl/A/btn/5"))
-time.sleep(1)
-
 # User A Jump to "Cue Recall" Page Button Controls NEXT
 mixer.send("/config/userctrl/A/btn/5", S901)
 print(mixer.query("/config/userctrl/A/btn/5"))
