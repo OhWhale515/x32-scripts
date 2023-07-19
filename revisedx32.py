@@ -1682,3 +1682,1199 @@ def user_a_jump_to_route_xlr_out(mixer):
     control_path = "/config/userctrl/A/btn/5"
     mixer.send(control_path, control_code)
     print(mixer.query(control_path))
+
+
+def user_a_jump_to_setup_global(mixer):
+    control_code = "P30"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_setup_conf(mixer):
+    control_code = "P31"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_setup_remote(mixer):
+    control_code = "P32"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_setup_network(mixer):
+    control_code = "P33"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_setup_names(mixer):
+    control_code = "P34"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_setup_preamps(mixer):
+    control_code = "P35"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_setup_card(mixer):
+    control_code = "P36"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_library_channel(mixer):
+    control_code = "P40"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_library_effect(mixer):
+    control_code = "P41"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_library_route(mixer):
+    control_code = "P42"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_off_home(mixer):
+    control_code = "P0050"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_off_fx1(mixer):
+    control_code = "P0051"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_off_fx2(mixer):
+    control_code = "P0052"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_off_fx3(mixer):
+    control_code = "P0053"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_off_fx4(mixer):
+    control_code = "P0054"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_off_fx5(mixer):
+    control_code = "P0055"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_off_fx6(mixer):
+    control_code = "P0056"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_off_fx7(mixer):
+    control_code = "P0057"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_off_fx8(mixer):
+    control_code = "P0058"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+def user_a_jump_to_fx_layer_01_home(mixer):
+    control_code = "P0150"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_01_fx1(mixer):
+    control_code = "P0151"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_01_fx2(mixer):
+    control_code = "P0152"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_01_fx3(mixer):
+    control_code = "P0153"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_01_fx4(mixer):
+    control_code = "P0154"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_01_fx5(mixer):
+    control_code = "P0155"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_01_fx6(mixer):
+    control_code = "P0156"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_01_fx7(mixer):
+    control_code = "P0157"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_01_fx8(mixer):
+    control_code = "P0158"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_fx_layer_02_home(mixer):
+    control_code = "P0250"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+# Continue with the rest of the functions for Layers 02 to 04.
+
+def user_a_jump_to_monitor_page(mixer):
+    control_code = "P60"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_monitor_talk_a(mixer):
+    control_code = "P61"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_monitor_talk_b(mixer):
+    control_code = "P62"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_monitor_osc(mixer):
+    control_code = "P63"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_usb_home(mixer):
+    control_code = "P70"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_usb_config(mixer):
+    control_code = "P71"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_scene_home(mixer):
+    control_code = "P80"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_scene_scenes(mixer):
+    control_code = "P81"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_scene_bit(mixer):
+    control_code = "P82"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_scene_parsafe(mixer):
+    control_code = "P83"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_scene_chnsafe(mixer):
+    control_code = "P84"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_scene_midi(mixer):
+    control_code = "P85"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_assign_home(mixer):
+    control_code = "P90"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_assign_set_a(mixer):
+    control_code = "P91"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_assign_set_b(mixer):
+    control_code = "P92"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_assign_set_c(mixer):
+    control_code = "P93"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mutes_channel_01_32(mixer):
+    control_code = "O00"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mutes_aux_01_08(mixer):
+    control_code = "O32"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mutes_fx_rtn_1l_to_fx_rtn_4r(mixer):
+    control_code = "O40"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mutes_mixbus_01_16(mixer):
+    control_code = "O48"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mutes_matrix_1_6(mixer):
+    control_code = "O64"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mutes_main_lr(mixer):
+    control_code = "O70"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mutes_main_mc(mixer):
+    control_code = "O71"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mutes_dca_1_8(mixer):
+    control_code = "O72"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_mutes_mute_group_1_6(mixer):
+    control_code = "O80"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_inserts_channel_01_32(mixer):
+    control_code = "I00"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+# Rest of the "Inserts" Page Button Controls functions...
+
+
+def user_a_jump_to_effect_button_effect_1_8_params_00_63(mixer):
+    control_code = "X000"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_midi_toggle_control_change_channel_number_value(mixer):
+    control_code = "Mc01000"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_midi_toggle_note_channel_number_value(mixer):
+    control_code = "Mn01000"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_remote_f1_f8(mixer):
+    control_code = "R000"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+def user_a_jump_to_remote_mrk_rtz(mixer):
+    control_code = "R023"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_remote_cycle(mixer):
+    control_code = "R024"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_remote_scrub(mixer):
+    control_code = "R025"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_remote_ndg_shut(mixer):
+    control_code = "R026"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_remote_drop_in(mixer):
+    control_code = "R027"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_remote_rep_out(mixer):
+    control_code = "R028"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_remote_cli_off(mixer):
+    control_code = "R029"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_remote_read(mixer):
+    control_code = "R030"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_remote_write(mixer):
+    control_code = "R031"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_remote_touch(mixer):
+    control_code = "R032"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_remote_trim(mixer):
+    control_code = "R033"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_remote_latch(mixer):
+    control_code = "R034"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_cue_recall_prev(mixer):
+    control_code = "S900"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_cue_recall_next(mixer):
+    control_code = "S901"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_cue_recall_undo(mixer):
+    control_code = "S902"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_cue_recall_go(mixer):
+    control_code = "S903"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_scene_recall_cue_number(mixer):
+    control_code = "S400"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_snippet_number(mixer):
+    control_code = "S200"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_usb_recorder_stop(mixer):
+    control_code = "T0"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_usb_recorder_play(mixer):
+    control_code = "T1"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_usb_recorder_record(mixer):
+    control_code = "T2"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_usb_recorder_pause(mixer):
+    control_code = "T3"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_usb_recorder_play_stop(mixer):
+    control_code = "T4"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_usb_recorder_play_pause(mixer):
+    control_code = "T5"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_usb_recorder_rec_stop(mixer):
+    control_code = "T6"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_usb_recorder_rec_pause(mixer):
+    control_code = "T7"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_usb_recorder_prev_track(mixer):
+    control_code = "T8"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_usb_recorder_next_track(mixer):
+    control_code = "T9"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_sd_recorder_stop(mixer):
+    control_code = "U00"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_sd_recorder_play(mixer):
+    control_code = "U01"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_sd_recorder_record(mixer):
+    control_code = "U02"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_sd_recorder_pause(mixer):
+    control_code = "U03"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_sd_recorder_play_stop(mixer):
+    control_code = "U04"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_sd_recorder_play_pause(mixer):
+    control_code = "U05"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_sd_recorder_add_marker(mixer):
+    control_code = "U06"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_sd_recorder_prev_marker(mixer):
+    control_code = "U07"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_sd_recorder_next_marker(mixer):
+    control_code = "U08"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_sd_recorder_play_marker(mixer):
+    control_code = "U09"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_sd_recorder_select_marker(mixer):
+    control_code = "U10"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_sd_recorder_select_session(mixer):
+    control_code = "U11"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_sd_recorder_usb_playback(mixer):
+    control_code = "U12"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+def user_a_jump_to_sd_recorder_chn_routing(mixer):
+    control_code = "U13"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_automix_enable_x_axis(mixer):
+    control_code = "A0"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def user_a_jump_to_automix_enable_y_axis(mixer):
+    control_code = "A1"
+    control_path = "/config/userctrl/A/btn/5"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def set_tape_gain_left(mixer, gain_value):
+    control_path = "/config/tape/gainL"
+    mixer.send(control_path, gain_value)
+    print(mixer.query(control_path))
+
+
+def set_tape_gain_right(mixer, gain_value):
+    control_path = "/config/tape/gainR"
+    mixer.send(control_path, gain_value)
+    print(mixer.query(control_path))
+
+
+def set_tape_autoplay_off(mixer):
+    control_code = "OFF"
+    control_path = "/config/tape/autoplay"
+    mixer.send(control_path, control_code)
+    print(mixer.query(control_path))
+
+
+def set_mix_enable_off(mixer, mix_number):
+    control_path = f"/config/amixenable/{mix_number}"
+    mixer.send(control_path, 0)
+    print(mixer.query(control_path))
+
+
+def set_mix_enable_on(mixer, mix_number):
+    control_path = f"/config/amixenable/{mix_number}"
+    mixer.send(control_path, 1)
+    print(mixer.query(control_path))
+
+
+def set_dp48_scope_group_name(mixer, scope_group_name):
+    control_path = "/config/dp48/scope"
+    mixer.send(control_path, 0)
+    print(mixer.query(control_path))
+
+
+def set_dp48_scope_group_assign(mixer, scope_group_assign):
+    control_path = "/config/dp48/scope"
+    mixer.send(control_path, 1)
+    print(mixer.query(control_path))
+
+
+def set_dp48_scope_chan_level(mixer, scope_chan_level):
+    control_path = "/config/dp48/scope"
+    mixer.send(control_path, 2)
+    print(mixer.query(control_path))
+
+
+def set_dp48_scope_chan_pan(mixer, scope_chan_pan):
+    control_path = "/config/dp48/scope"
+    mixer.send(control_path, 3)
+    print(mixer.query(control_path))
+
+
+def set_dp48_broadcast_no_op(mixer, broadcast_no_op):
+    control_path = "/config/dp48/broadcast"
+    mixer.send(control_path, 0)
+    print(mixer.query(control_path))
+
+
+def set_dp48_broadcast_scope_tbv(mixer, broadcast_scope_tbv):
+    control_path = "/config/dp48/broadcast"
+    mixer.send(control_path, 1)
+    print(mixer.query(control_path))
+
+
+def set_dp48_assign_group_off(mixer, channel_number):
+    control_path = f"/config/dp48/assign/{channel_number:02}"
+    mixer.send(control_path, 0)
+    print(mixer.query(control_path))
+
+
+def set_dp48_assign_group(mixer, channel_number, group_number):
+    control_path = f"/config/dp48/assign/{channel_number:02}"
+    mixer.send(control_path, group_number)
+    print(mixer.query(control_path))
+
+
+def set_dp48_group_name(mixer, group_number, group_name):
+    control_path = f"/config/dp48/grpname/{group_number:02}"
+    mixer.send(control_path, group_name)
+    print(mixer.query(control_path))
+
+
+def set_channel_name(mixer, channel_id, name):
+    control_path = f"/ch/{channel_id:02}/config/name"
+    mixer.send(control_path, name)
+    print(mixer.query(control_path))
+
+
+def set_channel_icon(mixer, channel_id, icon_id):
+    control_path = f"/ch/{channel_id:02}/config/icon"
+    mixer.send(control_path, icon_id)
+    print(mixer.query(control_path))
+
+
+def set_channel_color(mixer, channel_id, color_id):
+    control_path = f"/ch/{channel_id:02}/config/color"
+    mixer.send(control_path, color_id)
+    print(mixer.query(control_path))
+
+
+def set_channel_source(mixer, channel_id, source_id):
+    control_path = f"/ch/{channel_id:02}/config/source"
+    mixer.send(control_path, source_id)
+    print(mixer.query(control_path))
+
+
+def set_delay_on(mixer, channel_id, delay_on):
+    control_path = f"/ch/{channel_id:02}/delay/on"
+    mixer.send(control_path, delay_on)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_delay_time(mixer, channel_id, delay_time):
+    control_path = f"/ch/{channel_id:02}/delay/time"
+    mixer.send(control_path, delay_time)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_preamp_trim(mixer, channel_id, trim_value):
+    control_path = f"/ch/{channel_id:02}/preamp/trim"
+    mixer.send(control_path, trim_value)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_preamp_invert(mixer, channel_id, invert_on):
+    control_path = f"/ch/{channel_id:02}/preamp/invert"
+    mixer.send(control_path, invert_on)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_preamp_phantom_power(mixer, channel_id, phantom_power_on):
+    control_path = f"/ch/{channel_id:02}/preamp/hpon"
+    mixer.send(control_path, phantom_power_on)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_preamp_hpf(mixer, channel_id, hpf_value):
+    control_path = f"/ch/{channel_id:02}/preamp/hpf"
+    mixer.send(control_path, hpf_value)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_gate_on(mixer, channel_id, gate_on):
+    control_path = f"/ch/{channel_id:02}/gate/on"
+    mixer.send(control_path, gate_on)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_gate_mode(mixer, channel_id, gate_mode):
+    control_path = f"/ch/{channel_id:02}/gate/mode"
+    mixer.send(control_path, gate_mode)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_gate_threshold(mixer, channel_id, threshold):
+    control_path = f"/ch/{channel_id:02}/gate/thr"
+    mixer.send(control_path, threshold)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_gate_range(mixer, channel_id, gate_range):
+    control_path = f"/ch/{channel_id:02}/gate/range"
+    mixer.send(control_path, gate_range)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_gate_attack(mixer, channel_id, gate_attack):
+    control_path = f"/ch/{channel_id:02}/gate/attack"
+    mixer.send(control_path, gate_attack)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_gate_hold(mixer, channel_id, gate_hold):
+    control_path = f"/ch/{channel_id:02}/gate/hold"
+    mixer.send(control_path, gate_hold)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_gate_release(mixer, channel_id, gate_release):
+    control_path = f"/ch/{channel_id:02}/gate/release"
+    mixer.send(control_path, gate_release)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+
+def set_gate_source(mixer, channel_id, gate_source):
+    control_path = f"/ch/{channel_id:02}/gate/keysrc"
+    mixer.send(control_path, gate_source)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_gate_filter_on(mixer, channel_id, filter_on):
+    control_path = f"/ch/{channel_id:02}/gate/filter/on"
+    mixer.send(control_path, filter_on)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_gate_filter_type(mixer, channel_id, filter_type):
+    control_path = f"/ch/{channel_id:02}/gate/filter/type"
+    mixer.send(control_path, filter_type)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_gate_filter_hertz(mixer, channel_id, filter_hertz):
+    control_path = f"/ch/{channel_id:02}/gate/filter/f"
+    mixer.send(control_path, filter_hertz)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+
+def set_dynamic_mode_on(mixer, channel_id, dynamic_on):
+    control_path = f"/ch/{channel_id:02}/dyn/on"
+    mixer.send(control_path, dynamic_on)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_mode(mixer, channel_id, dynamic_mode):
+    control_path = f"/ch/{channel_id:02}/dyn/mode"
+    mixer.send(control_path, dynamic_mode)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_detection(mixer, channel_id, dynamic_detection):
+    control_path = f"/ch/{channel_id:02}/dyn/det"
+    mixer.send(control_path, dynamic_detection)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_envelope(mixer, channel_id, dynamic_envelope):
+    control_path = f"/ch/{channel_id:02}/dyn/env"
+    mixer.send(control_path, dynamic_envelope)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_threshold(mixer, channel_id, threshold):
+    control_path = f"/ch/{channel_id:02}/dyn/thr"
+    mixer.send(control_path, threshold)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_ratio(mixer, channel_id, ratio):
+    control_path = f"/ch/{channel_id:02}/dyn/ratio"
+    mixer.send(control_path, ratio)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+
+def set_dynamic_knee(mixer, channel_id, knee):
+    control_path = f"/ch/{channel_id:02}/dyn/knee"
+    mixer.send(control_path, knee)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_mgain(mixer, channel_id, mgain):
+    control_path = f"/ch/{channel_id:02}/dyn/mgain"
+    mixer.send(control_path, mgain)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_attack(mixer, channel_id, attack):
+    control_path = f"/ch/{channel_id:02}/dyn/attack"
+    mixer.send(control_path, attack)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_hold(mixer, channel_id, hold):
+    control_path = f"/ch/{channel_id:02}/dyn/hold"
+    mixer.send(control_path, hold)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_release(mixer, channel_id, release):
+    control_path = f"/ch/{channel_id:02}/dyn/release"
+    mixer.send(control_path, release)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_position(mixer, channel_id, position):
+    control_path = f"/ch/{channel_id:02}/dyn/pos"
+    mixer.send(control_path, position)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_key_source(mixer, channel_id, key_source):
+    control_path = f"/ch/{channel_id:02}/dyn/keysrc"
+    mixer.send(control_path, key_source)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_mix(mixer, channel_id, mix_percent):
+    control_path = f"/ch/{channel_id:02}/dyn/mix"
+    mixer.send(control_path, mix_percent)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_auto(mixer, channel_id, dynamic_auto):
+    control_path = f"/ch/{channel_id:02}/dyn/auto"
+    mixer.send(control_path, dynamic_auto)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_filter_on(mixer, channel_id, dynamic_filter_on):
+    control_path = f"/ch/{channel_id:02}/dyn/filter/on"
+    mixer.send(control_path, dynamic_filter_on)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+
+def set_channel_dynamic_type(mixer, channel_id, dynamic_type):
+    control_path = f"/ch/{channel_id:02}/dyn/filter/type"
+    mixer.send(control_path, dynamic_type)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_dynamic_filter_hertz(mixer, channel_id, dynamic_filter_hertz):
+    control_path = f"/ch/{channel_id:02}/dyn/filter/f"
+    mixer.send(control_path, dynamic_filter_hertz)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_insert_on(mixer, channel_id, insert_on):
+    control_path = f"/ch/{channel_id:02}/insert/on"
+    mixer.send(control_path, insert_on)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_insert_position(mixer, channel_id, insert_position):
+    control_path = f"/ch/{channel_id:02}/insert/pos"
+    mixer.send(control_path, insert_position)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_insert_sel(mixer, channel_id, insert_sel):
+    control_path = f"/ch/{channel_id:02}/insert/sel"
+    mixer.send(control_path, insert_sel)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+
+def set_channel_eq_on(mixer, channel_id, eq_on):
+    control_path = f"/ch/{channel_id:02}/eq/on"
+    mixer.send(control_path, eq_on)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_eq_type(mixer, channel_id, eq_band, eq_type):
+    control_path = f"/ch/{channel_id:02}/eq/{eq_band}/type"
+    mixer.send(control_path, eq_type)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_eq_hertz(mixer, channel_id, eq_band, eq_hertz):
+    control_path = f"/ch/{channel_id:02}/eq/{eq_band}/f"
+    mixer.send(control_path, eq_hertz)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_eq_db(mixer, channel_id, eq_band, eq_db):
+    control_path = f"/ch/{channel_id:02}/eq/{eq_band}/g"
+    mixer.send(control_path, eq_db)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_eq_q(mixer, channel_id, eq_band, eq_q):
+    control_path = f"/ch/{channel_id:02}/eq/{eq_band}/q"
+    mixer.send(control_path, eq_q)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_mix_on(mixer, channel_id, mix_on):
+    control_path = f"/ch/{channel_id:02}/mix/on"
+    mixer.send(control_path, mix_on)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_mix_fader(mixer, channel_id, mix_fader):
+    control_path = f"/ch/{channel_id:02}/mix/fader"
+    mixer.send(control_path, mix_fader)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_mix_stereo_link(mixer, channel_id, mix_stereo_link):
+    control_path = f"/ch/{channel_id:02}/mix/st"
+    mixer.send(control_path, mix_stereo_link)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_mix_pan(mixer, channel_id, mix_pan):
+    control_path = f"/ch/{channel_id:02}/mix/pan"
+    mixer.send(control_path, mix_pan)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_mix_mono(mixer, channel_id, mix_mono):
+    control_path = f"/ch/{channel_id:02}/mix/mono"
+    mixer.send(control_path, mix_mono)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_mix_mlevel(mixer, channel_id, mix_mlevel):
+    control_path = f"/ch/{channel_id:02}/mix/mlevel"
+    mixer.send(control_path, mix_mlevel)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_mix_on(mixer, channel_id, mix_on):
+    control_path = f"/ch/{channel_id:02}/mix/{mix_on}/on"
+    mixer.send(control_path, 1 if mix_on else 0)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_mix_level(mixer, channel_id, mix_level):
+    control_path = f"/ch/{channel_id:02}/mix/{mix_level}/level"
+    mixer.send(control_path, 10.0)
+    print(mixer.query(control_path))
+    time.sleep(1)
+    for i in range(100):
+        val = random.uniform(-60, 10)
+        mixer.send(control_path, str(val))
+        on = ~on
+    time.sleep(1)
+
+def set_channel_mix_pan(mixer, channel_id, mix_pan):
+    control_path = f"/ch/{channel_id:02}/mix/{mix_pan}/pan"
+    mixer.send(control_path, 10.0)
+    print(mixer.query(control_path))
+    time.sleep(1)
+    for i in range(100):
+        val = random.uniform(-60, 10)
+        mixer.send(control_path, str(val))
+        on = ~on
+    time.sleep(1)
+
+
+def set_channel_mix_type(mixer, channel_id, mix_id, mix_type):
+    control_path = f"/ch/{channel_id:02}/mix/{mix_id:02}/type"
+    mixer.send(control_path, mix_type)
+    print(mixer.query(control_path))
+    time.sleep(1)
+    
+
+def set_channel_mix_pan_follow(mixer, channel_id, mix_id, pan_follow):
+    control_path = f"/ch/{channel_id:02}/mix/{mix_id:02}/panFollow"
+    mixer.send(control_path, pan_follow)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_grp_dca(mixer, channel_id, dca_value):
+    control_path = f"/ch/{channel_id:02}/grp/dca"
+    mixer.send(control_path, dca_value)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_grp_mute(mixer, channel_id, mute_value):
+    control_path = f"/ch/{channel_id:02}/grp/mute"
+    mixer.send(control_path, mute_value)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_automix_group(mixer, channel_id, group_type):
+    control_path = f"/ch/{channel_id:02}/automix/group"
+    mixer.send(control_path, group_type)
+    print(mixer.query(control_path))
+    time.sleep(1)
+
+def set_channel_automix_weight(mixer, channel_id, weight_value):
+    control_path = f"/ch/{channel_id:02}/automix/weight"
+    mixer.send(control_path, weight_value)
+    print(mixer.query(control_path))
+    time.sleep(1)
