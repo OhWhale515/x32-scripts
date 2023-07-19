@@ -3064,65 +3064,65 @@ def set_fx_return_channel_mix_on(mixer, fxrtn_id, mix_on):
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/on"
     mixer.send(control_path, mix_on_map[mix_on])
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_fader(mixer, fxrtn_id, fader_level):
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/fader"
     mixer.send(control_path, fader_level)
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_st(mixer, fxrtn_id, st_on):
     st_on_map = {"OFF": 0, "ON": 1}
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/st"
     mixer.send(control_path, st_on_map[st_on])
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_pan(mixer, fxrtn_id, pan_level):
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/pan"
     mixer.send(control_path, pan_level)
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_mono(mixer, fxrtn_id, mono_on):
     mono_on_map = {"OFF": 0, "ON": 1}
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/mono"
     mixer.send(control_path, mono_on_map[mono_on])
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_mlevel(mixer, fxrtn_id, mlevel_level):
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/mlevel"
     mixer.send(control_path, mlevel_level)
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_channel_on(mixer, fxrtn_id, channel_num, channel_on):
     channel_on_map = {"OFF": 0, "ON": 1}
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/{channel_num:02}/on"
     mixer.send(control_path, channel_on_map[channel_on])
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_channel_level(mixer, fxrtn_id, channel_num, channel_level):
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/{channel_num:02}/level"
     mixer.send(control_path, channel_level)
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_channel_pan(mixer, fxrtn_id, channel_num, channel_pan):
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/{channel_num:02}/pan"
     mixer.send(control_path, channel_pan)
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_mix_channel_type(mixer, fxrtn_id, channel_num, channel_type):
     channel_type_map = {"IN/LC": 0, "<-EQ": 1, "EQ->": 2, "PRE": 3, "POST": 4, "GRP": 5}
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/{channel_num:02}/type"
     mixer.send(control_path, channel_type_map[channel_type])
     print(mixer.query(control_path))
-    time.sleep(1)
+    
     
     
 def set_fx_return_channel_mix_pan_follow(mixer, fxrtn_id, pan_follow):
@@ -3130,16 +3130,16 @@ def set_fx_return_channel_mix_pan_follow(mixer, fxrtn_id, pan_follow):
     control_path = f"/fxrtn/{fxrtn_id:02}/mix/panFollow"
     mixer.send(control_path, pan_follow_map[pan_follow])
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_grp_dca(mixer, fxrtn_id, dca_value):
     control_path = f"/fxrtn/{fxrtn_id:02}/grp/dca"
     mixer.send(control_path, dca_value)
     print(mixer.query(control_path))
-    time.sleep(1)
+    
 
 def set_fx_return_channel_grp_mute(mixer, fxrtn_id, mute_value):
     control_path = f"/fxrtn/{fxrtn_id:02}/grp/mute"
     mixer.send(control_path, mute_value)
     print(mixer.query(control_path))
-    time.sleep(1)
+    
