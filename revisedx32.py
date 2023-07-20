@@ -5903,3 +5903,615 @@ def get_xlive_data(mixer):
     return xlive_data
 xlive_data = get_xlive_data(mixer)
 print(xlive_data)
+
+
+def get_xlive_session_names(mixer):
+    session_names = {}
+    for session_num in range(1, 101):
+        param = f"/-urec/session/{session_num:03d}/name"
+        session_name = mixer.query(param)
+        if session_name:
+            session_names[session_num] = session_name
+    return session_names
+
+def get_xlive_marker_times(mixer):
+    marker_times = {}
+    for marker_num in range(1, 101):
+        param = f"/-urec/marker/{marker_num:03d}/time"
+        marker_time = mixer.query(param)
+        if marker_time is not None:
+            marker_times[marker_num] = marker_time
+    return marker_times
+
+
+def get_additional_status_data_previous(mixer):
+    response = mixer.query("/-stat/solosw/03")
+    solo_channel_03 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/04")
+    solo_channel_04 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/05")
+    solo_channel_05 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/06")
+    solo_channel_06 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/07")
+    solo_channel_07 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/08")
+    solo_channel_08 = bool(int(response))
+
+    # Store the status data in a dictionary
+    additional_status_data_previous = {
+        "solo_channel_03": solo_channel_03,
+        "solo_channel_04": solo_channel_04,
+        "solo_channel_05": solo_channel_05,
+        "solo_channel_06": solo_channel_06,
+        "solo_channel_07": solo_channel_07,
+        "solo_channel_08": solo_channel_08,
+    }
+
+    return additional_status_data_previous
+
+
+def get_additional_status_data_latest(mixer):
+    response = mixer.query("/-stat/urec/state")
+    xlive_state = int(response)
+
+    # X-Live! extension card state
+    xlive_states = {
+        0: "STOP",
+        1: "PPAUSE",
+        2: "PLAY",
+        3: "REC",
+    }
+
+    response = mixer.query("/-stat/urec/rtime")
+    xlive_recording_time = int(response)
+
+    response = mixer.query("/-stat/urec/etime")
+    xlive_elapsed_time = int(response)
+
+    # Convert elapsed and remaining time from milliseconds to seconds
+    xlive_elapsed_time_sec = xlive_elapsed_time // 1000
+    xlive_recording_time_sec = xlive_recording_time // 1000
+
+    response = mixer.query("/-stat/urec/state")
+    xlive_state = xlive_states[int(response)]
+
+    response = mixer.query("/-urec/sd1info")
+    xlive_sd1_info = response.strip()
+
+    response = mixer.query("/-urec/session/002/name")
+    xlive_session_name = response.strip()
+
+    response = mixer.query("/-urec/sessionmax")
+    xlive_session_max = int(response)
+
+    response = mixer.query("/-urec/sessionlen")
+    xlive_session_length = int(response)
+
+    response = mixer.query("/-urec/sessionpos")
+    xlive_session_position = int(response)
+
+    # Store the status data in a dictionary
+    additional_status_data_latest = {
+        "xlive_state": xlive_state,
+        "xlive_recording_time_sec": xlive_recording_time_sec,
+        "xlive_elapsed_time_sec": xlive_elapsed_time_sec,
+        "xlive_sd1_info": xlive_sd1_info,
+        "xlive_session_name": xlive_session_name,
+        "xlive_session_max": xlive_session_max,
+        "xlive_session_length": xlive_session_length,
+        "xlive_session_position": xlive_session_position,
+    }
+
+    return additional_status_data_latest
+
+
+def get_latest_status_data(mixer):
+    response = mixer.query("/-stat/screen/CHAN/page")
+    screen_chan_page = int(response)
+
+    # Store the status data in a dictionary
+    latest_status_data = {
+        "screen_chan_page": screen_chan_page,
+    }
+
+    return latest_status_data
+
+
+def get_ch_mix_levels(mixer):
+    ch_mix_levels = {}
+    for ch_num in range(1, 33):
+        response = mixer.query(f"/ch/{ch_num:02d}/mix/1/level")
+        ch_mix_levels[f"ch{ch_num}_mix1_level"] = float(response)
+
+        # Add more mix levels if needed (2 to n)
+
+    return ch_mix_levels
+
+def get_bus_mix_levels(mixer):
+    bus_mix_levels = {}
+    for bus_num in range(1, 17):
+        response = mixer.query(f"/bus/{bus_num:02d}/mix/1/level")
+        bus_mix_levels[f"bus{bus_num}_mix1_level"] = float(response)
+
+        # Add more mix levels if needed (2 to n)
+
+    return bus_mix_levels
+
+def get_main_stereo_mix_levels(mixer):
+    main_stereo_mix_levels = {}
+    response = mixer.query("/main/st/mix/1/level")
+    main_stereo_mix_levels["main_st_mix1_level"] = float(response)
+
+    # Add more main stereo mix levels if needed (2 to n)
+
+    return main_stereo_mix_levels
+
+def get_main_mono_mix_levels(mixer):
+    main_mono_mix_levels = {}
+    response = mixer.query("/main/m/mix/1/level")
+    main_mono_mix_levels["main_mono_mix1_level"] = float(response)
+
+    # Add more main mono mix levels if needed (2 to n)
+
+    return main_mono_mix_levels
+
+def get_fx_return_mix_levels(mixer):
+    fx_return_mix_levels = {}
+    for fx_num in range(1, 9):
+        response = mixer.query(f"/fxrtn/{fx_num:02d}/mix/1/level")
+        fx_return_mix_levels[f"fx{fx_num}_mix1_level"] = float(response)
+
+        # Add more fx return mix levels if needed (2 to n)
+
+    return fx_return_mix_levels
+
+def get_aux_in_mix_levels(mixer):
+    aux_in_mix_levels = {}
+    for aux_num in range(1, 7):
+        response = mixer.query(f"/auxin/{aux_num:02d}/mix/1/level")
+        aux_in_mix_levels[f"aux{aux_num}_mix1_level"] = float(response)
+
+        # Add more aux in mix levels if needed (2 to n)
+
+    return aux_in_mix_levels
+
+def get_screen_channel_page(mixer):
+    response = mixer.query("/-stat/screen/CHAN/page")
+    screen_channel_page = int(response)
+    return screen_channel_page
+
+def get_bussendbank(mixer):
+    response = mixer.query("/-stat/bussendbank")
+    bussendbank = int(response)
+    return bussendbank
+
+def get_ch_mix_mlevel(mixer):
+    ch_mix_mlevel = {}
+    for ch_num in range(1, 33):
+        response = mixer.query(f"/ch/{ch_num:02d}/mix/mlevel")
+        ch_mix_mlevel[f"ch{ch_num}_mix_mlevel"] = float(response)
+
+    return ch_mix_mlevel
+
+def get_bus_mix_mlevel(mixer):
+    bus_mix_mlevel = {}
+    for bus_num in range(1, 17):
+        response = mixer.query(f"/bus/{bus_num:02d}/mix/mlevel")
+        bus_mix_mlevel[f"bus{bus_num}_mix_mlevel"] = float(response)
+
+    return bus_mix_mlevel
+
+def get_fx_return_mix_mlevel(mixer):
+    fx_return_mix_mlevel = {}
+    for fx_num in range(1, 9):
+        response = mixer.query(f"/fxrtn/{fx_num:02d}/mix/mlevel")
+        fx_return_mix_mlevel[f"fx{fx_num}_mix_mlevel"] = float(response)
+
+    return fx_return_mix_mlevel
+
+def get_aux_in_mix_mlevel(mixer):
+    aux_in_mix_mlevel = {}
+    for aux_num in range(1, 7):
+        response = mixer.query(f"/auxin/{aux_num:02d}/mix/mlevel")
+        aux_in_mix_mlevel[f"aux{aux_num}_mix_mlevel"] = float(response)
+
+    return aux_in_mix_mlevel
+
+def get_ch_mix_mono(mixer):
+    ch_mix_mono = {}
+    for ch_num in range(1, 33):
+        response = mixer.query(f"/ch/{ch_num:02d}/mix/mono")
+        ch_mix_mono[f"ch{ch_num}_mix_mono"] = int(response)
+
+    return ch_mix_mono
+
+def get_bus_mix_mono(mixer):
+    bus_mix_mono = {}
+    for bus_num in range(1, 17):
+        response = mixer.query(f"/bus/{bus_num:02d}/mix/mono")
+        bus_mix_mono[f"bus{bus_num}_mix_mono"] = int(response)
+
+    return bus_mix_mono
+
+def get_fx_return_mix_mono(mixer):
+    fx_return_mix_mono = {}
+    for fx_num in range(1, 9):
+        response = mixer.query(f"/fxrtn/{fx_num:02d}/mix/mono")
+        fx_return_mix_mono[f"fx{fx_num}_mix_mono"] = int(response)
+
+    return fx_return_mix_mono
+
+def get_aux_in_mix_mono(mixer):
+    aux_in_mix_mono = {}
+    for aux_num in range(1, 7):
+        response = mixer.query(f"/auxin/{aux_num:02d}/mix/mono")
+        aux_in_mix_mono[f"aux{aux_num}_mix_mono"] = int(response)
+
+    return aux_in_mix_mono
+
+def get_ch_mix_pan(mixer):
+    ch_mix_pan = {}
+    for ch_num in range(1, 33):
+        response = mixer.query(f"/ch/{ch_num:02d}/mix/pan")
+        ch_mix_pan[f"ch{ch_num}_mix_pan"] = float(response)
+
+    return ch_mix_pan
+
+def get_bus_mix_pan(mixer):
+    bus_mix_pan = {}
+    for bus_num in range(1, 17):
+        response = mixer.query(f"/bus/{bus_num:02d}/mix/pan")
+        bus_mix_pan[f"bus{bus_num}_mix_pan"] = float(response)
+
+    return bus_mix_pan
+
+def get_fx_return_mix_pan(mixer):
+    fx_return_mix_pan = {}
+    for fx_num in range(1, 9):
+        response = mixer.query(f"/fxrtn/{fx_num:02d}/mix/pan")
+        fx_return_mix_pan[f"fx{fx_num}_mix_pan"] = float(response)
+
+    return fx_return_mix_pan
+
+def get_aux_in_mix_pan(mixer):
+    aux_in_mix_pan = {}
+    for aux_num in range(1, 7):
+        response = mixer.query(f"/auxin/{aux_num:02d}/mix/pan")
+        aux_in_mix_pan[f"aux{aux_num}_mix_pan"] = float(response)
+
+    return aux_in_mix_pan
+
+def get_ch_mix_st(mixer):
+    ch_mix_st = {}
+    for ch_num in range(1, 33):
+        response = mixer.query(f"/ch/{ch_num:02d}/mix/st")
+        ch_mix_st[f"ch{ch_num}_mix_st"] = float(response)
+
+    return ch_mix_st
+
+def get_bus_mix_st(mixer):
+    bus_mix_st = {}
+    for bus_num in range(1, 17):
+        response = mixer.query(f"/bus/{bus_num:02d}/mix/st")
+        bus_mix_st[f"bus{bus_num}_mix_st"] = float(response)
+
+    return bus_mix_st
+
+def get_fx_return_mix_st(mixer):
+    fx_return_mix_st = {}
+    for fx_num in range(1, 9):
+        response = mixer.query(f"/fxrtn/{fx_num:02d}/mix/st")
+        fx_return_mix_st[f"fx{fx_num}_mix_st"] = float(response)
+
+    return fx_return_mix_st
+
+def get_aux_in_mix_st(mixer):
+    aux_in_mix_st = {}
+    for aux_num in range(1, 7):
+        response = mixer.query(f"/auxin/{aux_num:02d}/mix/st")
+        aux_in_mix_st[f"aux{aux_num}_mix_st"] = float(response)
+
+    return aux_in_mix_st
+
+def get_screen_usb_page(mixer):
+    response = mixer.query("/-stat/screen/USB/page")
+    screen_usb_page = int(response)
+    return screen_usb_page
+
+
+def get_config_solo_mono(mixer):
+    response = mixer.query("/config/solo/mono")
+    config_solo_mono = int(response)
+    return config_solo_mono
+
+def get_screen_channel_page(mixer):
+    response = mixer.query("/-stat/screen/CHAN/page")
+    screen_channel_page = int(response)
+    return screen_channel_page
+
+def get_stat_talk_A(mixer):
+    response = mixer.query("/-stat/talk/A")
+    stat_talk_A = int(response)
+    return stat_talk_A
+
+def get_config_solo_dim(mixer):
+    response = mixer.query("/config/solo/dim")
+    config_solo_dim = int(response)
+    return config_solo_dim
+
+def get_stat_talk_B(mixer):
+    response = mixer.query("/-stat/talk/B")
+    stat_talk_B = int(response)
+    return stat_talk_B
+
+def get_stat_undo_time(mixer):
+    response = mixer.query("/-undo/time")
+    stat_undo_time = int(response)
+    return stat_undo_time
+
+def get_stat_userbank(mixer):
+    response = mixer.query("/-stat/userbank")
+    stat_userbank = int(response)
+    return stat_userbank
+
+def get_stat_screen_screen_screen(mixer):
+    response = mixer.query("/-stat/screen/screen/screen")
+    stat_screen_screen_screen = int(response)
+    return stat_screen_screen_screen
+
+def get_config_mute_levels(mixer):
+    config_mute_levels = {}
+    for mute_num in range(1, 7):
+        response = mixer.query(f"/config/mute/{mute_num}")
+        config_mute_levels[f"mute{mute_num}"] = int(response)
+
+    return config_mute_levels
+
+# Get config solo mono
+config_solo_mono = get_config_solo_mono(mixer)
+
+# Get screen channel page
+screen_channel_page = get_screen_channel_page(mixer)
+
+# Get stat talk A
+stat_talk_A = get_stat_talk_A(mixer)
+
+# Get config solo dim
+config_solo_dim = get_config_solo_dim(mixer)
+
+# Get stat talk B
+stat_talk_B = get_stat_talk_B(mixer)
+
+# Get stat undo time
+stat_undo_time = get_stat_undo_time(mixer)
+
+# Get stat user bank
+stat_userbank = get_stat_userbank(mixer)
+
+# Get stat screen screen screen
+stat_screen_screen_screen = get_stat_screen_screen_screen(mixer)
+
+# Get config mute levels
+config_mute_levels = get_config_mute_levels(mixer)
+
+
+def get_stat_selidx(mixer):
+    response = mixer.query("/-stat/selidx")
+    stat_selidx = response.strip()
+    return stat_selidx
+
+def get_stat_sendsonfader(mixer):
+    response = mixer.query("/-stat/sendsonfader")
+    stat_sendsonfader = int(response)
+    return stat_sendsonfader
+
+def get_stat_solosw(mixer):
+    stat_solosw = {}
+    for solosw_num in range(1, 71):
+        response = mixer.query(f"/-stat/solosw/{solosw_num:02d}")
+        stat_solosw[f"solosw{solosw_num:02d}"] = int(response)
+
+    return stat_solosw
+
+def get_ch_mix_on(mixer):
+    ch_mix_on = {}
+    for ch_num in range(1, 33):
+        response = mixer.query(f"/ch/{ch_num:02d}/mix/on")
+        ch_mix_on[f"ch{ch_num:02d}"] = int(response)
+
+    return ch_mix_on
+
+def get_bus_mix_on(mixer):
+    bus_mix_on = {}
+    for bus_num in range(1, 17):
+        response = mixer.query(f"/bus/{bus_num:02d}/mix/on")
+        bus_mix_on[f"bus{bus_num:02d}"] = int(response)
+
+    return bus_mix_on
+
+def get_auxin_mix_on(mixer):
+    auxin_mix_on = {}
+    for auxin_num in range(1, 9):
+        response = mixer.query(f"/auxin/{auxin_num:02d}/mix/on")
+        auxin_mix_on[f"auxin{auxin_num:02d}"] = int(response)
+
+    return auxin_mix_on
+
+def get_fxrtn_mix_on(mixer):
+    fxrtn_mix_on = {}
+    for fxrtn_num in range(1, 9):
+        response = mixer.query(f"/fxrtn/{fxrtn_num:02d}/mix/on")
+        fxrtn_mix_on[f"fxrtn{fxrtn_num:02d}"] = int(response)
+
+    return fxrtn_mix_on
+
+def get_dca_mix_on(mixer):
+    dca_mix_on = {}
+    for dca_num in range(1, 9):
+        response = mixer.query(f"/dca/{dca_num}/mix/on")
+        dca_mix_on[f"dca{dca_num}"] = int(response)
+
+    return dca_mix_on
+
+def get_main_m_mix_on(mixer):
+    response = mixer.query("/main/m/mix/on")
+    main_m_mix_on = int(response)
+    return main_m_mix_on
+
+def get_mtx_mix_on(mixer):
+    mtx_mix_on = {}
+    for mtx_num in range(1, 7):
+        response = mixer.query(f"/mtx/{mtx_num:02d}/mix/on")
+        mtx_mix_on[f"mtx{mtx_num:02d}"] = int(response)
+
+    return mtx_mix_on
+
+def get_stat_solo(mixer):
+    response = mixer.query("/-stat/solo")
+    stat_solo = int(response)
+    return stat_solo
+
+def get_ch_mix_fader(mixer):
+    ch_mix_fader = {}
+    for ch_num in range(1, 33):
+        response = mixer.query(f"/ch/{ch_num:02d}/mix/fader")
+        ch_mix_fader[f"ch{ch_num:02d}"] = float(response)
+
+    return ch_mix_fader
+
+def get_bus_mix_fader(mixer):
+    bus_mix_fader = {}
+    for bus_num in range(1, 17):
+        response = mixer.query(f"/bus/{bus_num:02d}/mix/fader")
+        bus_mix_fader[f"bus{bus_num:02d}"] = float(response)
+
+    return bus_mix_fader
+
+def get_auxin_mix_fader(mixer):
+    auxin_mix_fader = {}
+    for auxin_num in range(1, 9):
+        response = mixer.query(f"/auxin/{auxin_num:02d}/mix/fader")
+        auxin_mix_fader[f"auxin{auxin_num:02d}"] = float(response)
+
+    return auxin_mix_fader
+
+def get_fxrtn_mix_fader(mixer):
+    fxrtn_mix_fader = {}
+    for fxrtn_num in range(1, 9):
+        response = mixer.query(f"/fxrtn/{fxrtn_num:02d}/mix/fader")
+        fxrtn_mix_fader[f"fxrtn{fxrtn_num:02d}"] = float(response)
+
+    return fxrtn_mix_fader
+
+def get_dca_mix_fader(mixer):
+    dca_mix_fader = {}
+    for dca_num in range(1, 9):
+        response = mixer.query(f"/dca/{dca_num}/mix/fader")
+        dca_mix_fader[f"dca{dca_num}"] = float(response)
+
+    return dca_mix_fader
+
+def get_main_m_mix_fader(mixer):
+    response = mixer.query("/main/m/mix/fader")
+    main_m_mix_fader = float(response)
+    return main_m_mix_fader
+
+def get_mtx_mix_fader(mixer):
+    mtx_mix_fader = {}
+    for mtx_num in range(1, 7):
+        response = mixer.query(f"/mtx/{mtx_num:02d}/mix/fader")
+        mtx_mix_fader[f"mtx{mtx_num:02d}"] = float(response)
+
+    return mtx_mix_fader
+
+def get_main_st_mix_fader(mixer):
+    response = mixer.query("/main/st/mix/fader")
+    main_st_mix_fader = float(response)
+    return main_st_mix_fader
+
+def get_main_st_mix_on(mixer):
+    response = mixer.query("/main/st/mix/on")
+    main_st_mix_on = int(response)
+    return main_st_mix_on
+
+def get_stat_chfaderbank(mixer):
+    response = mixer.query("/-stat/chfaderbank")
+    stat_chfaderbank = int(response)
+    return stat_chfaderbank
+
+def get_stat_grpfaderbank(mixer):
+    response = mixer.query("/-stat/grpfaderbank")
+    stat_grpfaderbank = int(response)
+    return stat_grpfaderbank
+
+# Get stat selidx
+stat_selidx = get_stat_selidx(mixer)
+
+# Get stat sendsonfader
+stat_sendsonfader = get_stat_sendsonfader(mixer)
+
+# Get stat solosw
+stat_solosw = get_stat_solosw(mixer)
+
+# Get ch mix on
+ch_mix_on = get_ch_mix_on(mixer)
+
+# Get bus mix on
+bus_mix_on = get_bus_mix_on(mixer)
+
+# Get auxin mix on
+auxin_mix_on = get_auxin_mix_on(mixer)
+
+# Get fxrtn mix on
+fxrtn_mix_on = get_fxrtn_mix_on(mixer)
+
+# Get dca mix on
+dca_mix_on = get_dca_mix_on(mixer)
+
+# Get main m mix on
+main_m_mix_on = get_main_m_mix_on(mixer)
+
+# Get mtx mix on
+mtx_mix_on = get_mtx_mix_on(mixer)
+
+# Get stat solo
+stat_solo = get_stat_solo(mixer)
+
+# Get ch mix fader
+ch_mix_fader = get_ch_mix_fader(mixer)
+
+# Get bus mix fader
+bus_mix_fader = get_bus_mix_fader(mixer)
+
+# Get auxin mix fader
+auxin_mix_fader = get_auxin_mix_fader(mixer)
+
+# Get fxrtn mix fader
+fxrtn_mix_fader = get_fxrtn_mix_fader(mixer)
+
+# Get dca mix fader
+dca_mix_fader = get_dca_mix_fader(mixer)
+
+# Get main m mix fader
+main_m_mix_fader = get_main_m_mix_fader(mixer)
+
+# Get mtx mix fader
+mtx_mix_fader = get_mtx_mix_fader(mixer)
+
+# Get main st mix fader
+main_st_mix_fader = get_main_st_mix_fader(mixer)
+
+# Get main st mix on
+main_st_mix_on = get_main_st_mix_on(mixer)
+
+# Get stat chfaderbank
+stat_chfaderbank = get_stat_chfaderbank(mixer)
+
+# Get stat grpfaderbank
+stat_grpfaderbank = get_stat_grpfaderbank(mixer)
