@@ -4312,3 +4312,717 @@ def rename_internal_object(mixer, object_type, index, new_name):
 def delete_internal_object(mixer, object_type, index):
     command = f"/delete,{object_type},{index}"
     print(mixer.execute(command))
+
+
+# Get preferences data
+def get_preferences(mixer):
+    preferences = {}
+    preferences["style"] = mixer.execute("/-prefs/style").strip()
+    preferences["bright"] = mixer.execute("/-prefs/bright").strip()
+    preferences["lcdcont"] = mixer.execute("/-prefs/lcdcont").strip()
+    preferences["ledbright"] = mixer.execute("/-prefs/ledbright").strip()
+    preferences["lamp"] = mixer.execute("/-prefs/lamp").strip()
+    preferences["lampon"] = mixer.execute("/-prefs/lampon").strip()
+    preferences["clockrate"] = mixer.execute("/-prefs/clockrate").strip()
+    preferences["clocksource"] = mixer.execute("/-prefs/clocksource").strip()
+    return preferences
+
+# Set preferences data
+def set_preferences(mixer, style=None, bright=None, lcdcont=None, ledbright=None, lamp=None, lampon=None, clockrate=None, clocksource=None):
+    if style:
+        mixer.execute(f"/-prefs/style {style}")
+    if bright:
+        mixer.execute(f"/-prefs/bright {bright}")
+    if lcdcont:
+        mixer.execute(f"/-prefs/lcdcont {lcdcont}")
+    if ledbright:
+        mixer.execute(f"/-prefs/ledbright {ledbright}")
+    if lamp:
+        mixer.execute(f"/-prefs/lamp {lamp}")
+    if lampon is not None:
+        mixer.execute(f"/-prefs/lampon {int(lampon)}")
+    if clockrate is not None:
+        mixer.execute(f"/-prefs/clockrate {clockrate}")
+    if clocksource is not None:
+        mixer.execute(f"/-prefs/clocksource {clocksource}")
+
+# Getting preferences data
+preferences_data = get_preferences(mixer)
+print(preferences_data)
+
+# Setting preferences data
+set_preferences(mixer, bright=50, lampon=True, clockrate=0)
+
+
+# Get preferences data
+def get_preferences(mixer):
+    preferences = {}
+    preferences["style"] = mixer.execute("/-prefs/style").strip()
+    preferences["bright"] = mixer.execute("/-prefs/bright").strip()
+    preferences["lcdcont"] = mixer.execute("/-prefs/lcdcont").strip()
+    preferences["ledbright"] = mixer.execute("/-prefs/ledbright").strip()
+    preferences["lamp"] = mixer.execute("/-prefs/lamp").strip()
+    preferences["lampon"] = mixer.execute("/-prefs/lampon").strip()
+    preferences["clockrate"] = mixer.execute("/-prefs/clockrate").strip()
+    preferences["clocksource"] = mixer.execute("/-prefs/clocksource").strip()
+    preferences["confirm_general"] = mixer.execute("/-prefs/confirm_general").strip()
+    preferences["confirm_overwrite"] = mixer.execute("/-prefs/confirm_overwrite").strip()
+    preferences["confirm_sceneload"] = mixer.execute("/-prefs/confirm_sceneload").strip()
+    preferences["viewrtn"] = mixer.execute("/-prefs/viewrtn").strip()
+    preferences["selfollowsbank"] = mixer.execute("/-prefs/selfollowsbank").strip()
+    preferences["scene_advance"] = mixer.execute("/-prefs/scene_advance").strip()
+    preferences["safe_masterlevels"] = mixer.execute("/-prefs/safe_masterlevels").strip()
+    preferences["haflags"] = mixer.execute("/-prefs/haflags").strip()
+    preferences["autosel"] = mixer.execute("/-prefs/autosel").strip()
+    return preferences
+
+# Set preferences data
+def set_preferences(mixer, style=None, bright=None, lcdcont=None, ledbright=None, lamp=None, lampon=None, clockrate=None, clocksource=None,
+                    confirm_general=None, confirm_overwrite=None, confirm_sceneload=None, viewrtn=None, selfollowsbank=None,
+                    scene_advance=None, safe_masterlevels=None, haflags=None, autosel=None):
+    if style:
+        mixer.execute(f"/-prefs/style {style}")
+    if bright:
+        mixer.execute(f"/-prefs/bright {bright}")
+    if lcdcont:
+        mixer.execute(f"/-prefs/lcdcont {lcdcont}")
+    if ledbright:
+        mixer.execute(f"/-prefs/ledbright {ledbright}")
+    if lamp:
+        mixer.execute(f"/-prefs/lamp {lamp}")
+    if lampon is not None:
+        mixer.execute(f"/-prefs/lampon {int(lampon)}")
+    if clockrate is not None:
+        mixer.execute(f"/-prefs/clockrate {clockrate}")
+    if clocksource is not None:
+        mixer.execute(f"/-prefs/clocksource {clocksource}")
+    if confirm_general is not None:
+        mixer.execute(f"/-prefs/confirm_general {confirm_general}")
+    if confirm_overwrite is not None:
+        mixer.execute(f"/-prefs/confirm_overwrite {confirm_overwrite}")
+    if confirm_sceneload is not None:
+        mixer.execute(f"/-prefs/confirm_sceneload {confirm_sceneload}")
+    if viewrtn is not None:
+        mixer.execute(f"/-prefs/viewrtn {viewrtn}")
+    if selfollowsbank is not None:
+        mixer.execute(f"/-prefs/selfollowsbank {selfollowsbank}")
+    if scene_advance is not None:
+        mixer.execute(f"/-prefs/scene_advance {scene_advance}")
+    if safe_masterlevels is not None:
+        mixer.execute(f"/-prefs/safe_masterlevels {safe_masterlevels}")
+    if haflags is not None:
+        mixer.execute(f"/-prefs/haflags {haflags}")
+    if autosel is not None:
+        mixer.execute(f"/-prefs/autosel {autosel}")
+
+
+# Getting preferences data
+preferences_data = get_preferences(mixer)
+print(preferences_data)
+
+# Setting preferences data
+set_preferences(mixer, confirm_general="ON", viewrtn="ON", haflags=5)
+
+
+# Get preferences data
+def get_preferences(mixer):
+    preferences = {}
+    preferences["style"] = mixer.execute("/-prefs/style").strip()
+    preferences["bright"] = mixer.execute("/-prefs/bright").strip()
+    preferences["lcdcont"] = mixer.execute("/-prefs/lcdcont").strip()
+    preferences["ledbright"] = mixer.execute("/-prefs/ledbright").strip()
+    preferences["lamp"] = mixer.execute("/-prefs/lamp").strip()
+    preferences["lampon"] = mixer.execute("/-prefs/lampon").strip()
+    preferences["clockrate"] = mixer.execute("/-prefs/clockrate").strip()
+    preferences["clocksource"] = mixer.execute("/-prefs/clocksource").strip()
+    preferences["confirm_general"] = mixer.execute("/-prefs/confirm_general").strip()
+    preferences["confirm_overwrite"] = mixer.execute("/-prefs/confirm_overwrite").strip()
+    preferences["confirm_sceneload"] = mixer.execute("/-prefs/confirm_sceneload").strip()
+    preferences["viewrtn"] = mixer.execute("/-prefs/viewrtn").strip()
+    preferences["selfollowsbank"] = mixer.execute("/-prefs/selfollowsbank").strip()
+    preferences["scene_advance"] = mixer.execute("/-prefs/scene_advance").strip()
+    preferences["safe_masterlevels"] = mixer.execute("/-prefs/safe_masterlevels").strip()
+    preferences["haflags"] = mixer.execute("/-prefs/haflags").strip()
+    preferences["autosel"] = mixer.execute("/-prefs/autosel").strip()
+    preferences["show_control"] = mixer.execute("/-prefs/show_control").strip()
+    preferences["clockmode"] = mixer.execute("/-prefs/clockmode").strip()
+    preferences["hardmute"] = mixer.execute("/-prefs/hardmute").strip()
+    preferences["dcamute"] = mixer.execute("/-prefs/dcamute").strip()
+    preferences["invertmutes"] = mixer.execute("/-prefs/invertmutes").strip()
+    preferences["name"] = mixer.execute("/-prefs/name").strip()
+    preferences["rec_control"] = mixer.execute("/-prefs/rec_control").strip()
+    preferences["fastFaders"] = mixer.execute("/-prefs/fastFaders").strip()
+    return preferences
+
+# Set preferences data
+def set_preferences(mixer, style=None, bright=None, lcdcont=None, ledbright=None, lamp=None, lampon=None, clockrate=None, clocksource=None,
+                    confirm_general=None, confirm_overwrite=None, confirm_sceneload=None, viewrtn=None, selfollowsbank=None,
+                    scene_advance=None, safe_masterlevels=None, haflags=None, autosel=None, show_control=None,
+                    clockmode=None, hardmute=None, dcamute=None, invertmutes=None, name=None, rec_control=None, fastFaders=None):
+    if style:
+        mixer.execute(f"/-prefs/style {style}")
+    if bright:
+        mixer.execute(f"/-prefs/bright {bright}")
+    if lcdcont:
+        mixer.execute(f"/-prefs/lcdcont {lcdcont}")
+    if ledbright:
+        mixer.execute(f"/-prefs/ledbright {ledbright}")
+    if lamp:
+        mixer.execute(f"/-prefs/lamp {lamp}")
+    if lampon is not None:
+        mixer.execute(f"/-prefs/lampon {int(lampon)}")
+    if clockrate is not None:
+        mixer.execute(f"/-prefs/clockrate {clockrate}")
+    if clocksource is not None:
+        mixer.execute(f"/-prefs/clocksource {clocksource}")
+    if confirm_general is not None:
+        mixer.execute(f"/-prefs/confirm_general {confirm_general}")
+    if confirm_overwrite is not None:
+        mixer.execute(f"/-prefs/confirm_overwrite {confirm_overwrite}")
+    if confirm_sceneload is not None:
+        mixer.execute(f"/-prefs/confirm_sceneload {confirm_sceneload}")
+    if viewrtn is not None:
+        mixer.execute(f"/-prefs/viewrtn {viewrtn}")
+    if selfollowsbank is not None:
+        mixer.execute(f"/-prefs/selfollowsbank {selfollowsbank}")
+    if scene_advance is not None:
+        mixer.execute(f"/-prefs/scene_advance {scene_advance}")
+    if safe_masterlevels is not None:
+        mixer.execute(f"/-prefs/safe_masterlevels {safe_masterlevels}")
+    if haflags is not None:
+        mixer.execute(f"/-prefs/haflags {haflags}")
+    if autosel is not None:
+        mixer.execute(f"/-prefs/autosel {autosel}")
+    if show_control is not None:
+        mixer.execute(f"/-prefs/show_control {show_control}")
+    if clockmode is not None:
+        mixer.execute(f"/-prefs/clockmode {clockmode}")
+    if hardmute is not None:
+        mixer.execute(f"/-prefs/hardmute {hardmute}")
+    if dcamute is not None:
+        mixer.execute(f"/-prefs/dcamute {dcamute}")
+    if invertmutes is not None:
+        mixer.execute(f"/-prefs/invertmutes {invertmutes}")
+    if name:
+        mixer.execute(f"/-prefs/name {name}")
+    if rec_control is not None:
+        mixer.execute(f"/-prefs/rec_control {rec_control}")
+    if fastFaders is not None:
+        mixer.execute(f"/-prefs/fastFaders {fastFaders}")
+
+# Getting preferences data
+preferences_data = get_preferences(mixer)
+print(preferences_data)
+
+# Setting preferences data
+set_preferences(mixer, show_control=1, clockmode="12h", rec_control=0)
+
+
+# Get preferences data
+def get_preferences(mixer):
+    preferences = {}
+    preferences["style"] = mixer.execute("/-prefs/style").strip()
+    preferences["bright"] = mixer.execute("/-prefs/bright").strip()
+    preferences["lcdcont"] = mixer.execute("/-prefs/lcdcont").strip()
+    preferences["ledbright"] = mixer.execute("/-prefs/ledbright").strip()
+    preferences["lamp"] = mixer.execute("/-prefs/lamp").strip()
+    preferences["lampon"] = mixer.execute("/-prefs/lampon").strip()
+    preferences["clockrate"] = mixer.execute("/-prefs/clockrate").strip()
+    preferences["clocksource"] = mixer.execute("/-prefs/clocksource").strip()
+    preferences["confirm_general"] = mixer.execute("/-prefs/confirm_general").strip()
+    preferences["confirm_overwrite"] = mixer.execute("/-prefs/confirm_overwrite").strip()
+    preferences["confirm_sceneload"] = mixer.execute("/-prefs/confirm_sceneload").strip()
+    preferences["viewrtn"] = mixer.execute("/-prefs/viewrtn").strip()
+    preferences["selfollowsbank"] = mixer.execute("/-prefs/selfollowsbank").strip()
+    preferences["scene_advance"] = mixer.execute("/-prefs/scene_advance").strip()
+    preferences["safe_masterlevels"] = mixer.execute("/-prefs/safe_masterlevels").strip()
+    preferences["haflags"] = mixer.execute("/-prefs/haflags").strip()
+    preferences["autosel"] = mixer.execute("/-prefs/autosel").strip()
+    preferences["show_control"] = mixer.execute("/-prefs/show_control").strip()
+    preferences["clockmode"] = mixer.execute("/-prefs/clockmode").strip()
+    preferences["hardmute"] = mixer.execute("/-prefs/hardmute").strip()
+    preferences["dcamute"] = mixer.execute("/-prefs/dcamute").strip()
+    preferences["invertmutes"] = mixer.execute("/-prefs/invertmutes").strip()
+    preferences["name"] = mixer.execute("/-prefs/name").strip()
+    preferences["rec_control"] = mixer.execute("/-prefs/rec_control").strip()
+    preferences["fastFaders"] = mixer.execute("/-prefs/fastFaders").strip()
+    preferences["ip/dhcp"] = mixer.execute("/-prefs/ip/dhcp").strip()
+    preferences["ip/addr/0"] = mixer.execute("/-prefs/ip/addr/0").strip()
+    preferences["ip/addr/1"] = mixer.execute("/-prefs/ip/addr/1").strip()
+    preferences["ip/addr/2"] = mixer.execute("/-prefs/ip/addr/2").strip()
+    preferences["ip/addr/3"] = mixer.execute("/-prefs/ip/addr/3").strip()
+    preferences["ip/mask/0"] = mixer.execute("/-prefs/ip/mask/0").strip()
+    preferences["ip/mask/1"] = mixer.execute("/-prefs/ip/mask/1").strip()
+    preferences["ip/mask/2"] = mixer.execute("/-prefs/ip/mask/2").strip()
+    preferences["ip/mask/3"] = mixer.execute("/-prefs/ip/mask/3").strip()
+    preferences["ip/gateway/0"] = mixer.execute("/-prefs/ip/gateway/0").strip()
+    preferences["ip/gateway/1"] = mixer.execute("/-prefs/ip/gateway/1").strip()
+    preferences["ip/gateway/2"] = mixer.execute("/-prefs/ip/gateway/2").strip()
+    preferences["ip/gateway/3"] = mixer.execute("/-prefs/ip/gateway/3").strip()
+    preferences["remote/enable"] = mixer.execute("/-prefs/remote/enable").strip()
+    preferences["remote/protocol"] = mixer.execute("/-prefs/remote/protocol").strip()
+    preferences["remote/port"] = mixer.execute("/-prefs/remote/port").strip()
+    preferences["remote/ioenable"] = mixer.execute("/-prefs/remote/ioenable").strip()
+    return preferences
+
+# Set preferences data
+def set_preferences(mixer, style=None, bright=None, lcdcont=None, ledbright=None, lamp=None, lampon=None, clockrate=None, clocksource=None,
+                    confirm_general=None, confirm_overwrite=None, confirm_sceneload=None, viewrtn=None, selfollowsbank=None,
+                    scene_advance=None, safe_masterlevels=None, haflags=None, autosel=None, show_control=None,
+                    clockmode=None, hardmute=None, dcamute=None, invertmutes=None, name=None, rec_control=None, fastFaders=None,
+                    ip_dhcp=None, ip_addr=None, ip_mask=None, ip_gateway=None,
+                    remote_enable=None, remote_protocol=None, remote_port=None, remote_ioenable=None):
+    if style:
+        mixer.execute(f"/-prefs/style {style}")
+    if bright:
+        mixer.execute(f"/-prefs/bright {bright}")
+    if lcdcont:
+        mixer.execute(f"/-prefs/lcdcont {lcdcont}")
+    if ledbright:
+        mixer.execute(f"/-prefs/ledbright {ledbright}")
+    if lamp:
+        mixer.execute(f"/-prefs/lamp {lamp}")
+    if lampon is not None:
+        mixer.execute(f"/-prefs/lampon {lampon}")
+    if clockrate is not None:
+        mixer.execute(f"/-prefs/clockrate {clockrate}")
+    if clocksource is not None:
+        mixer.execute(f"/-prefs/clocksource {clocksource}")
+    if confirm_general is not None:
+        mixer.execute(f"/-prefs/confirm_general {confirm_general}")
+    if confirm_overwrite is not None:
+        mixer.execute(f"/-prefs/confirm_overwrite {confirm_overwrite}")
+    if confirm_sceneload is not None:
+        mixer.execute(f"/-prefs/confirm_sceneload {confirm_sceneload}")
+    if viewrtn is not None:
+        mixer.execute(f"/-prefs/viewrtn {viewrtn}")
+    if selfollowsbank is not None:
+        mixer.execute(f"/-prefs/selfollowsbank {selfollowsbank}")
+    if scene_advance is not None:
+        mixer.execute(f"/-prefs/scene_advance {scene_advance}")
+    if safe_masterlevels is not None:
+        mixer.execute(f"/-prefs/safe_masterlevels {safe_masterlevels}")
+    if haflags is not None:
+        mixer.execute(f"/-prefs/haflags {haflags}")
+    if autosel is not None:
+        mixer.execute(f"/-prefs/autosel {autosel}")
+    if show_control is not None:
+        mixer.execute(f"/-prefs/show_control {show_control}")
+    if clockmode is not None:
+        mixer.execute(f"/-prefs/clockmode {clockmode}")
+    if hardmute is not None:
+        mixer.execute(f"/-prefs/hardmute {hardmute}")
+    if dcamute is not None:
+        mixer.execute(f"/-prefs/dcamute {dcamute}")
+    if invertmutes is not None:
+        mixer.execute(f"/-prefs/invertmutes {invertmutes}")
+    if name:
+        mixer.execute(f"/-prefs/name {name}")
+    if rec_control is not None:
+        mixer.execute(f"/-prefs/rec_control {rec_control}")
+    if fastFaders is not None:
+        mixer.execute(f"/-prefs/fastFaders {fastFaders}")
+    if ip_dhcp is not None:
+        mixer.execute(f"/-prefs/ip/dhcp {ip_dhcp}")
+    if ip_addr:
+        for i, value in enumerate(ip_addr):
+            mixer.execute(f"/-prefs/ip/addr/{i} {value}")
+    if ip_mask:
+        for i, value in enumerate(ip_mask):
+            mixer.execute(f"/-prefs/ip/mask/{i} {value}")
+    if ip_gateway:
+        for i, value in enumerate(ip_gateway):
+            mixer.execute(f"/-prefs/ip/gateway/{i} {value}")
+    if remote_enable is not None:
+        mixer.execute(f"/-prefs/remote/enable {remote_enable}")
+    if remote_protocol is not None:
+        mixer.execute(f"/-prefs/remote/protocol {remote_protocol}")
+    if remote_port is not None:
+        mixer.execute(f"/-prefs/remote/port {remote_port}")
+    if remote_ioenable is not None:
+        mixer.execute(f"/-prefs/remote/ioenable {remote_ioenable}")
+
+
+# Set preferences data
+def set_preferences(mixer, style=None, bright=None, lcdcont=None, ledbright=None, lamp=None, lampon=None, clockrate=None, clocksource=None,
+                    confirm_general=None, confirm_overwrite=None, confirm_sceneload=None, viewrtn=None, selfollowsbank=None,
+                    scene_advance=None, safe_masterlevels=None, haflags=None, autosel=None, show_control=None,
+                    clockmode=None, hardmute=None, dcamute=None, invertmutes=None, name=None, rec_control=None, fastFaders=None,
+                    ip_dhcp=None, ip_addr=None, ip_mask=None, ip_gateway=None,
+                    remote_enable=None, remote_protocol=None, remote_port=None, remote_ioenable=None,
+                    card_UFifc=None, card_UFmode=None, card_USBmode=None, card_ADATwc=None):
+    preferences = {}
+
+    if style is not None:
+        mixer.execute(f"/-prefs/style {style}")
+    if bright is not None:
+        mixer.execute(f"/-prefs/bright {bright[0]} {bright[1]} {bright[2]}")
+    # ... (set other preferences data)
+
+    if card_UFifc is not None:
+        mixer.execute(f"/-prefs/card/UFifc {card_UFifc}")
+    if card_UFmode is not None:
+        mixer.execute(f"/-prefs/card/UFmode {card_UFmode}")
+    if card_USBmode is not None:
+        mixer.execute(f"/-prefs/card/USBmode {card_USBmode}")
+    if card_ADATwc is not None:
+        mixer.execute(f"/-prefs/card/ADATwc {card_ADATwc}")
+
+    return preferences
+
+
+# Set preferences data
+def set_preferences(mixer, style=None, bright=None, lcdcont=None, ledbright=None, lamp=None, lampon=None, clockrate=None, clocksource=None,
+                    confirm_general=None, confirm_overwrite=None, confirm_sceneload=None, viewrtn=None, selfollowsbank=None,
+                    scene_advance=None, safe_masterlevels=None, haflags=None, autosel=None, show_control=None,
+                    clockmode=None, hardmute=None, dcamute=None, invertmutes=None, name=None, rec_control=None, fastFaders=None,
+                    ip_dhcp=None, ip_addr=None, ip_mask=None, ip_gateway=None,
+                    remote_enable=None, remote_protocol=None, remote_port=None, remote_ioenable=None,
+                    card_UFifc=None, card_UFmode=None, card_USBmode=None, card_ADATwc=None,
+                    card_ADATsync=None, card_MADImode=None, card_MADIin=None, card_MADIout=None, card_MADIsrc=None,
+                    card_URECsdsel=None, card_URECtracks=None, card_URECplayb=None, card_URECrout=None):
+    preferences = {}
+
+    if style is not None:
+        mixer.execute(f"/-prefs/style {style}")
+    if bright is not None:
+        mixer.execute(f"/-prefs/bright {bright[0]} {bright[1]} {bright[2]}")
+    # ... (set other preferences data)
+
+    if card_UFifc is not None:
+        mixer.execute(f"/-prefs/card/UFifc {card_UFifc}")
+    if card_UFmode is not None:
+        mixer.execute(f"/-prefs/card/UFmode {card_UFmode}")
+    if card_USBmode is not None:
+        mixer.execute(f"/-prefs/card/USBmode {card_USBmode}")
+    if card_ADATwc is not None:
+        mixer.execute(f"/-prefs/card/ADATwc {card_ADATwc}")
+
+    # Additional card preferences
+    if card_ADATsync is not None:
+        mixer.execute(f"/-prefs/card/ADATsync {card_ADATsync}")
+    if card_MADImode is not None:
+        mixer.execute(f"/-prefs/card/MADImode {card_MADImode}")
+    if card_MADIin is not None:
+        mixer.execute(f"/-prefs/card/MADIin {card_MADIin}")
+    if card_MADIout is not None:
+        mixer.execute(f"/-prefs/card/MADIout {card_MADIout}")
+    if card_MADIsrc is not None:
+        mixer.execute(f"/-prefs/card/MADIsrc {card_MADIsrc}")
+    if card_URECsdsel is not None:
+        mixer.execute(f"/-prefs/card/URECsdsel {card_URECsdsel}")
+    if card_URECtracks is not None:
+        mixer.execute(f"/-prefs/card/URECtracks {card_URECtracks}")
+    if card_URECplayb is not None:
+        mixer.execute(f"/-prefs/card/URECplayb {card_URECplayb}")
+    if card_URECrout is not None:
+        mixer.execute(f"/-prefs/card/URECrout {card_URECrout}")
+
+    return preferences
+
+
+# Set preferences data
+def set_preferences(mixer, style=None, bright=None, lcdcont=None, ledbright=None, lamp=None, lampon=None, clockrate=None, clocksource=None,
+                    confirm_general=None, confirm_overwrite=None, confirm_sceneload=None, viewrtn=None, selfollowsbank=None,
+                    scene_advance=None, safe_masterlevels=None, haflags=None, autosel=None, show_control=None,
+                    clockmode=None, hardmute=None, dcamute=None, invertmutes=None, name=None, rec_control=None, fastFaders=None,
+                    ip_dhcp=None, ip_addr=None, ip_mask=None, ip_gateway=None,
+                    remote_enable=None, remote_protocol=None, remote_port=None, remote_ioenable=None,
+                    card_UFifc=None, card_UFmode=None, card_USBmode=None, card_ADATwc=None,
+                    card_ADATsync=None, card_MADImode=None, card_MADIin=None, card_MADIout=None, card_MADIsrc=None,
+                    card_URECsdsel=None, card_URECtracks=None, card_URECplayb=None, card_URECrout=None,
+                    rta_visibility=None, rta_gain=None, rta_autogain=None, rta_source=None, rta_pos=None):
+    preferences = {}
+
+    if style is not None:
+        mixer.execute(f"/-prefs/style {style}")
+    if bright is not None:
+        mixer.execute(f"/-prefs/bright {bright[0]} {bright[1]} {bright[2]}")
+    # ... (set other preferences data)
+
+    if card_UFifc is not None:
+        mixer.execute(f"/-prefs/card/UFifc {card_UFifc}")
+    if card_UFmode is not None:
+        mixer.execute(f"/-prefs/card/UFmode {card_UFmode}")
+    if card_USBmode is not None:
+        mixer.execute(f"/-prefs/card/USBmode {card_USBmode}")
+    if card_ADATwc is not None:
+        mixer.execute(f"/-prefs/card/ADATwc {card_ADATwc}")
+
+    # Additional card preferences
+    if card_ADATsync is not None:
+        mixer.execute(f"/-prefs/card/ADATsync {card_ADATsync}")
+    if card_MADImode is not None:
+        mixer.execute(f"/-prefs/card/MADImode {card_MADImode}")
+    if card_MADIin is not None:
+        mixer.execute(f"/-prefs/card/MADIin {card_MADIin}")
+    if card_MADIout is not None:
+        mixer.execute(f"/-prefs/card/MADIout {card_MADIout}")
+    if card_MADIsrc is not None:
+        mixer.execute(f"/-prefs/card/MADIsrc {card_MADIsrc}")
+    if card_URECsdsel is not None:
+        mixer.execute(f"/-prefs/card/URECsdsel {card_URECsdsel}")
+    if card_URECtracks is not None:
+        mixer.execute(f"/-prefs/card/URECtracks {card_URECtracks}")
+    if card_URECplayb is not None:
+        mixer.execute(f"/-prefs/card/URECplayb {card_URECplayb}")
+    if card_URECrout is not None:
+        mixer.execute(f"/-prefs/card/URECrout {card_URECrout}")
+
+    # RTA preferences
+    if rta_visibility is not None:
+        mixer.execute(f"/-prefs/rta/visibility {rta_visibility}")
+    if rta_gain is not None:
+        mixer.execute(f"/-prefs/rta/gain {rta_gain[0]} {rta_gain[1]} {rta_gain[2]}")
+    if rta_autogain is not None:
+        mixer.execute(f"/-prefs/rta/autogain {rta_autogain}")
+    if rta_source is not None:
+        mixer.execute(f"/-prefs/rta/source {rta_source}")
+    if rta_pos is not None:
+        mixer.execute(f"/-prefs/rta/pos {rta_pos}")
+
+    return preferences
+
+
+# Set preferences data
+def set_preferences(mixer, style=None, bright=None, lcdcont=None, ledbright=None, lamp=None, lampon=None, clockrate=None, clocksource=None,
+                    confirm_general=None, confirm_overwrite=None, confirm_sceneload=None, viewrtn=None, selfollowsbank=None,
+                    scene_advance=None, safe_masterlevels=None, haflags=None, autosel=None, show_control=None,
+                    clockmode=None, hardmute=None, dcamute=None, invertmutes=None, name=None, rec_control=None, fastFaders=None,
+                    ip_dhcp=None, ip_addr=None, ip_mask=None, ip_gateway=None,
+                    remote_enable=None, remote_protocol=None, remote_port=None, remote_ioenable=None,
+                    card_UFifc=None, card_UFmode=None, card_USBmode=None, card_ADATwc=None,
+                    card_ADATsync=None, card_MADImode=None, card_MADIin=None, card_MADIout=None, card_MADIsrc=None,
+                    card_URECsdsel=None, card_URECtracks=None, card_URECplayb=None, card_URECrout=None,
+                    rta_visibility=None, rta_gain=None, rta_autogain=None, rta_source=None, rta_pos=None, rta_mode=None,
+                    rta_options=None):
+    preferences = {}
+
+    if style is not None:
+        mixer.execute(f"/-prefs/style {style}")
+    if bright is not None:
+        mixer.execute(f"/-prefs/bright {bright[0]} {bright[1]} {bright[2]}")
+    # ... (set other preferences data)
+
+    if card_UFifc is not None:
+        mixer.execute(f"/-prefs/card/UFifc {card_UFifc}")
+    if card_UFmode is not None:
+        mixer.execute(f"/-prefs/card/UFmode {card_UFmode}")
+    if card_USBmode is not None:
+        mixer.execute(f"/-prefs/card/USBmode {card_USBmode}")
+    if card_ADATwc is not None:
+        mixer.execute(f"/-prefs/card/ADATwc {card_ADATwc}")
+
+    # Additional card preferences
+    if card_ADATsync is not None:
+        mixer.execute(f"/-prefs/card/ADATsync {card_ADATsync}")
+    if card_MADImode is not None:
+        mixer.execute(f"/-prefs/card/MADImode {card_MADImode}")
+    if card_MADIin is not None:
+        mixer.execute(f"/-prefs/card/MADIin {card_MADIin}")
+    if card_MADIout is not None:
+        mixer.execute(f"/-prefs/card/MADIout {card_MADIout}")
+    if card_MADIsrc is not None:
+        mixer.execute(f"/-prefs/card/MADIsrc {card_MADIsrc}")
+    if card_URECsdsel is not None:
+        mixer.execute(f"/-prefs/card/URECsdsel {card_URECsdsel}")
+    if card_URECtracks is not None:
+        mixer.execute(f"/-prefs/card/URECtracks {card_URECtracks}")
+    if card_URECplayb is not None:
+        mixer.execute(f"/-prefs/card/URECplayb {card_URECplayb}")
+    if card_URECrout is not None:
+        mixer.execute(f"/-prefs/card/URECrout {card_URECrout}")
+
+    # RTA preferences
+    if rta_visibility is not None:
+        mixer.execute(f"/-prefs/rta/visibility {rta_visibility}")
+    if rta_gain is not None:
+        mixer.execute(f"/-prefs/rta/gain {rta_gain[0]} {rta_gain[1]} {rta_gain[2]}")
+    if rta_autogain is not None:
+        mixer.execute(f"/-prefs/rta/autogain {rta_autogain}")
+    if rta_source is not None:
+        mixer.execute(f"/-prefs/rta/source {rta_source}")
+    if rta_pos is not None:
+        mixer.execute(f"/-prefs/rta/pos {rta_pos}")
+    if rta_mode is not None:
+        mixer.execute(f"/-prefs/rta/mode {rta_mode}")
+    if rta_options is not None:
+        mixer.execute(f"/-prefs/rta/options {rta_options}")
+
+    return preferences
+
+
+# Set preferences data
+def set_preferences(mixer, style=None, bright=None, lcdcont=None, ledbright=None, lamp=None, lampon=None, clockrate=None, clocksource=None,
+                    confirm_general=None, confirm_overwrite=None, confirm_sceneload=None, viewrtn=None, selfollowsbank=None,
+                    scene_advance=None, safe_masterlevels=None, haflags=None, autosel=None, show_control=None,
+                    clockmode=None, hardmute=None, dcamute=None, invertmutes=None, name=None, rec_control=None, fastFaders=None,
+                    ip_dhcp=None, ip_addr=None, ip_mask=None, ip_gateway=None,
+                    remote_enable=None, remote_protocol=None, remote_port=None, remote_ioenable=None,
+                    card_UFifc=None, card_UFmode=None, card_USBmode=None, card_ADATwc=None,
+                    card_ADATsync=None, card_MADImode=None, card_MADIin=None, card_MADIout=None, card_MADIsrc=None,
+                    card_URECsdsel=None, card_URECtracks=None, card_URECplayb=None, card_URECrout=None,
+                    rta_visibility=None, rta_gain=None, rta_autogain=None, rta_source=None, rta_pos=None, rta_mode=None,
+                    rta_options=None, rta_det=None, rta_decay=None, rta_peakhold=None,
+                    iQ_iQmodel=None, iQ_iQeqset=None, iQ_iQsound=None):
+    preferences = {}
+
+    if style is not None:
+        mixer.execute(f"/-prefs/style {style}")
+    if bright is not None:
+        mixer.execute(f"/-prefs/bright {bright[0]} {bright[1]} {bright[2]}")
+    # ... (set other preferences data)
+
+    if card_UFifc is not None:
+        mixer.execute(f"/-prefs/card/UFifc {card_UFifc}")
+    if card_UFmode is not None:
+        mixer.execute(f"/-prefs/card/UFmode {card_UFmode}")
+    if card_USBmode is not None:
+        mixer.execute(f"/-prefs/card/USBmode {card_USBmode}")
+    if card_ADATwc is not None:
+        mixer.execute(f"/-prefs/card/ADATwc {card_ADATwc}")
+
+    # Additional card preferences
+    if card_ADATsync is not None:
+        mixer.execute(f"/-prefs/card/ADATsync {card_ADATsync}")
+    if card_MADImode is not None:
+        mixer.execute(f"/-prefs/card/MADImode {card_MADImode}")
+    if card_MADIin is not None:
+        mixer.execute(f"/-prefs/card/MADIin {card_MADIin}")
+    if card_MADIout is not None:
+        mixer.execute(f"/-prefs/card/MADIout {card_MADIout}")
+    if card_MADIsrc is not None:
+        mixer.execute(f"/-prefs/card/MADIsrc {card_MADIsrc}")
+    if card_URECsdsel is not None:
+        mixer.execute(f"/-prefs/card/URECsdsel {card_URECsdsel}")
+    if card_URECtracks is not None:
+        mixer.execute(f"/-prefs/card/URECtracks {card_URECtracks}")
+    if card_URECplayb is not None:
+        mixer.execute(f"/-prefs/card/URECplayb {card_URECplayb}")
+    if card_URECrout is not None:
+        mixer.execute(f"/-prefs/card/URECrout {card_URECrout}")
+
+    # RTA preferences
+    if rta_visibility is not None:
+        mixer.execute(f"/-prefs/rta/visibility {rta_visibility}")
+    if rta_gain is not None:
+        mixer.execute(f"/-prefs/rta/gain {rta_gain[0]} {rta_gain[1]} {rta_gain[2]}")
+    if rta_autogain is not None:
+        mixer.execute(f"/-prefs/rta/autogain {rta_autogain}")
+    if rta_source is not None:
+        mixer.execute(f"/-prefs/rta/source {rta_source}")
+    if rta_pos is not None:
+        mixer.execute(f"/-prefs/rta/pos {rta_pos}")
+    if rta_mode is not None:
+        mixer.execute(f"/-prefs/rta/mode {rta_mode}")
+    if rta_options is not None:
+        mixer.execute(f"/-prefs/rta/options {rta_options}")
+    if rta_det is not None:
+        mixer.execute(f"/-prefs/rta/det {rta_det}")
+    if rta_decay is not None:
+        mixer.execute(f"/-prefs/rta/decay {rta_decay[0]} {rta_decay[1]} {rta_decay[2]}")
+    if rta_peakhold is not None:
+        mixer.execute(f"/-prefs/rta/peakhold {rta_peakhold}")
+
+    # Turbosound iQ speakers preferences
+    for i in range(1, 17):
+        if iQ_iQmodel is not None:
+            mixer.execute(f"/-prefs/iQ/{i:02d}/iQmodel {iQ_iQmodel[i-1]}")
+        if iQ_iQeqset is not None:
+            mixer.execute(f"/-prefs/iQ/{i:02d}/iQeqset {iQ_iQeqset[i-1]}")
+        if iQ_iQsound is not None:
+            mixer.execute(f"/-prefs/iQ/{i:02d}/iQsound {iQ_iQsound[i-1]}")
+
+    return preferences
+
+
+# Set preferences data
+def set_preferences(mixer, style=None, bright=None, lcdcont=None, ledbright=None, lamp=None, lampon=None, clockrate=None, clocksource=None,
+                    confirm_general=None, confirm_overwrite=None, confirm_sceneload=None, viewrtn=None, selfollowsbank=None,
+                    scene_advance=None, safe_masterlevels=None, haflags=None, autosel=None, show_control=None,
+                    clockmode=None, hardmute=None, dcamute=None, invertmutes=None, name=None, rec_control=None, fastFaders=None,
+                    ip_dhcp=None, ip_addr=None, ip_mask=None, ip_gateway=None,
+                    remote_enable=None, remote_protocol=None, remote_port=None, remote_ioenable=None,
+                    card_UFifc=None, card_UFmode=None, card_USBmode=None, card_ADATwc=None,
+                    card_ADATsync=None, card_MADImode=None, card_MADIin=None, card_MADIout=None, card_MADIsrc=None,
+                    card_URECsdsel=None, card_URECtracks=None, card_URECplayb=None, card_URECrout=None,
+                    rta_visibility=None, rta_gain=None, rta_autogain=None, rta_source=None, rta_pos=None, rta_mode=None,
+                    rta_options=None, rta_det=None, rta_decay=None, rta_peakhold=None,
+                    iQ_iQmodel=None, iQ_iQeqset=None, iQ_iQsound=None,
+                    key_layout=None, key_history=None):
+    preferences = {}
+
+    if style is not None:
+        mixer.execute(f"/-prefs/style {style}")
+    if bright is not None:
+        mixer.execute(f"/-prefs/bright {bright[0]} {bright[1]} {bright[2]}")
+    # ... (set other preferences data)
+
+    if card_UFifc is not None:
+        mixer.execute(f"/-prefs/card/UFifc {card_UFifc}")
+    if card_UFmode is not None:
+        mixer.execute(f"/-prefs/card/UFmode {card_UFmode}")
+    if card_USBmode is not None:
+        mixer.execute(f"/-prefs/card/USBmode {card_USBmode}")
+    if card_ADATwc is not None:
+        mixer.execute(f"/-prefs/card/ADATwc {card_ADATwc}")
+
+    # Additional card preferences
+    if card_ADATsync is not None:
+        mixer.execute(f"/-prefs/card/ADATsync {card_ADATsync}")
+    if card_MADImode is not None:
+        mixer.execute(f"/-prefs/card/MADImode {card_MADImode}")
+    if card_MADIin is not None:
+        mixer.execute(f"/-prefs/card/MADIin {card_MADIin}")
+    if card_MADIout is not None:
+        mixer.execute(f"/-prefs/card/MADIout {card_MADIout}")
+    if card_MADIsrc is not None:
+        mixer.execute(f"/-prefs/card/MADIsrc {card_MADIsrc}")
+    if card_URECsdsel is not None:
+        mixer.execute(f"/-prefs/card/URECsdsel {card_URECsdsel}")
+    if card_URECtracks is not None:
+        mixer.execute(f"/-prefs/card/URECtracks {card_URECtracks}")
+    if card_URECplayb is not None:
+        mixer.execute(f"/-prefs/card/URECplayb {card_URECplayb}")
+    if card_URECrout is not None:
+        mixer.execute(f"/-prefs/card/URECrout {card_URECrout}")
+
+    # RTA preferences
+    if rta_visibility is not None:
+        mixer.execute(f"/-prefs/rta/visibility {rta_visibility}")
+    if rta_gain is not None:
+        mixer.execute(f"/-prefs/rta/gain {rta_gain[0]} {rta_gain[1]} {rta_gain[2]}")
+    if rta_autogain is not None:
+        mixer.execute(f"/-prefs/rta/autogain {rta_autogain}")
+    if rta_source is not None:
+        mixer.execute(f"/-prefs/rta/source {rta_source}")
+    if rta_pos is not None:
+        mixer.execute(f"/-prefs/rta/pos {rta_pos}")
+    if rta_mode is not None:
+        mixer.execute(f"/-prefs/rta/mode {rta_mode}")
+    if rta_options is not None:
+        mixer.execute(f"/-prefs/rta/options {rta_options}")
+    if rta_det is not None:
+        mixer.execute(f"/-prefs/rta/det {rta_det}")
+    if rta_decay is not None:
+        mixer.execute(f"/-prefs/rta/decay {rta_decay[0]} {rta_decay[1]} {rta_decay[2]}")
+    if rta_peakhold is not None:
+        mixer.execute(f"/-prefs/rta/peakhold {rta_peakhold}")
+
+    # Turbosound iQ speakers preferences
+    for i in range(1, 17):
+        if iQ_iQmodel is not None:
+            mixer.execute(f"/-prefs/iQ/{i:02d}/iQmodel {iQ_iQmodel[i-1]}")
+        if iQ_iQeqset is not None:
+            mixer.execute(f"/-prefs/iQ/{i:02d}/iQeqset {iQ_iQeqset[i-1]}")
+        if iQ_iQsound is not None:
+            mixer.execute(f"/-prefs/iQ/{i:02d}/iQsound {iQ_iQsound[i-1]}")
+
+    # Keyboard preferences
+    if key_layout is not None:
+        mixer.execute(f"/-prefs/key/layout {key_layout}")
+    if key_history is not None:
+        for i, entry in enumerate(key_history):
+            mixer.execute(f"/-prefs/key/{i:02d} {entry}")
+
+    return preferences
