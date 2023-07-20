@@ -4020,3 +4020,295 @@ def set_insert_aux(mixer, aux_index, channel_index):
     control_path = f"/-insert/aux{aux_index}"
     mixer.send(control_path, channel_index)
     print(mixer.query(control_path))
+
+
+# /showdump none Requests the X32/M32 to send all Cue, Scene, and Snippet related data.
+def request_show_dump(mixer):
+    control_path = "/showdump"
+    mixer.send(control_path, "none")
+    print(mixer.query(control_path))
+
+# /‐show/prepos/current int Scene page cue, scene, or snippet slot highlighted line/index is <int> value.
+def set_current_scene_slot(mixer, slot_value):
+    control_path = "/‐show/prepos/current"
+    mixer.send(control_path, slot_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/show/name string Name of the current show
+def get_current_show_name(mixer):
+    control_path = "/‐show/showfile/show/name"
+    print(mixer.query(control_path))
+
+# /‐show/showfile/show/inputs int Param safe page Scene safe parameters Input channels selection
+def set_scene_safe_input_channels(mixer, param_safe_value):
+    control_path = "/‐show/showfile/show/inputs"
+    mixer.send(control_path, param_safe_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/show/mxsends int Param safe page Scene safe parameters Input channels selection (16 bits bitmap)
+def set_scene_safe_mx_sends(mixer, param_safe_value):
+    control_path = "/‐show/showfile/show/mxsends"
+    mixer.send(control_path, param_safe_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/show/mxbuses int Param safe page Scene safe parameters Mix Buses selection
+def set_scene_safe_mix_buses(mixer, param_safe_value):
+    control_path = "/‐show/showfile/show/mxbuses"
+    mixer.send(control_path, param_safe_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/show/console int Param safe page Scene safe parameters Console selection (4 bits bitmap)
+def set_scene_safe_console(mixer, param_safe_value):
+    control_path = "/‐show/showfile/show/console"
+    mixer.send(control_path, param_safe_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/show/chan16 int Chan safe page Chanel safe parameters selection (16 bits bitmap)
+def set_channel_safe_parameters(mixer, chan_safe_value):
+    control_path = "/‐show/showfile/show/chan16"
+    mixer.send(control_path, chan_safe_value)
+    print(mixer.query(control_path))
+
+
+# /‐show/showfile/show/chan32 int Chan safe page Chanel safe parameters selection (16 bits bitmap)
+def set_channel_safe_parameters_32(mixer, chan_safe_value):
+    control_path = "/‐show/showfile/show/chan32"
+    mixer.send(control_path, chan_safe_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/show/return int Chan safe page Return & Aux safe parameters selection (16 bits bitmap)
+def set_return_aux_safe_parameters(mixer, return_aux_safe_value):
+    control_path = "/‐show/showfile/show/return"
+    mixer.send(control_path, return_aux_safe_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/show/buses int Chan safe page Buses safe parameters selection (16 bits bitmap)
+def set_buses_safe_parameters(mixer, buses_safe_value):
+    control_path = "/‐show/showfile/show/buses"
+    mixer.send(control_path, buses_safe_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/show/lrmtxdca int Chan safe page Buses safe parameters selection (16 bits bitmap)
+def set_lr_mtx_dca_safe_parameters(mixer, lr_mtx_dca_safe_value):
+    control_path = "/‐show/showfile/show/lrmtxdca"
+    mixer.send(control_path, lr_mtx_dca_safe_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/show/effects int Chan safe page Effects Slots safe parameters selection (8 bits bitmap)
+def set_effects_slots_safe_parameters(mixer, effects_safe_value):
+    control_path = "/‐show/showfile/show/effects"
+    mixer.send(control_path, effects_safe_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/cue/[000‐099]/numb int Number of cue in the form xxx.x.x, saved at position [000‐099]
+def get_cue_number(mixer, cue_position):
+    control_path = f"/‐show/showfile/cue/{cue_position}/numb"
+    print(mixer.query(control_path))
+
+# /‐show/showfile/cue/[000‐099]/name string Name of cue at position [000‐099]
+def get_cue_name(mixer, cue_position):
+    control_path = f"/‐show/showfile/cue/{cue_position}/name"
+    print(mixer.query(control_path))
+
+# /‐show/showfile/cue/[000‐099]/skip int 0 (no Skip) or 1 (Skip) for cue at position [000‐099]
+def set_cue_skip(mixer, cue_position, skip_value):
+    control_path = f"/‐show/showfile/cue/{cue_position}/skip"
+    mixer.send(control_path, skip_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/cue/[000‐099]/scene int Associate Scene <int> with cue at position [000‐099]
+def associate_scene_with_cue(mixer, cue_position, scene_value):
+    control_path = f"/‐show/showfile/cue/{cue_position}/scene"
+    mixer.send(control_path, scene_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/cue/[000‐099]/bit int Associate Snippet <int> with cue at position [000‐099]
+def associate_snippet_with_cue(mixer, cue_position, snippet_value):
+    control_path = f"/‐show/showfile/cue/{cue_position}/bit"
+    mixer.send(control_path, snippet_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/cue/[000‐099]/miditype int Associate MIDI type <int> with cue at position [000‐099].
+def associate_midi_type_with_cue(mixer, cue_position, midi_type_value):
+    control_path = f"/‐show/showfile/cue/{cue_position}/miditype"
+    mixer.send(control_path, midi_type_value)
+    print(mixer.query(control_path))
+
+
+# /‐show/showfile/scene/[000‐099]/name string Scene “Name” parameter for scene [000‐099]
+def get_scene_name(mixer, scene_position):
+    control_path = f"/‐show/showfile/scene/{scene_position}/name"
+    print(mixer.query(control_path))
+
+# /‐show/showfile/scene/[000‐099]/notes string Scene “Notes” parameter for scene [000‐099]
+def get_scene_notes(mixer, scene_position):
+    control_path = f"/‐show/showfile/scene/{scene_position}/notes"
+    print(mixer.query(control_path))
+
+# /‐show/showfile/scene/[000‐099]/safes %int Scene “Scene Safes” parameters selection for scene [000‐099]
+def set_scene_safes(mixer, scene_position, safes_value):
+    control_path = f"/‐show/showfile/scene/{scene_position}/safes"
+    mixer.send(control_path, safes_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/scene/[000‐099]/hasdata int Scene at position [000‐099] has valid data
+def check_scene_data(mixer, scene_position):
+    control_path = f"/‐show/showfile/scene/{scene_position}/hasdata"
+    print(mixer.query(control_path))
+
+# /‐show/showfile/snippet/[000‐099]/name string Snippet “Name” parameter for Snippet [000‐099]
+def get_snippet_name(mixer, snippet_position):
+    control_path = f"/‐show/showfile/snippet/{snippet_position}/name"
+    print(mixer.query(control_path))
+
+# /‐show/showfile/snippet/[000‐099]/eventtyp %int Parameter Filters & Effects affected by snippet in the form of bitwise operation
+def set_snippet_event_type(mixer, snippet_position, event_type_value):
+    control_path = f"/‐show/showfile/snippet/{snippet_position}/eventtyp"
+    mixer.send(control_path, event_type_value)
+    print(mixer.query(control_path))
+
+
+# /‐show/showfile/snippet/[000‐099]/channels %int Channels affected by snippet in the form of bitwise operation
+def set_snippet_channels(mixer, snippet_position, channels_value):
+    control_path = f"/‐show/showfile/snippet/{snippet_position}/channels"
+    mixer.send(control_path, channels_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/snippet/[000‐099]/auxbuses %int Returns and Buses affected by snippet in the form of bitwise operation
+def set_snippet_aux_buses(mixer, snippet_position, aux_buses_value):
+    control_path = f"/‐show/showfile/snippet/{snippet_position}/auxbuses"
+    mixer.send(control_path, aux_buses_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/snippet/[000‐099]/maingrps %int Main/Matrix/Group affected by snippet in the form of bitwise operation
+def set_snippet_main_groups(mixer, snippet_position, main_groups_value):
+    control_path = f"/‐show/showfile/snippet/{snippet_position}/maingrps"
+    mixer.send(control_path, main_groups_value)
+    print(mixer.query(control_path))
+
+# /‐show/showfile/snippet/[000‐099]/hasdata int Snippet at position [000‐099] has valid data
+def check_snippet_data(mixer, snippet_position):
+    control_path = f"/‐show/showfile/snippet/{snippet_position}/hasdata"
+    print(mixer.query(control_path))
+
+
+# /‐libs/fx/[001‐100]/pos int The position of the effect preset number [001‐100]
+def get_effect_preset_position(mixer, preset_number):
+    control_path = f"/‐libs/fx/{preset_number:03d}/pos"
+    print(mixer.query(control_path))
+
+# /‐libs/fx/[001‐100]/name string Name of the effect preset
+def get_effect_preset_name(mixer, preset_number):
+    control_path = f"/‐libs/fx/{preset_number:03d}/name"
+    print(mixer.query(control_path))
+
+# /‐libs/fx/[001‐100]/type int Type of the effect preset
+def get_effect_preset_type(mixer, preset_number):
+    control_path = f"/‐libs/fx/{preset_number:03d}/type"
+    print(mixer.query(control_path))
+
+# /‐libs/fx/[001‐100]/flags %int Use as an int to list the effect type “Ambiance”, “Plate Reverb”, etc. at the right of the effect name on the X32/M32 screen. 38 Note: int values do not match with FX enums!
+def get_effect_preset_flags(mixer, preset_number):
+    control_path = f"/‐libs/fx/{preset_number:03d}/flags"
+    print(mixer.query(control_path))
+
+# /‐libs/fx/[001‐100]/hasdata int {0, 1} depending on the validity of the effect preset.
+def check_effect_preset_data(mixer, preset_number):
+    control_path = f"/‐libs/fx/{preset_number:03d}/hasdata"
+    print(mixer.query(control_path))
+
+
+# /‐libs/r/[001‐100]/pos int The position of the routing preset number [001‐100]
+def get_routing_preset_position(mixer, preset_number):
+    control_path = f"/‐libs/r/{preset_number:03d}/pos"
+    print(mixer.query(control_path))
+
+# /‐libs/r/[001‐100]/name string Name of the routing preset
+def get_routing_preset_name(mixer, preset_number):
+    control_path = f"/‐libs/r/{preset_number:03d}/name"
+    print(mixer.query(control_path))
+
+# /‐libs/r/[001‐100]/type int Type of the routing preset
+def get_routing_preset_type(mixer, preset_number):
+    control_path = f"/‐libs/r/{preset_number:03d}/type"
+    print(mixer.query(control_path))
+
+# /‐libs/r/[001‐100]/flags %int Unused (all 0).
+def get_routing_preset_flags(mixer, preset_number):
+    control_path = f"/‐libs/r/{preset_number:03d}/flags"
+    print(mixer.query(control_path))
+
+# /‐libs/r/[001‐100]/hasdata int {0, 1} depending on the validity of the routing preset.
+def check_routing_preset_data(mixer, preset_number):
+    control_path = f"/‐libs/r/{preset_number:03d}/hasdata"
+    print(mixer.query(control_path))
+
+# /‐libs/mon/[001‐100]/pos int The position of the AES/DP48 preset number [001‐100]
+def get_monitor_preset_position(mixer, preset_number):
+    control_path = f"/‐libs/mon/{preset_number:03d}/pos"
+    print(mixer.query(control_path))
+
+
+# /‐libs/mon/[001‐100]/name string Name of the AES/DP48 preset
+def get_aes_dp48_preset_name(mixer, preset_number):
+    control_path = f"/‐libs/mon/{preset_number:03d}/name"
+    print(mixer.query(control_path))
+
+# /‐libs/mon/[001‐100]/type int Type of the AES/DP48 preset
+def get_aes_dp48_preset_type(mixer, preset_number):
+    control_path = f"/‐libs/mon/{preset_number:03d}/type"
+    print(mixer.query(control_path))
+
+# /‐libs/mon/[001‐100]/flags %int Unused (all 0).
+def get_aes_dp48_preset_flags(mixer, preset_number):
+    control_path = f"/‐libs/mon/{preset_number:03d}/flags"
+    print(mixer.query(control_path))
+
+# /‐libs/mon/[001‐100]/hasdata int {0, 1} depending on the validity of the AES/DP48 preset.
+def check_aes_dp48_preset_data(mixer, preset_number):
+    control_path = f"/‐libs/mon/{preset_number:03d}/hasdata"
+    print(mixer.query(control_path))
+
+# /copy string, int, int Copies an X32/M32 internal set to another.
+def copy_internal_set(mixer, set_type, source_index, destination_index):
+    command = f"/copy,{set_type},{source_index},{destination_index}"
+    print(mixer.execute(command))
+
+
+# /add string, int, string Adds a cue element to the current show in the X32/M32 internal memory.
+def add_cue(mixer, cue_name, cue_index, cue_description):
+    command = f"/add,{cue_name},{cue_index},{cue_description}"
+    print(mixer.execute(command))
+
+# /save string, int, [int | string, …] Saves or updates in the X32/M32 internal memory a scene, snippet, or preset.
+def save_internal_object(mixer, object_type, *params):
+    command = f"/save,{object_type}"
+    for param in params:
+        command += f",{param}"
+    print(mixer.execute(command))
+
+
+# /load string, int [,int[, %int]] Loads from the X32/M32 internal memory a scene, snippet, or a preset.
+def load_internal_object(mixer, object_type, index, *params):
+    command = f"/load,{object_type},{index}"
+    
+    if object_type == 'libchan':
+        channel_index, scope = params
+        command += f",{channel_index},{scope}"
+    elif object_type == 'libfx':
+        effect_index = params[0]
+        command += f",{effect_index}"
+    
+    print(mixer.execute(command))
+
+
+# /rename string, int, string Renames in the X32/M32 internal memory a scene, snippet, or a preset listed at a given index.
+def rename_internal_object(mixer, object_type, index, new_name):
+    command = f"/rename,{object_type},{index},{new_name}"
+    print(mixer.execute(command))
+
+
+# /delete string, int Deletes from the X32/M32 internal memory an element at the given index.
+def delete_internal_object(mixer, object_type, index):
+    command = f"/delete,{object_type},{index}"
+    print(mixer.execute(command))
