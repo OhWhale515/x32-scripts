@@ -5026,3 +5026,880 @@ def set_preferences(mixer, style=None, bright=None, lcdcont=None, ledbright=None
             mixer.execute(f"/-prefs/key/{i:02d} {entry}")
 
     return preferences
+
+
+# Get USB stick information
+def get_usb_info(mixer, path=None, title=None, dirpos=None, maxpos=None):
+    usb_info = {}
+
+    if path is not None:
+        response = mixer.query(f"/-usb/path {path}")
+        usb_info['path'] = response.strip()
+    if title is not None:
+        response = mixer.query(f"/-usb/title {title}")
+        usb_info['title'] = response.strip()
+    if dirpos is not None:
+        response = mixer.query(f"/-usb/dir/dirpos {dirpos}")
+        usb_info['dirpos'] = int(response)
+    if maxpos is not None:
+        response = mixer.query(f"/-usb/dir/maxpos")
+        usb_info['maxpos'] = int(response)
+
+    # Get file names in the current directory
+    for i in range(1, 1000):
+        try:
+            response_type = mixer.query(f"/-usb/dir/{i:03d}/type")
+            response_name = mixer.query(f"/-usb/dir/{i:03d}/name")
+            usb_info[f'{i:03d}'] = {
+                'type': response_type.strip(),
+                'name': response_name.strip()
+            }
+        except:
+            break
+
+    return usb_info
+
+
+# Get status data
+def get_status_data(mixer, selidx=None, chfaderbank=None, grpfaderbank=None, sendsonfader=None):
+    status_data = {}
+
+    if selidx is not None:
+        response = mixer.query(f"/-stat/selidx {selidx}")
+        status_data['selidx'] = response.strip()
+    if chfaderbank is not None:
+        response = mixer.query(f"/-stat/chfaderbank {chfaderbank}")
+        status_data['chfaderbank'] = int(response)
+    if grpfaderbank is not None:
+        response = mixer.query(f"/-stat/grpfaderbank {grpfaderbank}")
+        status_data['grpfaderbank'] = int(response)
+    if sendsonfader is not None:
+        response = mixer.query(f"/-stat/sendsonfader {sendsonfader}")
+        status_data['sendsonfader'] = response.strip()
+
+    return status_data
+
+
+# Get additional status data
+def get_additional_status_data(mixer, bussendbank=None, eqband=None, solo=None, keysolo=None, userbank=None):
+    status_data = {}
+
+    if bussendbank is not None:
+        response = mixer.query(f"/-stat/bussendbank {bussendbank}")
+        status_data['bussendbank'] = int(response)
+    if eqband is not None:
+        response = mixer.query(f"/-stat/eqband {eqband}")
+        status_data['eqband'] = int(response)
+    if solo is not None:
+        response = mixer.query(f"/-stat/solo {solo}")
+        status_data['solo'] = response.strip()
+    if keysolo is not None:
+        response = mixer.query(f"/-stat/keysolo {keysolo}")
+        status_data['keysolo'] = response.strip()
+    if userbank is not None:
+        response = mixer.query(f"/-stat/userbank {userbank}")
+        status_data['userbank'] = int(response)
+
+    return status_data
+
+
+# Get remaining status data
+def get_remaining_status_data(mixer, autosave=None, lock=None, usbmounted=None, remote=None, rtamodeeq=None, rtamodegeq=None, rtaeqpre=None, rtageqpost=None):
+    status_data = {}
+
+    if autosave is not None:
+        response = mixer.query(f"/-stat/autosave {autosave}")
+        status_data['autosave'] = response.strip()
+    if lock is not None:
+        response = mixer.query(f"/-stat/lock {lock}")
+        status_data['lock'] = int(response)
+    if usbmounted is not None:
+        response = mixer.query(f"/-stat/usbmounted {usbmounted}")
+        status_data['usbmounted'] = response.strip()
+    if remote is not None:
+        response = mixer.query(f"/-stat/remote {remote}")
+        status_data['remote'] = response.strip()
+    if rtamodeeq is not None:
+        response = mixer.query(f"/-stat/rtamodeeq {rtamodeeq}")
+        status_data['rtamodeeq'] = response.strip()
+    if rtamodegeq is not None:
+        response = mixer.query(f"/-stat/rtamodegeq {rtamodegeq}")
+        status_data['rtamodegeq'] = response.strip()
+    if rtaeqpre is not None:
+        response = mixer.query(f"/-stat/rtaeqpre {rtaeqpre}")
+        status_data['rtaeqpre'] = response.strip()
+    if rtageqpost is not None:
+        response = mixer.query(f"/-stat/rtageqpost {rtageqpost}")
+        status_data['rtageqpost'] = response.strip()
+
+    return status_data
+
+
+# Get RTA source data
+def get_rta_source(mixer):
+    response = mixer.query("/-stat/rtasource")
+    rta_source_data = {}
+
+    channels = [
+        f"Channel {i+1:02}" for i in range(32)
+    ]
+    aux = [
+        f"Aux {i+1:02}" for i in range(8)
+    ]
+    fxrtn = [
+        f"Fxrtn {i+1}L" for i in range(4)
+    ]
+    buses = [
+        f"Bus {i+1:02}" for i in range(16)
+    ]
+    matrix = [
+        f"Matrix {i+1:02}" for i in range(6)
+    ]
+    others = [
+        "L/R", "Mono", "Monitor"
+    ]
+
+    # Combine the lists to get the complete RTA source mapping
+    rta_source_mapping = channels + aux + fxrtn + buses + matrix + others
+
+    for index, source in enumerate(rta_source_mapping):
+        rta_source_data[index] = source
+
+    return rta_source_data
+
+
+# Get status data
+def get_status_data(mixer):
+    response = mixer.query("/-stat/xcardtype")
+    xcardtype = int(response)
+
+    response = mixer.query("/-stat/xcardsync")
+    xcardsync = int(response)
+
+    response = mixer.query("/-stat/geqonfdr")
+    geqonfdr = int(response)
+
+    response = mixer.query("/-stat/geqpos")
+    geqpos = int(response)
+
+    response = mixer.query("/-stat/screen/screen")
+    screen = int(response)
+
+    response = mixer.query("/-stat/screen/mutegrp")
+    mutegrp = int(response)
+
+    response = mixer.query("/-stat/screen/utils")
+    utils = int(response)
+
+    response = mixer.query("/-stat/screen/CHAN/page")
+    chan_page = int(response)
+
+    status_data = {
+        "xcardtype": xcardtype,
+        "xcardsync": xcardsync,
+        "geqonfdr": geqonfdr,
+        "geqpos": geqpos,
+        "screen": screen,
+        "mutegrp": mutegrp,
+        "utils": utils,
+        "chan_page": chan_page
+    }
+
+    return status_data
+
+
+def get_status_data(mixer):
+    # Previous status data retrieval code
+    response = mixer.query("/-stat/selidx")
+    selected_index = int(response)
+
+    response = mixer.query("/-stat/chfaderbank")
+    channel_fader_bank = int(response)
+
+    response = mixer.query("/-stat/grpfaderbank")
+    group_fader_bank = int(response)
+
+    response = mixer.query("/-stat/sendsonfader")
+    sends_on_fader = int(response)
+
+    response = mixer.query("/-stat/bussendbank")
+    bus_sends_bank = int(response)
+
+    response = mixer.query("/-stat/eqband")
+    eq_band = int(response)
+
+    response = mixer.query("/-stat/solo")
+    solo_state = int(response)
+
+    response = mixer.query("/-stat/keysolo")
+    key_solo_state = int(response)
+
+    response = mixer.query("/-stat/userbank")
+    user_bank = int(response)
+
+    # Additional status data retrieval (from previous updates)
+    response = mixer.query("/-stat/autosave")
+    autosave_state = int(response)
+
+    response = mixer.query("/-stat/lock48")
+    lock_status = int(response)
+
+    response = mixer.query("/-stat/usbmounted")
+    usb_mount_status = int(response)
+
+    response = mixer.query("/-stat/remote")
+    remote_mode = int(response)
+
+    # ... (Add other additional status data retrieval here)
+
+    # Store all the status data in a dictionary
+    status_data = {
+        "selected_index": selected_index,
+        "channel_fader_bank": channel_fader_bank,
+        "group_fader_bank": group_fader_bank,
+        "sends_on_fader": sends_on_fader,
+        "bus_sends_bank": bus_sends_bank,
+        "eq_band": eq_band,
+        "solo_state": solo_state,
+        "key_solo_state": key_solo_state,
+        "user_bank": user_bank,
+        "autosave_state": autosave_state,
+        "lock_status": lock_status,
+        "usb_mount_status": usb_mount_status,
+        "remote_mode": remote_mode,
+        # ... (Add other additional status data to the dictionary)
+    }
+
+    return status_data
+
+
+def get_status_data(mixer):
+    # Previous status data retrieval code
+    response = mixer.query("/-stat/selidx")
+    selected_index = int(response)
+
+    response = mixer.query("/-stat/chfaderbank")
+    channel_fader_bank = int(response)
+
+    response = mixer.query("/-stat/grpfaderbank")
+    group_fader_bank = int(response)
+
+    response = mixer.query("/-stat/sendsonfader")
+    sends_on_fader = int(response)
+
+    response = mixer.query("/-stat/bussendbank")
+    bus_sends_bank = int(response)
+
+    response = mixer.query("/-stat/eqband")
+    eq_band = int(response)
+
+    response = mixer.query("/-stat/solo")
+    solo_state = int(response)
+
+    response = mixer.query("/-stat/keysolo")
+    key_solo_state = int(response)
+
+    response = mixer.query("/-stat/userbank")
+    user_bank = int(response)
+
+    # Additional status data retrieval (from previous updates)
+    response = mixer.query("/-stat/autosave")
+    autosave_state = int(response)
+
+    response = mixer.query("/-stat/lock48")
+    lock_status = int(response)
+
+    response = mixer.query("/-stat/usbmounted")
+    usb_mount_status = int(response)
+
+    response = mixer.query("/-stat/remote")
+    remote_mode = int(response)
+
+    # Additional status data retrieval (latest updates)
+    response = mixer.query("/-stat/screen/ASSIGN/page")
+    assign_screen_page = int(response)
+
+    response = mixer.query("/-stat/aes50/state")
+    aes50_state = int(response)
+
+    response = mixer.query("/-stat/aes50/A")
+    aes50_detected_A = response.strip()
+
+    response = mixer.query("/-stat/aes50/B")
+    aes50_detected_B = response.strip()
+
+    # Store all the status data in a dictionary
+    status_data = {
+        "selected_index": selected_index,
+        "channel_fader_bank": channel_fader_bank,
+        "group_fader_bank": group_fader_bank,
+        "sends_on_fader": sends_on_fader,
+        "bus_sends_bank": bus_sends_bank,
+        "eq_band": eq_band,
+        "solo_state": solo_state,
+        "key_solo_state": key_solo_state,
+        "user_bank": user_bank,
+        "autosave_state": autosave_state,
+        "lock_status": lock_status,
+        "usb_mount_status": usb_mount_status,
+        "remote_mode": remote_mode,
+        "assign_screen_page": assign_screen_page,
+        "aes50_state": aes50_state,
+        "aes50_detected_A": aes50_detected_A,
+        "aes50_detected_B": aes50_detected_B,
+    }
+
+    return status_data
+
+
+def get_status_data(mixer):
+    # Previous status data retrieval code
+    response = mixer.query("/-stat/selidx")
+    selected_index = int(response)
+
+    response = mixer.query("/-stat/chfaderbank")
+    channel_fader_bank = int(response)
+
+    response = mixer.query("/-stat/grpfaderbank")
+    group_fader_bank = int(response)
+
+    response = mixer.query("/-stat/sendsonfader")
+    sends_on_fader = int(response)
+
+    response = mixer.query("/-stat/bussendbank")
+    bus_sends_bank = int(response)
+
+    response = mixer.query("/-stat/eqband")
+    eq_band = int(response)
+
+    response = mixer.query("/-stat/solo")
+    solo_state = int(response)
+
+    response = mixer.query("/-stat/keysolo")
+    key_solo_state = int(response)
+
+    response = mixer.query("/-stat/userbank")
+    user_bank = int(response)
+
+    # Additional status data retrieval (from previous updates)
+    response = mixer.query("/-stat/autosave")
+    autosave_state = int(response)
+
+    response = mixer.query("/-stat/lock48")
+    lock_status = int(response)
+
+    response = mixer.query("/-stat/usbmounted")
+    usb_mount_status = int(response)
+
+    response = mixer.query("/-stat/remote")
+    remote_mode = int(response)
+
+    # Additional status data retrieval (latest updates)
+    response = mixer.query("/-stat/screen/ASSIGN/page")
+    assign_screen_page = int(response)
+
+    response = mixer.query("/-stat/aes50/state")
+    aes50_state = int(response)
+
+    response = mixer.query("/-stat/aes50/A")
+    aes50_detected_A = response.strip()
+
+    response = mixer.query("/-stat/aes50/B")
+    aes50_detected_B = response.strip()
+
+    # Additional status data retrieval (latest updates)
+    response = mixer.query("/-stat/solosw/01-32")
+    solo_switches = [int(sw) for sw in response.strip().split(",")]
+
+    response = mixer.query("/-stat/talk/A")
+    talkback_A_state = int(response)
+
+    response = mixer.query("/-stat/talk/B")
+    talkback_B_state = int(response)
+
+    response = mixer.query("/-stat/osc/on")
+    oscillator_state = int(response)
+
+    response = mixer.query("/-stat/tape/state")
+    tape_state = int(response)
+
+    # Store all the status data in a dictionary
+    status_data = {
+        "selected_index": selected_index,
+        "channel_fader_bank": channel_fader_bank,
+        "group_fader_bank": group_fader_bank,
+        "sends_on_fader": sends_on_fader,
+        "bus_sends_bank": bus_sends_bank,
+        "eq_band": eq_band,
+        "solo_state": solo_state,
+        "key_solo_state": key_solo_state,
+        "user_bank": user_bank,
+        "autosave_state": autosave_state,
+        "lock_status": lock_status,
+        "usb_mount_status": usb_mount_status,
+        "remote_mode": remote_mode,
+        "assign_screen_page": assign_screen_page,
+        "aes50_state": aes50_state,
+        "aes50_detected_A": aes50_detected_A,
+        "aes50_detected_B": aes50_detected_B,
+        "solo_switches": solo_switches,
+        "talkback_A_state": talkback_A_state,
+        "talkback_B_state": talkback_B_state,
+        "oscillator_state": oscillator_state,
+        "tape_state": tape_state,
+    }
+
+    return status_data
+
+
+def get_status_data(mixer):
+    # Previous status data retrieval code
+    response = mixer.query("/-stat/meter/02/mode")
+    meter_mode = int(response)
+
+    response = mixer.query("/-stat/meter/02/cnt")
+    meter_count = int(response)
+
+    response = mixer.query("/-stat/meter/02/0PPN")
+    meter_ppn = int(response)
+
+    response = mixer.query("/-stat/rtasource")
+    rta_source = int(response)
+
+    # Additional status data retrieval (from previous updates)
+    response = mixer.query("/-stat/rta/options")
+    rta_options = int(response)
+
+    response = mixer.query("/-stat/rta/det")
+    rta_detector = int(response)
+
+    response = mixer.query("/-stat/rta/decay")
+    rta_decay = float(response)
+
+    response = mixer.query("/-stat/rta/peakhold")
+    rta_peak_hold = int(response)
+
+    response = mixer.query("/-stat/xcardsync")
+    xcard_sync = int(response)
+
+    response = mixer.query("/-stat/geqonfdr")
+    geq_on_fader = int(response)
+
+    response = mixer.query("/-stat/geqpos")
+    geq_position = int(response)
+
+    response = mixer.query("/-stat/solo")
+    solo_state = int(response)
+
+    response = mixer.query("/-stat/keysolo")
+    key_solo_state = int(response)
+
+    response = mixer.query("/-stat/userbank")
+    user_bank = int(response)
+
+    # Additional status data retrieval (latest updates)
+    response = mixer.query("/-stat/screen/ASSIGN/page")
+    assign_screen_page = int(response)
+
+    response = mixer.query("/-stat/aes50/state")
+    aes50_state = int(response)
+
+    response = mixer.query("/-stat/aes50/A")
+    aes50_detected_A = response.strip()
+
+    response = mixer.query("/-stat/aes50/B")
+    aes50_detected_B = response.strip()
+
+    # Additional status data retrieval (latest updates)
+    response = mixer.query("/-stat/solosw/01-32")
+    solo_switches = [int(sw) for sw in response.strip().split(",")]
+
+    response = mixer.query("/-stat/talk/A")
+    talkback_A_state = int(response)
+
+    response = mixer.query("/-stat/talk/B")
+    talkback_B_state = int(response)
+
+    response = mixer.query("/-stat/osc/on")
+    oscillator_state = int(response)
+
+    response = mixer.query("/-stat/tape/state")
+    tape_state = int(response)
+
+    response = mixer.query("/-stat/tape/file")
+    tape_file = response.strip()
+
+    response = mixer.query("/-stat/tape/etime")
+    elapsed_time = int(response)
+
+    response = mixer.query("/-stat/tape/rtime")
+    remaining_time = int(response)
+
+    # User Parameters
+    user_parameters = {}
+    user_params = [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
+                   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+                   14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+
+    for param_id in user_params:
+        response = mixer.query(f"/-stat/userpar/{param_id}/value")
+        value = int(response)
+        user_parameters[f"{param_id:02d}"] = value
+
+    # Store all the status data in a dictionary
+    status_data = {
+        # Previous status data (unchanged)
+        "meter_mode": meter_mode,
+        "meter_count": meter_count,
+        "meter_ppn": meter_ppn,
+        "rta_source": rta_source,
+
+        # Additional status data (from previous updates)
+        "rta_options": rta_options,
+        "rta_detector": rta_detector,
+        "rta_decay": rta_decay,
+        "rta_peak_hold": rta_peak_hold,
+        "xcard_sync": xcard_sync,
+        "geq_on_fader": geq_on_fader,
+        "geq_position": geq_position,
+        "solo_state": solo_state,
+        "key_solo_state": key_solo_state,
+        "user_bank": user_bank,
+
+        # Additional status data (latest updates)
+        "assign_screen_page": assign_screen_page,
+        "aes50_state": aes50_state,
+        "aes50_detected_A": aes50_detected_A,
+        "aes50_detected_B": aes50_detected_B,
+        "solo_switches": solo_switches,
+        "talkback_A_state": talkback_A_state,
+        "talkback_B_state": talkback_B_state,
+        "oscillator_state": oscillator_state,
+        "tape_state": tape_state,
+        "tape_file": tape_file,
+        "elapsed_time": elapsed_time,
+        "remaining_time": remaining_time,
+        "user_parameters": user_parameters,
+    }
+
+    return status_data
+
+
+def get_status_data(mixer):
+    # Previous status data retrieval code
+    response = mixer.query("/-stat/selidx")
+    selected_index = int(response)
+
+    response = mixer.query("/-stat/chfader")
+    channel_fader = float(response)
+
+    response = mixer.query("/-stat/solosw/01")
+    solo_channel_01 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/02")
+    solo_channel_02 = bool(int(response))
+
+    # Additional status data retrieval (from previous updates)
+    response = mixer.query("/-stat/solosw/03")
+    solo_channel_03 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/04")
+    solo_channel_04 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/05")
+    solo_channel_05 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/06")
+    solo_channel_06 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/07")
+    solo_channel_07 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/08")
+    solo_channel_08 = bool(int(response))
+
+    # Additional status data retrieval (latest updates)
+    response = mixer.query("/-stat/urec/state")
+    xlive_state = int(response)
+
+    # X-Live! extension card state
+    xlive_states = {
+        0: "STOP",
+        1: "PPAUSE",
+        2: "PLAY",
+        3: "REC",
+    }
+
+    response = mixer.query("/-stat/urec/rtime")
+    xlive_recording_time = int(response)
+
+    response = mixer.query("/-stat/urec/etime")
+    xlive_elapsed_time = int(response)
+
+    response = mixer.query("/-stat/urec/state")
+    xlive_state = xlive_states[int(response)]
+
+    response = mixer.query("/-urec/sd1info")
+    xlive_sd1_info = response.strip()
+
+    response = mixer.query("/-urec/session/002/name")
+    xlive_session_name = response.strip()
+
+    response = mixer.query("/-urec/sessionmax")
+    xlive_session_max = int(response)
+
+    response = mixer.query("/-urec/sessionlen")
+    xlive_session_length = int(response)
+
+    response = mixer.query("/-urec/sessionpos")
+    xlive_session_position = int(response)
+
+    # Store all the status data in a dictionary
+    status_data = {
+        "selected_index": selected_index,
+        "channel_fader": channel_fader,
+        "solo_channel_01": solo_channel_01,
+        "solo_channel_02": solo_channel_02,
+        "solo_channel_03": solo_channel_03,
+        "solo_channel_04": solo_channel_04,
+        "solo_channel_05": solo_channel_05,
+        "solo_channel_06": solo_channel_06,
+        "solo_channel_07": solo_channel_07,
+        "solo_channel_08": solo_channel_08,
+        "xlive_state": xlive_state,
+        "xlive_recording_time": xlive_recording_time,
+        "xlive_elapsed_time": xlive_elapsed_time,
+        "xlive_sd1_info": xlive_sd1_info,
+        "xlive_session_name": xlive_session_name,
+        "xlive_session_max": xlive_session_max,
+        "xlive_session_length": xlive_session_length,
+        "xlive_session_position": xlive_session_position,
+    }
+
+    return status_data
+
+
+def get_status_data(mixer):
+    # Previous status data retrieval code
+    response = mixer.query("/-stat/selidx")
+    selected_index = int(response)
+
+    response = mixer.query("/-stat/chfader")
+    channel_fader = float(response)
+
+    response = mixer.query("/-stat/solosw/01")
+    solo_channel_01 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/02")
+    solo_channel_02 = bool(int(response))
+
+    # Additional status data retrieval (from previous updates)
+    response = mixer.query("/-stat/solosw/03")
+    solo_channel_03 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/04")
+    solo_channel_04 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/05")
+    solo_channel_05 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/06")
+    solo_channel_06 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/07")
+    solo_channel_07 = bool(int(response))
+
+    response = mixer.query("/-stat/solosw/08")
+    solo_channel_08 = bool(int(response))
+
+    # Additional status data retrieval (latest updates)
+    response = mixer.query("/-stat/urec/state")
+    xlive_state = int(response)
+
+    # X-Live! extension card state
+    xlive_states = {
+        0: "STOP",
+        1: "PPAUSE",
+        2: "PLAY",
+        3: "REC",
+    }
+
+    response = mixer.query("/-stat/urec/rtime")
+    xlive_recording_time = int(response)
+
+    response = mixer.query("/-stat/urec/etime")
+    xlive_elapsed_time = int(response)
+
+    # Convert elapsed and remaining time from milliseconds to seconds
+    xlive_elapsed_time_sec = xlive_elapsed_time // 1000
+    xlive_recording_time_sec = xlive_recording_time // 1000
+
+    response = mixer.query("/-stat/urec/state")
+    xlive_state = xlive_states[int(response)]
+
+    response = mixer.query("/-urec/sd1info")
+    xlive_sd1_info = response.strip()
+
+    response = mixer.query("/-urec/session/002/name")
+    xlive_session_name = response.strip()
+
+    response = mixer.query("/-urec/sessionmax")
+    xlive_session_max = int(response)
+
+    response = mixer.query("/-urec/sessionlen")
+    xlive_session_length = int(response)
+
+    response = mixer.query("/-urec/sessionpos")
+    xlive_session_position = int(response)
+
+    # Store all the status data in a dictionary
+    status_data = {
+        "selected_index": selected_index,
+        "channel_fader": channel_fader,
+        "solo_channel_01": solo_channel_01,
+        "solo_channel_02": solo_channel_02,
+        "solo_channel_03": solo_channel_03,
+        "solo_channel_04": solo_channel_04,
+        "solo_channel_05": solo_channel_05,
+        "solo_channel_06": solo_channel_06,
+        "solo_channel_07": solo_channel_07,
+        "solo_channel_08": solo_channel_08,
+        "xlive_state": xlive_state,
+        "xlive_recording_time_sec": xlive_recording_time_sec,
+        "xlive_elapsed_time_sec": xlive_elapsed_time_sec,
+        "xlive_sd1_info": xlive_sd1_info,
+        "xlive_session_name": xlive_session_name,
+        "xlive_session_max": xlive_session_max,
+        "xlive_session_length": xlive_session_length,
+        "xlive_session_position": xlive_session_position,
+    }
+
+    return status_data
+
+
+def send_action_command(mixer, command, value=None):
+    if value is not None:
+        response = mixer.send("/-action/" + command, value)
+    else:
+        response = mixer.send("/-action/" + command)
+    return response
+
+# Set clock value
+#send_action_command(mixer, "setclock", "12:00:00")
+
+# Initialize X32 Console
+#send_action_command(mixer, "initall", 1)
+
+# Initialize X32 Libraries
+#send_action_command(mixer, "initlib", 1)
+
+# Save X32/M32 state
+#send_action_command(mixer, "savestate", 1)
+
+# Create checkpoint for undo
+#send_action_command(mixer, "undopt", 1)
+
+# Perform an undo
+#send_action_command(mixer, "doundo", 1)
+
+# Play next track from USB recorder
+#send_action_command(mixer, "playtrack", 1)
+
+# Renew LCD screen display
+#send_action_command(mixer, "newscreen", 1)
+
+# Clear all solo buttons
+#send_action_command(mixer, "clearsolo", 1)
+
+# Set sampling rate to 48kHz
+#send_action_command(mixer, "setsrate", 0)
+
+# Select RTA source channel #1 (Ch 1)
+#send_action_command(mixer, "setrtasrc", 0)
+
+
+def send_action_command(mixer, command, value=None):
+    if value is not None:
+        response = mixer.send("/-action/" + command, value)
+    else:
+        response = mixer.send("/-action/" + command)
+    return response
+
+# Renew LCD screen display
+#send_action_command(mixer, "newscreen", 1)
+
+# Select and execute record #3 in the current directory
+#send_action_command(mixer, "recselect", 3)
+
+# Load saved cue #10
+#send_action_command(mixer, "gocue", 10)
+
+# Load saved scene #5
+#send_action_command(mixer, "goscene", 5)
+
+# Load saved snippet #2
+#send_action_command(mixer, "gosnippet", 2)
+
+# Select X-Live! sdcard record session index 6
+#send_action_command(mixer, "selsession", 6)
+
+
+def send_action_command(mixer, command, value=None):
+    if value is not None:
+        response = mixer.send("/-action/" + command, value)
+    else:
+        response = mixer.send("/-action/" + command)
+    return response
+
+# Delete X-Live! sdcard record session index 6
+#send_action_command(mixer, "delsession", 6)
+
+# Select X-Live! marker index 10
+#send_action_command(mixer, "selmarker", 10)
+
+# Delete X-Live! marker index 5
+#send_action_command(mixer, "delmarker", 5)
+
+# Save X-Live! sdcard position at marker index 3
+#send_action_command(mixer, "savemarker", 3)
+
+# Add X-Live! Marker
+#send_action_command(mixer, "addmarker", 1)
+
+# Set X-Live! sdcard position to 5000 milliseconds
+#send_action_command(mixer, "setposition", 5000)
+
+# Clear X-Live! alert status
+#send_action_command(mixer, "clearalert", 1)
+
+
+def send_action_command(mixer, command, value=None):
+    if value is not None:
+        response = mixer.send("/-action/" + command, value)
+    else:
+        response = mixer.send("/-action/" + command)
+    return response
+
+# Format active sdcard
+#send_action_command(mixer, "formatcard", 0)
+
+
+def get_xlive_data(mixer):
+    xlive_data = {
+        "sessionmax": mixer.query("/-urec/sessionmax"),
+        "markermax": mixer.query("/-urec/markermax"),
+        "sessionlen": mixer.query("/-urec/sessionlen"),
+        "sessionpos": mixer.query("/-urec/sessionpos"),
+        "markerpos": mixer.query("/-urec/markerpos"),
+        "batterystate": mixer.query("/-urec/batterystate"),
+        "srate": mixer.query("/-urec/srate"),
+        "tracks": mixer.query("/-urec/tracks"),
+        "sessionspan": mixer.query("/-urec/sessionspan"),
+        "sessionoffs": mixer.query("/-urec/sessionoffs"),
+        "sd1state": mixer.query("/-urec/sd1state"),
+        "sd2state": mixer.query("/-urec/sd2state"),
+        "sd1info": mixer.query("/-urec/sd1info")
+    }
+    return xlive_data
+xlive_data = get_xlive_data(mixer)
+print(xlive_data)
